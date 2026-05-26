@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA que Vende — Prompts Prontos + A Estratégia Por Trás de Cada Um</title>
+  <meta name="description" content="Guia digital com 29 prompts prontos e método completo para donos de pequenos negócios criarem posts, artes, anúncios e fecharem mais pelo WhatsApp com IA." />
+  <meta property="og:title" content="IA que Vende — Prompts + Estratégia Para Seu Negócio" />
+  <meta property="og:description" content="29 prompts prontos com o método de como, quando e por que usar cada um. Para pequenos negócios venderem mais com IA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       RESET & TOKENS
+    ============================================= */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --bg:        #07090f;
+      --bg2:       #0c0f1c;
+      --card:      #101422;
+      --card2:     #151928;
+      --border:    rgba(255,255,255,0.07);
+      --amber:     #f59e0b;
+      --amber-l:   #fbbf24;
+      --amber-d:   #d97706;
+      --sky:       #38bdf8;
+      --green:     #4ade80;
+      --red:       #f87171;
+      --txt:       #f1f5f9;
+      --txt2:      #94a3b8;
+      --muted:     #475569;
+      --f-head:    'Syne', sans-serif;
+      --f-body:    'DM Sans', sans-serif;
+      --r:         12px;
+      --r-lg:      20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      background: var(--bg);
+      color: var(--txt);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    /* =============================================
+       UTILITIES
+    ============================================= */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+    .container-wide { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+    .grad-text {
+      background: linear-gradient(120deg, var(--amber-l), var(--sky));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--f-head);
+      font-size: clamp(1.55rem, 4.5vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--txt);
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--txt2);
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    /* reveal on scroll */
+    .reveal { opacity:0; transform:translateY(28px); transition:.65s ease; }
+    .reveal.on { opacity:1; transform:none; }
+
+    /* =============================================
+       URGENCY BAR
+    ============================================= */
+    #urgency-bar {
+      background: linear-gradient(90deg,#6d28d9,#1e40af);
+      padding: 10px 16px;
+      text-align: center;
+      font-size: .83rem;
+      font-weight: 500;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #urgency-bar .timer-pill {
+      background: rgba(255,255,255,.18);
+      padding: 2px 12px;
+      border-radius: 100px;
+      font-family: var(--f-head);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    /* =============================================
+       NAVBAR
+    ============================================= */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(7,9,15,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 41px;
+      z-index: 999;
+    }
+
+    .nav-logo {
+      font-family: var(--f-head);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--txt);
+    }
+    .nav-logo span { color: var(--amber); }
+
+    .nav-btn {
+      background: var(--amber);
+      color: #000;
+      font-family: var(--f-head);
+      font-weight: 700;
+      font-size: .82rem;
+      padding: 8px 18px;
+      border-radius: 8px;
+      transition: .2s;
+    }
+    .nav-btn:hover { background: var(--amber-l); transform: translateY(-1px); }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      position: relative;
+      padding: 88px 20px 100px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% -10%, rgba(245,158,11,.13) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 40% at 85% 110%, rgba(56,189,248,.09) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245,158,11,.1);
+      border: 1px solid rgba(245,158,11,.3);
+      color: var(--amber);
+      font-size: .78rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      letter-spacing: .5px;
+    }
+
+    .hero h1 {
+      font-family: var(--f-head);
+      font-size: clamp(2rem, 7.5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.08;
+      color: var(--txt);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .line2 {
+      display: block;
+      font-size: .7em;
+      color: var(--txt2);
+      font-weight: 600;
+      margin-top: 6px;
+      line-height: 1.3;
+    }
+
+    .hero-sub {
+      font-size: clamp(.95rem, 2.5vw, 1.13rem);
+      color: var(--txt2);
+      max-width: 580px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+
+    .hero-sub strong { color: var(--txt); font-weight: 600; }
+
+    .hero-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 48px;
+    }
+
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--amber);
+      color: #000;
+      font-family: var(--f-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 18px 36px;
+      border-radius: var(--r);
+      transition: .2s;
+      box-shadow: 0 4px 28px rgba(245,158,11,.35);
+      width: 100%;
+      max-width: 390px;
+    }
+    .btn-main:hover {
+      background: var(--amber-l);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 36px rgba(245,158,11,.48);
+    }
+
+    .hero-price {
+      font-size: .9rem;
+      color: var(--txt2);
+    }
+    .hero-price s { color: var(--muted); }
+    .hero-price strong { color: var(--amber); font-size: 1.05rem; }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+
+    /* =============================================
+       SECTION BG ALTERNANCE
+    ============================================= */
+    .sec-alt { background: var(--bg2); }
+
+    .sec { padding: 88px 0; }
+
+    /* =============================================
+       DOR SECTION
+    ============================================= */
+    .dor-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .dor-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      transition: border-color .25s;
+    }
+    .dor-item:hover { border-color: rgba(248,113,113,.28); }
+
+    .dor-x {
+      color: var(--red);
+      font-weight: 800;
+      font-size: .95rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .dor-text {
+      font-size: .93rem;
+      color: var(--txt2);
+    }
+    .dor-text strong { color: var(--txt); font-weight: 500; }
+
+    /* =============================================
+       O QUE É
+    ============================================= */
+    .o-que-e-card {
+      background: var(--card);
+      border: 1px solid rgba(56,189,248,.18);
+      border-radius: var(--r-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .o-que-e-card::after {
+      content:'';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--amber), var(--sky));
+    }
+
+    .pdf-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(56,189,248,.1);
+      border: 1px solid rgba(56,189,248,.22);
+      color: var(--sky);
+      font-size: .73rem;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 6px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .o-que-e-card h3 {
+      font-family: var(--f-head);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--txt);
+      margin-bottom: 12px;
+    }
+
+    .o-que-e-card .desc {
+      color: var(--txt2);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      font-size: .95rem;
+    }
+
+    .diff-list { display: grid; gap: 12px; }
+
+    .diff-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .9rem;
+      color: var(--txt2);
+    }
+    .diff-item::before {
+      content: '→';
+      color: var(--amber);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .diff-item strong { color: var(--txt); font-weight: 600; }
+
+    /* =============================================
+       COAT METHOD
+    ============================================= */
+    .coat-terminal {
+      background: #080a13;
+      border: 1px solid rgba(56,189,248,.14);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 0 70px rgba(56,189,248,.05);
+    }
+
+    .term-bar {
+      background: #0d0f1c;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .dot { width:10px; height:10px; border-radius:50%; }
+    .dot-r { background:#ff5f57; }
+    .dot-y { background:#febc2e; }
+    .dot-g { background:#28c840; }
+    .term-label {
+      margin-left: 10px;
+      font-size: .75rem;
+      color: var(--muted);
+      font-family: 'Courier New', monospace;
+      letter-spacing: .5px;
+    }
+
+    .coat-steps {
+      padding: 36px;
+      display: grid;
+      gap: 28px;
+    }
+
+    .coat-step { display: flex; gap: 18px; align-items: flex-start; }
+
+    .coat-letter {
+      font-family: var(--f-head);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--amber);
+      line-height: 1;
+      width: 44px;
+      flex-shrink: 0;
+    }
+
+    .coat-body h4 {
+      font-family: var(--f-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--txt);
+      margin-bottom: 4px;
+    }
+    .coat-body p { font-size: .87rem; color: var(--txt2); line-height: 1.55; }
+
+    .coat-divider { height:1px; background: rgba(255,255,255,.04); }
+
+    /* =============================================
+       FEATURED MODULES
+    ============================================= */
+    .modules-grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media(min-width:600px){ .modules-grid { grid-template-columns: repeat(3,1fr); } }
+
+    .mod-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 28px 22px;
+      transition: .3s;
+    }
+    .mod-card:hover {
+      border-color: rgba(245,158,11,.32);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(245,158,11,.1);
+    }
+    .mod-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .mod-card h3 { font-family:var(--f-head); font-size:.98rem; font-weight:700; color:var(--txt); margin-bottom:8px; }
+    .mod-card p { font-size:.84rem; color:var(--txt2); line-height:1.6; }
+
+    /* =============================================
+       FULL CONTENT
+    ============================================= */
+    .content-grid {
+      display: grid;
+      gap: 10px;
+    }
+    @media(min-width:500px){ .content-grid { grid-template-columns: 1fr 1fr; } }
+
+    .ci {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .9rem;
+      color: var(--txt2);
+    }
+    .ci .ck { color: var(--green); font-weight:700; flex-shrink:0; margin-top:1px; }
+
+    /* =============================================
+       NICHOS
+    ============================================= */
+    .nichos-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .nicho {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--txt2);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: .84rem;
+      transition: .2s;
+    }
+    .nicho:hover { border-color: var(--amber); color: var(--amber); background: rgba(245,158,11,.05); }
+
+    /* =============================================
+       DESAFIO 7 DIAS
+    ============================================= */
+    .desafio-grid { display: grid; gap: 6px; }
+
+    .desafio-day {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      transition: .2s;
+    }
+    .desafio-day:hover { border-color: rgba(245,158,11,.22); }
+
+    .day-tag {
+      font-family: var(--f-head);
+      font-size: .72rem;
+      font-weight: 800;
+      color: var(--amber);
+      background: rgba(245,158,11,.1);
+      border: 1px solid rgba(245,158,11,.18);
+      padding: 3px 9px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      letter-spacing: .5px;
+      white-space: nowrap;
+      margin-top: 1px;
+    }
+
+    .day-body h4 { font-size:.9rem; font-weight:600; color:var(--txt); margin-bottom:3px; }
+    .day-body p  { font-size:.82rem; color:var(--muted); }
+
+    /* =============================================
+       PARA QUEM
+    ============================================= */
+    .para-grid {
+      display: grid;
+      gap: 18px;
+    }
+    @media(min-width:540px){ .para-grid { grid-template-columns:1fr 1fr; } }
+
+    .para-card {
+      background: var(--card);
+      border-radius: var(--r-lg);
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+    }
+    .para-card.sim { border-color: rgba(74,222,128,.14); }
+    .para-card.nao { border-color: rgba(248,113,113,.1); }
+
+    .para-card h4 {
+      font-family: var(--f-head);
+      font-size: .92rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .para-card.sim h4 { color: var(--green); }
+    .para-card.nao h4 { color: var(--red); }
+
+    .pq-list { display: grid; gap: 10px; }
+    .pq-item { display:flex; align-items:flex-start; gap:9px; font-size:.88rem; color:var(--txt2); }
+    .pq-icon { flex-shrink:0; }
+
+    /* =============================================
+       DEPOIMENTOS (PLACEHOLDERS)
+    ============================================= */
+    /* ⚠️  SUBSTITUIR COM DEPOIMENTOS REAIS DE BETA TESTERS */
+    .dep-grid {
+      display: grid;
+      gap: 14px;
+    }
+    @media(min-width:560px){ .dep-grid { grid-template-columns:1fr 1fr; } }
+
+    .dep-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      position: relative;
+    }
+    .dep-card::before {
+      content: '"';
+      position: absolute;
+      top: 12px; right: 20px;
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      color: rgba(245,158,11,.12);
+      line-height: 1;
+    }
+    .dep-stars { color: var(--amber); font-size: .85rem; margin-bottom: 10px; }
+    .dep-text { font-size: .88rem; color: var(--txt2); line-height: 1.65; margin-bottom: 16px; }
+    .dep-author { display:flex; align-items:center; gap:10px; }
+    .dep-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--amber-d), var(--sky));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: .85rem; color: #000; flex-shrink:0;
+    }
+    .dep-name { font-size: .82rem; font-weight: 600; color: var(--txt); }
+    .dep-role { font-size: .76rem; color: var(--muted); }
+
+    /* =============================================
+       OFFER
+    ============================================= */
+    .offer-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .offer-card {
+      background: var(--card);
+      border: 1px solid rgba(245,158,11,.25);
+      border-radius: var(--r-lg);
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 0 80px rgba(245,158,11,.07);
+    }
+
+    .offer-card::before {
+      content:'';
+      position:absolute;
+      top:0; left:0; right:0;
+      height:3px;
+      background: linear-gradient(90deg, var(--amber-d), var(--amber-l));
+      border-radius: var(--r-lg) var(--r-lg) 0 0;
+    }
+
+    .offer-pill {
+      display: inline-block;
+      background: var(--amber);
+      color: #000;
+      font-family: var(--f-head);
+      font-size: .72rem;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 100px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .offer-card h2 {
+      font-family: var(--f-head);
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--txt);
+      margin-bottom: 28px;
+    }
+
+    .offer-old { font-size:.95rem; color:var(--muted); text-decoration:line-through; margin-bottom:4px; }
+
+    .offer-price {
+      font-family: var(--f-head);
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--amber);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .offer-price sup { font-size:1.6rem; vertical-align: top; margin-top:.6rem; }
+
+    .offer-parcel { font-size: .83rem; color: var(--muted); margin-bottom: 32px; }
+
+    .offer-list { display:grid; gap:9px; text-align:left; margin-bottom:32px; }
+    .offer-li { display:flex; align-items:flex-start; gap:9px; font-size:.88rem; color:var(--txt2); }
+    .offer-li .ck { color:var(--green); flex-shrink:0; }
+
+    .btn-offer {
+      display: block;
+      background: var(--amber);
+      color: #000;
+      font-family: var(--f-head);
+      font-weight: 800;
+      font-size: 1.08rem;
+      padding: 20px 28px;
+      border-radius: var(--r);
+      transition: .2s;
+      box-shadow: 0 4px 28px rgba(245,158,11,.4);
+      margin-bottom: 14px;
+    }
+    .btn-offer:hover {
+      background: var(--amber-l);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 44px rgba(245,158,11,.52);
+    }
+
+    .offer-safe {
+      display: flex; align-items:center; justify-content:center;
+      gap: 6px; font-size:.78rem; color:var(--muted);
+    }
+
+    /* =============================================
+       GARANTIA
+    ============================================= */
+    .garantia-card {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid rgba(74,222,128,.15);
+      border-radius: var(--r-lg);
+      padding: 36px;
+    }
+    @media(max-width:480px){ .garantia-card { flex-direction:column; gap:16px; } }
+
+    .garantia-icon { font-size:3rem; flex-shrink:0; }
+    .garantia-card h3 {
+      font-family: var(--f-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--txt);
+      margin-bottom: 8px;
+    }
+    .garantia-card p { font-size:.9rem; color:var(--txt2); line-height:1.7; }
+
+    /* =============================================
+       FAQ
+    ============================================= */
+    .faq-list { display:grid; gap:8px; }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+
+    .faq-btn {
+      width:100%;
+      background:none;
+      border:none;
+      padding:20px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      cursor:pointer;
+      text-align:left;
+      color:var(--txt);
+      font-family:var(--f-body);
+      font-size:.93rem;
+      font-weight:500;
+      transition:color .2s;
+    }
+    .faq-btn:hover { color:var(--amber); }
+
+    .faq-chevron { color:var(--amber); transition:transform .3s; flex-shrink:0; }
+    .faq-item.open .faq-chevron { transform:rotate(180deg); }
+
+    .faq-body { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    .faq-item.open .faq-body { max-height:220px; }
+
+    .faq-body-inner {
+      padding:0 24px 20px;
+      font-size:.89rem;
+      color:var(--txt2);
+      line-height:1.72;
+      border-top:1px solid var(--border);
+      padding-top:16px;
+    }
+
+    /* =============================================
+       FINAL CTA SECTION
+    ============================================= */
+    .final-sec {
+      padding:100px 20px;
+      text-align:center;
+      background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+    }
+    .final-sec h2 {
+      font-family:var(--f-head);
+      font-size:clamp(1.6rem,5vw,2.3rem);
+      font-weight:800;
+      color:var(--txt);
+      max-width:600px;
+      margin:0 auto 14px;
+    }
+    .final-sec p { color:var(--txt2); margin-bottom:40px; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    .footer {
+      border-top:1px solid var(--border);
+      padding:32px 20px;
+      text-align:center;
+    }
+    .footer p { font-size:.8rem; color:var(--muted); max-width:620px; margin:0 auto; }
+    .footer-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:12px; }
+    .footer-links a { font-size:.78rem; color:var(--muted); }
+    .footer-links a:hover { color:var(--txt2); }
+
+    /* =============================================
+       FLOATING CTA
+    ============================================= */
+    .float-cta {
+      position:fixed;
+      bottom:24px;
+      left:50%;
+      transform:translateX(-50%) translateY(100px);
+      background:var(--amber);
+      color:#000;
+      font-family:var(--f-head);
+      font-weight:800;
+      font-size:.88rem;
+      padding:13px 28px;
+      border-radius:100px;
+      box-shadow:0 4px 24px rgba(245,158,11,.5);
+      z-index:990;
+      transition:transform .4s cubic-bezier(.34,1.56,.64,1), box-shadow .2s;
+      white-space:nowrap;
+    }
+    .float-cta.show { transform:translateX(-50%) translateY(0); }
+    .float-cta:hover { box-shadow:0 8px 40px rgba(245,158,11,.6); }
+
+    /* =============================================
+       WHATSAPP FLOAT
+    ============================================= */
+    .wa-btn {
+      position:fixed;
+      bottom:88px;
+      right:20px;
+      background:#25d366;
+      color:#fff;
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.45rem;
+      box-shadow:0 4px 18px rgba(37,211,102,.4);
+      z-index:991;
+      transition:.2s;
+    }
+    .wa-btn:hover { transform:scale(1.1); }
+
+    /* =============================================
+       MISC
+    ============================================= */
+    .sep {
+      height:1px;
+      background:linear-gradient(90deg,transparent,var(--border),transparent);
+      max-width:800px;
+      margin:0 auto;
+    }
+
+    @media(max-width:480px){
+      .hero { padding:64px 20px 80px; }
+      .offer-card { padding:36px 22px; }
+      .o-que-e-card { padding:28px 22px; }
+      .coat-steps { padding:24px 20px; }
+      .garantia-card { padding:28px 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+       URGENCY BAR
+  ============================================= -->
+  <div id="urgency-bar">
+    ⏳ Oferta de lançamento encerra em
+    <span class="timer-pill" id="countdown">--:--:--</span>
+    &nbsp;·&nbsp; Preço sobe para R$97
+  </div>
+
+  <!-- ============================================
+       NAV
+  ============================================= -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">IA <span>que Vende</span></a>
+    <!-- 🔗 SUBSTITUIR PELO SEU LINK DO KIRVANO -->
+    <a href="SEU_LINK_KIRVANO_AQUI" class="nav-btn">Quero o guia</a>
+  </nav>
+
+  <!-- ============================================
+       HERO
+  ============================================= -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">🚀 Guia de Lançamento · Acesso Imediato</div>
+      <h1>
+        Não é só o prompt.
+        <span class="line2 grad-text">É a estratégia por trás de cada um.</span>
+      </h1>
+      <p class="hero-sub">
+        Um <strong>guia digital em PDF</strong> com 29 prompts prontos e o método completo de como, quando e por que usar cada um — para criar posts, artes, anúncios e fechar mais pelo WhatsApp,
+        <strong>mesmo sem experiência com IA.</strong>
+      </p>
+      <div class="hero-cta-wrap">
+        <!-- 🔗 SUBSTITUIR PELO SEU LINK DO KIRVANO -->
+        <a href="SEU_LINK_KIRVANO_AQUI" class="btn-main">
+          Quero o guia por R$67 →
+        </a>
+        <p class="hero-price">
+          <s>De R$197</s> &nbsp;por apenas <strong>R$67</strong> no lançamento
+        </p>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item">📄 Guia em PDF</span>
+        <span class="trust-item">⚡ Acesso imediato</span>
+        <span class="trust-item">🛡️ Garantia de 7 dias</span>
+        <span class="trust-item">🔒 Pagamento seguro</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ============================================
+       DOR
+  ============================================= -->
+  <section class="sec sec-alt">
+    <div class="container reveal">
+      <p class="section-label">Você se identifica?</p>
+      <h2 class="section-title">Você sabe que precisa aparecer mais —<br>mas <em class="grad-text">trava na hora de criar.</em></h2>
+      <p class="section-sub">Todo pequeno negócio precisa postar, responder clientes, criar ofertas e vender pelo WhatsApp. O problema é que quase ninguém tem agência, tempo ou habilidade para fazer tudo isso bem.</p>
+      <div class="dor-grid">
+        <div class="dor-item reveal">
+          <span class="dor-x">✕</span>
+          <span class="dor-text"><strong>Fica sem ideia do que postar</strong> e acaba não postando nada — ou repete sempre o mesmo.</span>
+        </div>
+        <div class="dor-item reveal">
+          <span class="dor-x">✕</span>
+          <span class="dor-text"><strong>Perde horas no Canva</strong> tentando fazer uma arte que fica mais ou menos — e sabe disso.</span>
+        </div>
+        <div class="dor-item reveal">
+          <span class="dor-x">✕</span>
+          <span class="dor-text"><strong>Manda mensagem no WhatsApp</strong> e o cliente lê, responde "obrigado" e some sem comprar.</span>
+        </div>
+        <div class="dor-item reveal">
+          <span class="dor-x">✕</span>
+          <span class="dor-text"><strong>Quer anunciar no Instagram</strong> mas não sabe criar criativo nem escrever copy que converte.</span>
+        </div>
+        <div class="dor-item reveal">
+          <span class="dor-x">✕</span>
+          <span class="dor-text"><strong>Já tentou usar IA</strong> mas recebeu resposta genérica que não serve pra nada no seu negócio.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       O QUE É
+  ============================================= -->
+  <section class="sec">
+    <div class="container reveal">
+      <p class="section-label">O produto</p>
+      <h2 class="section-title">O que é o IA que Vende?</h2>
+      <div class="o-que-e-card">
+        <div class="pdf-badge">📄 Guia Digital · PDF</div>
+        <h3>É um guia em PDF. Mas não é qualquer PDF de prompts.</h3>
+        <p class="desc">
+          Dentro você encontra 29 prompts prontos para usar no ChatGPT ou qualquer IA — mas cada prompt vem com o contexto certo, o objetivo claro e a estratégia de uso para que a IA entenda exatamente o que você precisa e entregue <strong>resultado real, não resposta genérica.</strong>
+        </p>
+        <div class="diff-list">
+          <div class="diff-item"><strong>Contexto de negócio:</strong> como apresentar sua empresa para a IA antes de pedir qualquer coisa</div>
+          <div class="diff-item"><strong>Objetivo por uso:</strong> o que pedir de forma que a IA entenda e entregue do jeito certo</div>
+          <div class="diff-item"><strong>Estratégia por nicho:</strong> o que funciona para salão é diferente de pet shop — temos os dois</div>
+          <div class="diff-item"><strong>Análise de conversas reais:</strong> cole sua conversa do WhatsApp e a IA aponta onde você perdeu a venda</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ============================================
+       MÉTODO COAT
+  ============================================= -->
+  <section class="sec sec-alt">
+    <div class="container reveal">
+      <p class="section-label">O método</p>
+      <h2 class="section-title">O Método C.O.A.T.</h2>
+      <p class="section-sub">É a estrutura por trás de cada prompt do guia. Quando você segue esse método, a IA deixa de dar respostas genéricas e começa a trabalhar de verdade para o seu negócio.</p>
+      <div class="coat-terminal">
+        <div class="term-bar">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="term-label">metodo-coat.md — IA que Vende</span>
+        </div>
+        <div class="coat-steps">
+          <div class="coat-step">
+            <div class="coat-letter">C</div>
+            <div class="coat-body">
+              <h4>Contexto — Apresente seu negócio para a IA</h4>
+              <p>Antes de pedir qualquer coisa, você ensina a IA quem você é: seu nicho, seu público, seu tom. Um prompt sem contexto gera resposta genérica. Com contexto, a IA trabalha como se fosse seu sócio.</p>
+            </div>
+          </div>
+          <div class="coat-divider"></div>
+          <div class="coat-step">
+            <div class="coat-letter">O</div>
+            <div class="coat-body">
+              <h4>Objetivo — Diga exatamente o que você quer criar</h4>
+              <p>Post de engajamento? Oferta de sexta? Script de WhatsApp para cliente que pediu preço? O objetivo muda tudo. O guia mostra como definir o objetivo certo para cada situação.</p>
+            </div>
+          </div>
+          <div class="coat-divider"></div>
+          <div class="coat-step">
+            <div class="coat-letter">A</div>
+            <div class="coat-body">
+              <h4>Ação — Execute com o prompt pronto</h4>
+              <p>Aqui entram os 29 prompts do guia. Você copia, cola, adapta o nome do seu negócio e manda para a IA. Nada de tentar adivinhar o que escrever — está tudo pronto.</p>
+            </div>
+          </div>
+          <div class="coat-divider"></div>
+          <div class="coat-step">
+            <div class="coat-letter">T</div>
+            <div class="coat-body">
+              <h4>Tom — Ajuste para a sua voz</h4>
+              <p>O resultado da IA sai bom, mas ainda precisa da sua cara. O guia ensina a calibrar o tom para que o conteúdo pareça que você escreveu — não um robô.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MÓDULOS DESTAQUE
+  ============================================= -->
+  <section class="sec">
+    <div class="container-wide reveal">
+      <p class="section-label">Destaques</p>
+      <h2 class="section-title">Os 3 módulos que mais geram resultado</h2>
+      <p class="section-sub">Cada módulo resolve um gargalo específico do marketing do pequeno negócio. Juntos, cobrem os três maiores problemas de quem tenta crescer sem agência.</p>
+      <div class="modules-grid">
+        <div class="mod-card reveal">
+          <span class="mod-icon">🎨</span>
+          <h3>Canva Nunca Mais</h3>
+          <p>Aprenda a criar posts, stories e criativos de anúncio usando IA. Com o prompt certo, você descreve o que precisa e a IA gera — sem arrastar elemento nenhum.</p>
+        </div>
+        <div class="mod-card reveal">
+          <span class="mod-icon">📱</span>
+          <h3>WhatsApp que Vende</h3>
+          <p>Cole sua conversa do ZAP e a IA analisa onde você perdeu a venda. Scripts prontos para "quanto custa?", follow-up, objeções e fechamento.</p>
+        </div>
+        <div class="mod-card reveal">
+          <span class="mod-icon">🔥</span>
+          <h3>5 Prompts Indispensáveis</h3>
+          <p>Diagnóstico do negócio, criador de oferta irresistível, calendário do mês, criativo de anúncio e script de venda. Os cinco que mudam o jogo desde o primeiro uso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ============================================
+       TUDO QUE VEM DENTRO
+  ============================================= -->
+  <section class="sec sec-alt">
+    <div class="container reveal">
+      <p class="section-label">O que você recebe</p>
+      <h2 class="section-title">Tudo que vem dentro do guia</h2>
+      <p class="section-sub">13 módulos práticos, organizados para você aplicar do zero. Sem enrolação, sem teoria desnecessária — cada item serve para resolver um problema real do dia a dia.</p>
+      <div class="content-grid">
+        <div class="ci"><span class="ck">✓</span><span>29 Mega-Prompts prontos para copiar</span></div>
+        <div class="ci"><span class="ck">✓</span><span>13 módulos práticos</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Método C.O.A.T. completo</span></div>
+        <div class="ci"><span class="ck">✓</span><span>5 Prompts Indispensáveis</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Criador de Oferta Irresistível</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Módulo Canva Nunca Mais</span></div>
+        <div class="ci"><span class="ck">✓</span><span>WhatsApp que Vende + análise</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Meta Ads para WhatsApp</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Google Meu Negócio com IA</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Biblioteca por nicho — 15 nichos</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Banco de Hooks e CTAs</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Calendário editorial mensal</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Planilha de acompanhamento de leads</span></div>
+        <div class="ci"><span class="ck">✓</span><span>Desafio de 7 Dias com resultado</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       NICHOS
+  ============================================= -->
+  <section class="sec">
+    <div class="container reveal">
+      <p class="section-label">Feito para o seu negócio</p>
+      <h2 class="section-title">15 nichos de pequenos negócios locais</h2>
+      <p class="section-sub">O guia tem uma biblioteca de prompts segmentada por nicho. Porque o que funciona para um salão de beleza é diferente do que funciona para uma assistência técnica.</p>
+      <div class="nichos-wrap">
+        <span class="nicho">💅 Estética</span>
+        <span class="nicho">✂️ Salão & Barbearia</span>
+        <span class="nicho">🍔 Restaurante & Delivery</span>
+        <span class="nicho">🐾 Pet Shop</span>
+        <span class="nicho">💪 Academia</span>
+        <span class="nicho">👗 Moda & Roupas</span>
+        <span class="nicho">📦 Importados</span>
+        <span class="nicho">🛒 Mercearia & Padaria</span>
+        <span class="nicho">💊 Farmácia</span>
+        <span class="nicho">🔧 Assistência Técnica</span>
+        <span class="nicho">👓 Ótica</span>
+        <span class="nicho">📎 Papelaria</span>
+        <span class="nicho">🏥 Clínica</span>
+        <span class="nicho">🏠 Serviços Locais</span>
+        <span class="nicho">+ seu nicho</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ============================================
+       DESAFIO 7 DIAS
+  ============================================= -->
+  <section class="sec sec-alt">
+    <div class="container reveal">
+      <p class="section-label">Do zero ao resultado</p>
+      <h2 class="section-title">Desafio de 7 Dias</h2>
+      <p class="section-sub">O guia não é material para "ler depois". O Desafio de 7 Dias garante que você aplica uma coisa por dia — e no 7º dia você tem resultado real para mostrar.</p>
+      <div class="desafio-grid">
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 1</span>
+          <div class="day-body">
+            <h4>Diagnóstico completo do seu negócio</h4>
+            <p>A IA mapeia seus pontos fortes, fracos e oportunidades em 10 minutos.</p>
+          </div>
+        </div>
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 2</span>
+          <div class="day-body">
+            <h4>Sua oferta irresistível criada com IA</h4>
+            <p>Monte uma oferta com gatilhos que faz o cliente querer comprar na hora.</p>
+          </div>
+        </div>
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 3</span>
+          <div class="day-body">
+            <h4>Calendário de conteúdo do mês inteiro</h4>
+            <p>30 ideias de post geradas em 10 minutos, já formatadas para o seu nicho.</p>
+          </div>
+        </div>
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 4</span>
+          <div class="day-body">
+            <h4>Seu primeiro criativo de anúncio</h4>
+            <p>Headline + copy + arte gerada com IA. Pronto para subir no Instagram.</p>
+          </div>
+        </div>
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 5</span>
+          <div class="day-body">
+            <h4>Script de WhatsApp que fecha</h4>
+            <p>Resposta para "quanto custa?", objeções e follow-up sem parecer insistente.</p>
+          </div>
+        </div>
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 6</span>
+          <div class="day-body">
+            <h4>Análise da sua conversa real do WhatsApp</h4>
+            <p>Cole uma conversa onde perdeu venda. A IA aponta onde errou e o que fazer.</p>
+          </div>
+        </div>
+        <div class="desafio-day reveal">
+          <span class="day-tag">DIA 7</span>
+          <div class="day-body">
+            <h4>Resultado publicado e sistema rodando</h4>
+            <p>Post no ar, script pronto, oferta definida. Seu negócio com IA funcionando.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DEPOIMENTOS ⚠️ SUBSTITUIR COM REAIS
+  ============================================= -->
+  <section class="sec">
+    <div class="container reveal">
+      <p class="section-label">Quem já está usando</p>
+      <h2 class="section-title">O que dizem os primeiros usuários</h2>
+      <!-- ⚠️  SUBSTITUIR PELOS DEPOIMENTOS REAIS DOS SEUS BETA TESTERS -->
+      <div class="dep-grid">
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"Nunca pensei que ia conseguir criar post profissional sozinha. Usei o prompt do Canva Nunca Mais e em 5 minutos tinha 3 artes prontas pro Instagram do meu salão."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">M</div>
+            <div>
+              <div class="dep-name">Márcia S.</div>
+              <div class="dep-role">Salão de Beleza · Fortaleza/CE</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"O módulo de WhatsApp mudou meu atendimento completamente. Antes eu ficava sem saber o que responder. Agora tenho script para cada situação."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">R</div>
+            <div>
+              <div class="dep-name">Roberto A.</div>
+              <div class="dep-role">Assistência Técnica · Recife/PE</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"Já tentei usar ChatGPT antes e não dava certo, as respostas eram genéricas. Com o método do guia, a IA entende meu negócio e entrega o que eu precisava."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">K</div>
+            <div>
+              <div class="dep-name">Karla M.</div>
+              <div class="dep-role">Pet Shop · Salvador/BA</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card reveal">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"Fiz o calendário de conteúdo do mês inteiro em 15 minutos. Antes eu ficava uma hora pensando o que postar. Vale cada centavo dos R$67."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">F</div>
+            <div>
+              <div class="dep-name">Felipe N.</div>
+              <div class="dep-role">Delivery de Comida · Maceió/AL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ============================================
+       PARA QUEM
+  ============================================= -->
+  <section class="sec sec-alt">
+    <div class="container reveal">
+      <p class="section-label">Fit</p>
+      <h2 class="section-title">Para quem é — e para quem não é</h2>
+      <div class="para-grid">
+        <div class="para-card sim reveal">
+          <h4>✅ É para você se…</h4>
+          <div class="pq-list">
+            <div class="pq-item"><span class="pq-icon">✓</span><span>Você tem um pequeno negócio local</span></div>
+            <div class="pq-item"><span class="pq-icon">✓</span><span>Vende pelo WhatsApp ou quer vender mais</span></div>
+            <div class="pq-item"><span class="pq-icon">✓</span><span>Faz o marketing sozinho, sem agência</span></div>
+            <div class="pq-item"><span class="pq-icon">✓</span><span>Quer postar e anunciar, mas não sabe criar</span></div>
+            <div class="pq-item"><span class="pq-icon">✓</span><span>Já tentou IA mas achou complicado demais</span></div>
+            <div class="pq-item"><span class="pq-icon">✓</span><span>Quer resultado prático, não teoria</span></div>
+          </div>
+        </div>
+        <div class="para-card nao reveal">
+          <h4>✕ Não é para você se…</h4>
+          <div class="pq-list">
+            <div class="pq-item"><span class="pq-icon">✕</span><span>Você procura fórmula mágica sem esforço</span></div>
+            <div class="pq-item"><span class="pq-icon">✕</span><span>Acha que IA vende sozinha, sem você aplicar</span></div>
+            <div class="pq-item"><span class="pq-icon">✕</span><span>Não tem produto, serviço ou negócio real</span></div>
+            <div class="pq-item"><span class="pq-icon">✕</span><span>Não está disposto a dedicar 15 min por dia</span></div>
+            <div class="pq-item"><span class="pq-icon">✕</span><span>Espera resultado sem oferta e atendimento</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       OFERTA
+  ============================================= -->
+  <section class="sec" id="oferta">
+    <div class="offer-wrap reveal">
+      <div class="offer-card">
+        <div class="offer-pill">🚀 Lançamento</div>
+        <h2>Comece hoje a usar IA no seu negócio</h2>
+        <p class="offer-old">De R$197,00</p>
+        <div class="offer-price"><sup>R$</sup>67</div>
+        <p class="offer-parcel">à vista · acesso imediato · pagamento seguro</p>
+        <div class="offer-list">
+          <div class="offer-li"><span class="ck">✓</span><span>Guia completo em PDF — 13 módulos</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>29 Mega-Prompts prontos para copiar</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>Método C.O.A.T. completo</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>Módulo Canva Nunca Mais</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>WhatsApp que Vende + análise real</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>Biblioteca por nicho — 15 nichos</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>Banco de Hooks e CTAs</span></div>
+          <div class="offer-li"><span class="ck">✓</span><span>Planilha de leads + Desafio de 7 Dias</span></div>
+        </div>
+        <!-- 🔗 SUBSTITUIR PELO SEU LINK DO KIRVANO -->
+        <a href="SEU_LINK_KIRVANO_AQUI" class="btn-offer">
+          Quero acessar agora por R$67 →
+        </a>
+        <div class="offer-safe">🔒 Pagamento seguro · Kirvano · Pix ou Cartão</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ============================================
+       GARANTIA
+  ============================================= -->
+  <section class="sec sec-alt">
+    <div class="container reveal">
+      <div class="garantia-card">
+        <div class="garantia-icon">🛡️</div>
+        <div>
+          <h3>Garantia total de 7 dias</h3>
+          <p>Você tem 7 dias para acessar o material, testar os prompts e ver se faz sentido para o seu negócio. Se não gostar por qualquer motivo, é só solicitar o reembolso dentro do prazo — sem pergunta, sem burocracia, 100% devolvido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ
+  ============================================= -->
+  <section class="sec" id="faq">
+    <div class="container reveal">
+      <p class="section-label">Dúvidas frequentes</p>
+      <h2 class="section-title">Perguntas e respostas</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Preciso pagar o ChatGPT para usar o guia?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Não precisa começa pagando. A versão gratuita do ChatGPT funciona para a maioria dos prompts do guia. A versão paga só vale a pena se você for criar muitas artes e criativos por semana — e o guia explica quando isso faz sentido.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>É um curso ou um PDF?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">É um guia digital em PDF. A ideia é você copiar os prompts, adaptar para o seu negócio e usar direto. Não é um curso longo com horas de vídeo — é material de execução rápida para quem quer resultado, não teoria.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Serve para o meu tipo de negócio?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">O guia foi feito para pequenos negócios locais e inclui uma biblioteca com 15 nichos: estética, salão, barbearia, restaurante, delivery, pet shop, academia, moda, importados, mercearia, padaria, farmácia, assistência técnica, ótica e papelaria. Se seu negócio não está na lista, o método C.O.A.T. funciona para adaptar qualquer prompt.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Quando recebo o acesso?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Acesso imediato. Assim que o pagamento for confirmado, você recebe o link do guia no e-mail — pode acessar pelo celular, computador ou tablet.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>Preciso saber de marketing para usar?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Não. O guia foi feito exatamente para quem não tem formação em marketing. O método C.O.A.T. e os prompts prontos guiam você passo a passo — sem precisar saber nada de copy, design ou tecnologia.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span>E se eu não gostar?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Você tem 7 dias de garantia total. Se por qualquer motivo o guia não fizer sentido para você, basta solicitar o reembolso dentro do prazo. Sem pergunta, sem burocracia — 100% devolvido via plataforma Kirvano.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA
+  ============================================= -->
+  <div class="final-sec reveal">
+    <div class="container">
+      <p class="section-label">Última chamada</p>
+      <h2>Seu negócio está esperando.<br><span class="grad-text">A IA está pronta.</span></h2>
+      <p>Basta você dar o primeiro passo. Acesso imediato, preço de lançamento, garantia total.</p>
+      <!-- 🔗 SUBSTITUIR PELO SEU LINK DO KIRVANO -->
+      <a href="SEU_LINK_KIRVANO_AQUI" class="btn-main" style="margin:0 auto; max-width:400px;">
+        Quero o IA que Vende por R$67 →
+      </a>
+      <p style="margin-top:16px; font-size:.82rem; color:var(--muted);">🛡️ Garantia de 7 dias · ⚡ Acesso imediato · 🔒 Pagamento seguro</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+    <p>© 2026 Ale IA Negócios · aleianegocios.com.br · Todos os direitos reservados.<br>Este produto é um guia digital em PDF. Os resultados dependem da aplicação individual de cada usuário.</p>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <!-- 🔗 SUBSTITUIR PELO SEU NÚMERO DO WHATSAPP -->
+      <a href="https://wa.me/55SEUNUMERO">Suporte via WhatsApp</a>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <!-- 🔗 SUBSTITUIR PELO SEU LINK DO KIRVANO -->
+  <a href="SEU_LINK_KIRVANO_AQUI" class="float-cta" id="floatCta">
+    Quero o guia por R$67 →
+  </a>
+
+  <!-- WHATSAPP BUTTON -->
+  <!-- 🔗 SUBSTITUIR PELO SEU NÚMERO DO WHATSAPP (formato: 5585999999999) -->
+  <a href="https://wa.me/55SEUNUMERO?text=Oi!+Tenho+uma+d%C3%BAvida+sobre+o+IA+que+Vende."
+     class="wa-btn" target="_blank" title="Tire sua dúvida no WhatsApp">💬</a>
+
+
+  <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    /* ---------- COUNTDOWN ---------- */
+    function updateCountdown() {
+      const now   = new Date();
+      const end   = new Date();
+      end.setHours(23, 59, 59, 0);
+      const diff  = end - now;
+      if (diff <= 0) { document.getElementById('countdown').textContent = '00:00:00'; return; }
+      const h = String(Math.floor(diff / 3600000)).padStart(2,'0');
+      const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+      const s = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+      document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ---------- SCROLL REVEAL ---------- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ---------- FLOATING CTA ---------- */
+    const floatCta  = document.getElementById('floatCta');
+    const heroEl    = document.querySelector('.hero');
+    const heroObs   = new IntersectionObserver((entries) => {
+      entries.forEach(e => { floatCta.classList.toggle('show', !e.isIntersecting); });
+    }, { threshold: 0 });
+    heroObs.observe(heroEl);
+
+    /* ---------- FAQ ACCORDION ---------- */
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item  = btn.parentElement;
+        const open  = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+
+    /* ---------- SMOOTH NAV TOP OFFSET ---------- */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = 100;
+        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
