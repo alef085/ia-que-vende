@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviços de Marketing — Ale IA Negócios</title>
+<meta name="description" content="Campanhas de Meta Ads e Google Ads para pequenos negócios locais. A Ale IA Negócios gera conversas qualificadas pelo WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080809;--surface:#0F0F11;--surface2:#161618;--border:#242428;
+  --amber:#F5A623;--amber-dim:rgba(245,166,35,0.10);
+  --teal:#00D4AA;--teal-dim:rgba(0,212,170,0.10);
+  --red:#FF4757;--text:#EEEAE4;--muted:#6E6E78;--subtle:#3A3A42;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+@media(max-width:900px){section{padding:64px 0}}
+
+/* TAGS */
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);background:var(--amber-dim);border:1px solid rgba(245,166,35,0.20);padding:5px 12px;border-radius:3px;margin-bottom:20px}
+.tag.teal{color:var(--teal);background:var(--teal-dim);border-color:rgba(0,212,170,0.20)}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--amber);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;padding:16px 32px;border-radius:3px;text-decoration:none;transition:all 0.25s;border:none;cursor:pointer}
+.btn-primary:hover{background:#FFB740;transform:translateY(-2px);box-shadow:0 12px 40px rgba(245,166,35,0.30)}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;padding:13px 24px;border-radius:3px;text-decoration:none;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe59;transform:translateY(-1px)}
+.btn-wa.lg{font-size:15px;padding:16px 32px}
+.btn-wa.full{width:100%;justify-content:center}
+
+/* TYPOGRAPHY */
+h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-0.03em;line-height:1.1}
+h1{font-size:clamp(32px,5vw,58px)}
+h2{font-size:clamp(26px,4vw,44px)}
+h3{font-size:clamp(18px,2.5vw,26px);font-weight:700}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(8,8,9,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:60px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.03em;white-space:nowrap}
+.nav-menu{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-menu a{font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;color:var(--muted);transition:color 0.2s}
+.nav-menu a:hover{color:var(--text)}
+.nav-menu a.active{color:var(--amber);position:relative}
+.nav-menu a.active::after{content:'';position:absolute;bottom:-18px;left:0;right:0;height:2px;background:var(--amber);border-radius:1px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(8,8,9,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:99;padding:20px 24px;flex-direction:column;gap:16px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Outfit',sans-serif;font-size:16px;font-weight:500;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--text)}
+.nav-cta-mobile{display:none}
+@media(max-width:900px){.nav-menu,.nav-right{display:none}.hamburger{display:flex}.nav-cta-mobile{display:inline-flex}}
+
+/* HERO */
+.hero-mkt{position:relative;overflow:hidden;padding:90px 0 100px}
+.hero-bg-mkt{position:absolute;inset:0;pointer-events:none}
+.hero-bg-mkt::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 60% 50%,rgba(245,166,35,0.06) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(255,71,87,0.03) 0%,transparent 60%)}
+.hero-grid-mkt{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hero-tags .tag{margin-bottom:0}
+.hero-title{margin-bottom:24px}
+.hero-sub{font-size:17px;font-weight:400;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:480px}
+.hero-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.hero-bullets li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
+.hero-bullets li::before{content:'';display:inline-block;width:18px;height:18px;flex-shrink:0;background:var(--amber-dim) url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%23F5A623' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;border:1px solid rgba(245,166,35,0.3);border-radius:50%}
+.hero-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.hero-link{font-size:14px;color:var(--muted);font-weight:500;transition:color 0.2s}
+.hero-link:hover{color:var(--amber)}
+
+/* HERO CARD - PAINEL CAMPANHA */
+.panel-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.04)}
+.panel-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:#0a0a0b;border-bottom:1px solid var(--border)}
+.panel-dot{width:10px;height:10px;border-radius:50%}
+.panel-dot.r{background:#FF5F57}
+.panel-dot.y{background:#FEBC2E}
+.panel-dot.g{background:#28C840}
+.panel-title{font-family:'Syne Mono',monospace;font-size:11px;color:var(--muted);margin-left:8px}
+.panel-body{padding:24px}
+.panel-badge{margin-bottom:16px}
+.panel-metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.metric-box{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:16px}
+.metric-label{font-family:'Syne Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.06em;margin-bottom:8px}
+.metric-value{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.04em;color:var(--text)}
+.metric-value.amber{color:var(--amber)}
+.metric-value.teal{color:var(--teal)}
+.panel-status{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid rgba(37,211,102,0.2);border-radius:4px;padding:10px 14px}
+.status-led{width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 8px rgba(37,211,102,0.5);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.status-text{font-family:'Syne Mono',monospace;font-size:11px;color:#25D366}
+.panel-note{margin-top:14px;font-family:'Syne Mono',monospace;font-size:10px;color:var(--muted);line-height:1.5;letter-spacing:0.03em}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.panel-card{display:none}.hero-mkt{padding:60px 0 64px}}
+
+/* SEÇÃO HEADER */
+.sec-hd{margin-bottom:56px}
+.sec-hd p{font-size:17px;color:var(--muted);max-width:560px;margin-top:16px}
+
+/* DOR */
+#dor-mkt{background:var(--surface)}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.pain-grid{grid-template-columns:1fr}}
+.pain-card{background:var(--surface2);border:1px solid var(--border);border-left:3px solid transparent;border-radius:6px;padding:28px;transition:all 0.3s}
+.pain-card:hover{border-left-color:var(--red);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+.pain-icon{font-size:22px;margin-bottom:12px}
+.pain-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;letter-spacing:-0.02em;margin-bottom:8px}
+.pain-card p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* SOLUÇÃO */
+#solucao-mkt{background:var(--bg)}
+.sol-text h2{margin-bottom:16px}
+.sol-text p{color:var(--muted);font-size:16px;margin-top:16px}
+.sol-text p+p{font-size:14px;margin-top:12px}
+
+/* SERVIÇOS */
+#servicos{background:var(--surface)}
+.servicos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+@media(max-width:700px){.servicos-grid{grid-template-columns:1fr}}
+@media(min-width:700px) and (max-width:900px){.servicos-grid{grid-template-columns:1fr 1fr}}
+.servico-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:28px;transition:all 0.35s;position:relative;overflow:hidden}
+.servico-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,166,35,0.04) 0%,transparent 60%);opacity:0;transition:opacity 0.3s}
+.servico-card:hover{border-color:rgba(245,166,35,0.35);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.servico-card:hover::before{opacity:1}
+.servico-num{font-family:'Syne Mono',monospace;font-size:11px;color:var(--amber);letter-spacing:0.08em;margin-bottom:14px}
+.servico-icon{font-size:28px;margin-bottom:12px}
+.servico-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.02em;margin-bottom:8px}
+.servico-card p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* COMO FUNCIONA */
+#como-funciona-mkt{background:var(--bg)}
+.timeline{position:relative;display:flex;flex-direction:column}
+.timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--amber),rgba(245,166,35,0.1))}
+.t-item{display:flex;gap:24px;padding:0 0 36px;position:relative}
+.t-item:last-child{padding-bottom:0}
+.t-num{flex-shrink:0;width:42px;height:42px;background:var(--bg);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;color:var(--amber);position:relative;z-index:1;transition:all 0.3s}
+.t-item:hover .t-num{background:var(--amber-dim);border-color:rgba(245,166,35,0.4)}
+.t-item.hl .t-num{background:var(--teal-dim);border-color:rgba(0,212,170,0.4);color:var(--teal)}
+.t-content{padding-top:8px}
+.t-content h4{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;letter-spacing:-0.02em;margin-bottom:6px}
+.t-item.hl .t-content h4{color:var(--teal)}
+.t-content p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* IA INTEGRATION BLOCK */
+#ia-integracao{background:var(--surface)}
+.ia-block{max-width:760px;margin:0 auto}
+.ia-card{background:var(--surface2);border:1px solid rgba(0,212,170,0.2);border-radius:10px;padding:36px 40px;text-align:center}
+.ia-card .tag{margin-bottom:16px}
+.ia-card h3{margin-bottom:16px;font-size:clamp(20px,3vw,28px)}
+.ia-card p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:560px;margin-left:auto;margin-right:auto}
+.ia-card a.ia-link{font-size:14px;color:var(--teal);font-weight:600;font-family:'Syne',sans-serif;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.ia-card a.ia-link:hover{gap:10px}
+@media(max-width:600px){.ia-card{padding:28px 20px}}
+
+/* PARA QUEM */
+#para-quem-mkt{background:var(--bg)}
+.nicho-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:10px 18px;cursor:default;transition:all 0.25s}
+.chip:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-1px)}
+.chip.hl{color:var(--amber);border-color:rgba(245,166,35,0.3)}
+
+/* DIAGNÓSTICO */
+#diagnostico-mkt{background:var(--surface)}
+.diag-card{max-width:600px;margin:0 auto;text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:56px 48px;position:relative;overflow:hidden}
+.diag-card::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(ellipse,rgba(245,166,35,0.07) 0%,transparent 70%);pointer-events:none}
+.diag-card h2{margin-bottom:16px;font-size:clamp(24px,4vw,36px)}
+.diag-card p{font-size:16px;color:var(--muted);margin-bottom:32px;line-height:1.7;margin-top:16px}
+.diag-note{display:block;margin-top:16px;font-family:'Syne Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.05em}
+@media(max-width:600px){.diag-card{padding:40px 24px}}
+
+/* FAQ */
+#faq-mkt{background:var(--bg)}
+.faq-grid{display:grid;grid-template-columns:280px 1fr;gap:64px;align-items:start}
+@media(max-width:900px){.faq-grid{grid-template-columns:1fr;gap:32px}}
+.faq-item{border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:8px}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:600;font-size:14px;letter-spacing:-0.01em;background:var(--surface);transition:background 0.2s;user-select:none;gap:16px}
+.faq-q:hover{background:var(--surface2)}
+.faq-q.active{color:var(--amber);background:var(--amber-dim);border-bottom:1px solid rgba(245,166,35,0.15)}
+.faq-ic{width:22px;height:22px;flex-shrink:0;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all 0.3s}
+.faq-q.active .faq-ic{transform:rotate(45deg);border-color:var(--amber)}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height 0.35s ease;background:var(--surface2)}
+.faq-ans p{padding:16px 20px;font-size:14px;color:var(--muted);line-height:1.7}
+
+/* CTA FINAL */
+#cta-final-mkt{background:var(--surface);position:relative;overflow:hidden}
+#cta-final-mkt::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:400px;background:radial-gradient(ellipse,rgba(245,166,35,0.06) 0%,transparent 70%);pointer-events:none}
+.cta-wrap{text-align:center;position:relative;z-index:1}
+.cta-wrap h2{margin-bottom:16px;font-size:clamp(26px,4vw,48px)}
+.cta-wrap p{font-size:17px;color:var(--muted);margin-bottom:36px;margin-top:16px}
+.cta-trust{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px;font-family:'Syne Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.04em}
+.cta-trust span{display:flex;align-items:center;gap:6px}
+.cta-trust .dot{color:var(--border)}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 0;text-align:center}
+.footer-copy{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.footer-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--muted);transition:color 0.2s;padding:0 12px;border-right:1px solid var(--border)}
+.footer-links a:last-child{border-right:none}
+.footer-links a:hover{color:var(--amber)}
+
+/* STICKY BAR */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(8,8,9,0.95);backdrop-filter:blur(16px);border-top:1px solid var(--border);padding:12px 20px;z-index:90;align-items:center;justify-content:space-between;gap:16px}
+.sticky-bar-txt{font-family:'Syne',sans-serif;font-weight:600;font-size:13px}
+@media(max-width:900px){.sticky-bar{display:flex}}
+
+.wa-svg{width:18px;height:18px;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ale IA<span style="color:var(--amber)">.</span>Negócios</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#agente-ia">WhatsApp com IA</a></li>
+        <li><a href="marketing.html" class="active">Serviços de Marketing</a></li>
+        <li><a href="/ia-que-vende">IA que Vende</a></li>
+        <li><a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing">Contato</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing" class="btn-primary">
+          <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp →
+        </a>
+      </div>
+      <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing" class="btn-wa nav-cta-mobile" style="font-size:12px;padding:8px 12px">WA</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Início</a>
+  <a href="index.html#agente-ia">WhatsApp com IA</a>
+  <a href="marketing.html">Serviços de Marketing</a>
+  <a href="/ia-que-vende">IA que Vende</a>
+  <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing">Contato</a>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero-mkt">
+  <div class="hero-bg-mkt"><div class="hero-grid-mkt"></div></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tags reveal">
+          <span class="tag">📣 Tráfego Pago e Marketing</span>
+          <span class="tag teal">⚡ Para pequenos negócios locais</span>
+        </div>
+        <h1 class="hero-title reveal" style="transition-delay:.08s">Anúncios que geram conversas.<br>Não só curtidas.</h1>
+        <p class="hero-sub reveal" style="transition-delay:.14s">A Ale IA Negócios cria e gerencia campanhas de Meta Ads e Google Ads para pequenos negócios locais que querem mais conversas, orçamentos e agendamentos pelo WhatsApp.</p>
+        <ul class="hero-bullets reveal" style="transition-delay:.18s">
+          <li>Meta Ads: Instagram e Facebook</li>
+          <li>Google Ads: rede de pesquisa</li>
+          <li>Campanhas com destino WhatsApp</li>
+          <li>Criativos e textos de anúncio</li>
+          <li>Funil de captação estruturado</li>
+          <li>Relatórios e otimização contínua</li>
+        </ul>
+        <div class="hero-cta reveal" style="transition-delay:.22s">
+          <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing" class="btn-wa lg">
+            <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Quero gerar mais conversas qualificadas →
+          </a>
+          <a href="#servicos" class="hero-link">↓ Ver os serviços disponíveis</a>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.26s">
+        <div class="panel-card">
+          <div class="panel-bar">
+            <span class="panel-dot r"></span>
+            <span class="panel-dot y"></span>
+            <span class="panel-dot g"></span>
+            <span class="panel-title">campanha-whatsapp.log</span>
+          </div>
+          <div class="panel-body">
+            <div class="panel-badge"><span class="tag teal" style="margin-bottom:0">CAMPANHA ATIVA</span></div>
+            <div class="panel-metrics">
+              <div class="metric-box">
+                <div class="metric-label">CONVERSAS INICIADAS</div>
+                <div class="metric-value teal">47</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">CUSTO POR CONVERSA</div>
+                <div class="metric-value amber">R$4,80</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">LEADS QUALIFICADOS</div>
+                <div class="metric-value">31</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">PERÍODO</div>
+                <div class="metric-value" style="font-size:16px;margin-top:4px">últimos<br>7 dias</div>
+              </div>
+            </div>
+            <div class="panel-status">
+              <div class="status-led"></div>
+              <span class="status-text">Campanha otimizada e rodando</span>
+            </div>
+            <p class="panel-note">Resultados variam conforme verba, nicho e oferta.<br>Exemplos ilustrativos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ DOR ════ -->
+<section id="dor-mkt">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <span class="tag">Você já viveu isso?</span>
+      <h2>Anúncio rodando,<br>dinheiro saindo,<br>resultado não aparece.</h2>
+      <p>Impulsionar post no Instagram não é o mesmo que criar uma campanha estratégica. A diferença está no que acontece depois do clique.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal"><div class="pain-icon">👎</div><h4>Impulsionou post no Instagram mas não veio nenhum orçamento.</h4><p>Alcance alto, conversa zero.</p></div>
+      <div class="pain-card reveal" style="transition-delay:.06s"><div class="pain-icon">❤️</div><h4>Recebeu curtidas e salvamentos, mas nenhum cliente.</h4><p>Engajamento não paga boleto.</p></div>
+      <div class="pain-card reveal" style="transition-delay:.1s"><div class="pain-icon">❌</div><h4>O lead chegou no WhatsApp mas não era o cliente certo.</h4><p>Verba gasta com quem nunca compraria.</p></div>
+      <div class="pain-card reveal" style="transition-delay:.14s"><div class="pain-icon">📊</div><h4>Não sabe quanto está gastando por conversa.</h4><p>Sem métrica, não dá para melhorar.</p></div>
+      <div class="pain-card reveal" style="transition-delay:.18s"><div class="pain-icon">😕</div><h4>Tentou anunciar sozinho e não sabe o que deu errado.</h4><p>Configurar campanha parece coisa de especialista.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SOLUÇÃO ════ -->
+<section id="solucao-mkt">
+  <div class="container">
+    <div style="max-width:680px">
+      <div class="sol-text reveal">
+        <span class="tag teal">A diferença</span>
+        <h2>Campanhas feitas para gerar conversas, não curtidas.</h2>
+        <p>Criamos campanhas com foco em resultado concreto: uma pessoa clicando no anúncio e chegando no seu WhatsApp pronta para comprar ou pedir orçamento.</p>
+        <p>Cada detalhe da campanha — criativo, texto, segmentação e destino — é pensado para o seu negócio e para o seu público local.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SERVIÇOS ════ -->
+<section id="servicos">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <span class="tag">O que fazemos</span>
+      <h2>Serviços de marketing<br>disponíveis.</h2>
+    </div>
+    <div class="servicos-grid">
+      <div class="servico-card reveal">
+        <div class="servico-num">01</div>
+        <div class="servico-icon">📣</div>
+        <h4>Tráfego Pago</h4>
+        <p>Gerenciamento de campanhas pagas para atrair interessados para seu WhatsApp, site ou formulário.</p>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:.06s">
+        <div class="servico-num">02</div>
+        <div class="servico-icon">📸</div>
+        <h4>Meta Ads</h4>
+        <p>Anúncios no Instagram e Facebook com foco em negócios locais, campanhas para WhatsApp e geração de leads.</p>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:.1s">
+        <div class="servico-num">03</div>
+        <div class="servico-icon">🔍</div>
+        <h4>Google Ads</h4>
+        <p>Campanhas na rede de pesquisa para alcançar pessoas que já estão procurando pelo seu tipo de serviço.</p>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:.14s">
+        <div class="servico-num">04</div>
+        <div class="servico-icon">✍️</div>
+        <h4>Criativos e Copies</h4>
+        <p>Criação de ideias, textos e estrutura de peças para anúncios com foco em clareza e testes.</p>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:.18s">
+        <div class="servico-num">05</div>
+        <div class="servico-icon">📲</div>
+        <h4>Funil para WhatsApp</h4>
+        <p>Estrutura de mensagens, CTA, atendimento e follow-up para melhorar o aproveitamento dos leads gerados.</p>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:.22s">
+        <div class="servico-num">06</div>
+        <div class="servico-icon">📈</div>
+        <h4>Relatórios e Otimização</h4>
+        <p>Acompanhamento de métricas como custo por conversa, qualidade dos leads e ajustes contínuos nas campanhas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ COMO FUNCIONA ════ -->
+<section id="como-funciona-mkt">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <span class="tag">Processo</span>
+      <h2>Como funciona a gestão.</h2>
+    </div>
+    <div style="max-width:680px">
+      <div class="timeline reveal">
+        <div class="t-item"><div class="t-num">1</div><div class="t-content"><h4>Diagnóstico do negócio e da oferta</h4><p>Entendemos sua empresa, seu público, sua oferta e o que faz sentido anunciar.</p></div></div>
+        <div class="t-item"><div class="t-num">2</div><div class="t-content"><h4>Definição do objetivo da campanha</h4><p>Conversas no WhatsApp? Pedidos de orçamento? Agendamentos? O objetivo define tudo que vem depois.</p></div></div>
+        <div class="t-item"><div class="t-num">3</div><div class="t-content"><h4>Criação dos criativos e copies</h4><p>Desenvolvemos os textos e estrutura dos anúncios com base na sua oferta e no seu público.</p></div></div>
+        <div class="t-item"><div class="t-num">4</div><div class="t-content"><h4>Configuração das campanhas</h4><p>Montamos a campanha na plataforma com segmentação, orçamento e destino definidos.</p></div></div>
+        <div class="t-item"><div class="t-num">5</div><div class="t-content"><h4>Acompanhamento dos primeiros resultados</h4><p>Monitoramos os primeiros dias para entender o que está funcionando e o que precisa de ajuste.</p></div></div>
+        <div class="t-item"><div class="t-num">6</div><div class="t-content"><h4>Otimização com base nos dados</h4><p>Ajustamos segmentação, criativos e configurações para melhorar os resultados ao longo do tempo.</p></div></div>
+        <div class="t-item hl"><div class="t-num">7</div><div class="t-content"><h4>Relatório e próximos testes</h4><p>Apresentamos o que foi feito, os resultados obtidos e o que testaremos na próxima etapa.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ IA INTEGRAÇÃO ════ -->
+<section id="ia-integracao">
+  <div class="container">
+    <div class="ia-block reveal">
+      <div class="ia-card">
+        <span class="tag teal">Opcional — mas faz diferença</span>
+        <h3>Tráfego gera o lead.<br>O atendente de IA atende na hora.</h3>
+        <p>Se sua empresa também usar o atendente de IA no WhatsApp, os leads gerados pelos anúncios podem ser atendidos automaticamente, qualificados e organizados antes de chegar ao atendimento humano.</p>
+        <a href="index.html" class="ia-link">→ Conhecer o atendente de IA no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PARA QUEM ════ -->
+<section id="para-quem-mkt">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <span class="tag">Nichos atendidos</span>
+      <h2>Para negócios que querem<br>mais conversas qualificadas.</h2>
+    </div>
+    <div class="nicho-grid reveal" style="transition-delay:.08s">
+      <span class="chip">🏥 Clínicas</span><span class="chip">🦷 Odontologia</span>
+      <span class="chip">💅 Estética</span><span class="chip">🍽 Restaurantes</span>
+      <span class="chip">🛵 Delivery</span><span class="chip">🔧 Assistência técnica</span>
+      <span class="chip">🏠 Prestadores</span><span class="chip">🏋️ Academias</span>
+      <span class="chip">📚 Escolas e cursos</span>
+      <span class="chip hl">+ outros negócios locais</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ DIAGNÓSTICO ════ -->
+<section id="diagnostico-mkt">
+  <div class="container">
+    <div class="diag-card reveal">
+      <span class="tag">Análise inicial gratuita</span>
+      <h2>Quer saber qual campanha faz sentido para o seu negócio?</h2>
+      <p>Solicite uma análise inicial. Vamos entender sua oferta, seu público e o melhor canal para gerar conversas qualificadas.</p>
+      <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing" class="btn-wa lg">
+        <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Solicitar diagnóstico de marketing →
+      </a>
+      <span class="diag-note">Sem compromisso · Resposta rápida</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section id="faq-mkt">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="reveal"><span class="tag">Dúvidas</span><h2>Perguntas frequentes.</h2></div>
+      <div class="reveal" style="transition-delay:.08s">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vocês fazem Meta Ads?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Sim. Criamos e gerenciamos campanhas no Facebook e Instagram com foco em negócios locais e geração de conversas.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vocês fazem Google Ads?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Sim. Configuramos campanhas na rede de pesquisa para alcançar pessoas que já estão buscando pelo seu tipo de serviço.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">A verba de anúncio está inclusa no serviço?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Não. A verba de anúncio é paga diretamente pelo cliente para a plataforma (Meta ou Google). A gestão — configuração, criativos e otimização — é cobrada separadamente.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vocês criam os anúncios?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Sim. O serviço pode incluir criação de ideias, textos e estrutura dos criativos. Alinhamos os detalhes no diagnóstico.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Preciso ter o atendente de IA para contratar tráfego?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Não. Os serviços de marketing são contratados separadamente. O atendente de IA é uma opção complementar que pode melhorar o aproveitamento dos leads gerados.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Como acompanho os resultados?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Você recebe relatórios periódicos com as principais métricas: custo por conversa, volume de leads e desempenho geral.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Tem contrato de fidelidade?<span class="faq-ic">+</span></div><div class="faq-ans"><p>Trabalhamos com planos mensais. Os detalhes são alinhados diretamente pelo WhatsApp.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA FINAL ════ -->
+<section id="cta-final-mkt">
+  <div class="container">
+    <div class="cta-wrap reveal">
+      <span class="tag">Próximo passo</span>
+      <h2>Mais leads no WhatsApp.<br>Menos verba desperdiçada.</h2>
+      <p>Análise inicial gratuita. Sem compromisso.<br>Atendimento direto com o Alê.</p>
+      <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing" class="btn-wa lg">
+        <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quero gerar mais conversas qualificadas →
+      </a>
+      <div class="cta-trust">
+        <span>📍 Belém, PA</span><span class="dot">·</span>
+        <span>🎯 Foco em negócios locais</span><span class="dot">·</span>
+        <span>🤝 Sem intermediários</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="container">
+    <p class="footer-copy">© 2026 Ale IA Negócios · aleianegocios.com.br · Todos os direitos reservados.<br>Gestão de tráfego pago para pequenos negócios locais em Belém e região.</p>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="index.html">Atendente de IA</a>
+      <a href="/ia-que-vende">IA que Vende</a>
+      <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing">Falar no WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ════ STICKY BAR MOBILE ════ -->
+<div class="sticky-bar">
+  <span class="sticky-bar-txt">Tráfego e Marketing</span>
+  <a href="https://wa.me/559185639091?text=Oi%20vim%20do%20site%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos%20de%20marketing" class="btn-wa" style="font-size:13px;padding:10px 18px">
+    <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Falar agora →
+  </a>
+</div>
+
+<script>
+const obs = new IntersectionObserver(
+  entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)} }),
+  {threshold:0.08,rootMargin:'0px 0px -40px 0px'}
+);
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+const hb = document.getElementById('hamburger');
+const mm = document.getElementById('mobileMenu');
+hb.addEventListener('click', () => { hb.classList.toggle('open'); mm.classList.toggle('open'); });
+mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hb.classList.remove('open'); mm.classList.remove('open'); }));
+
+function toggleFaq(el) {
+  const ans = el.nextElementSibling;
+  const open = el.classList.contains('active');
+  document.querySelectorAll('.faq-q').forEach(q => { q.classList.remove('active'); q.nextElementSibling.style.maxHeight = null; });
+  if (!open) { el.classList.add('active'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+}
+</script>
+</body>
+</html>
