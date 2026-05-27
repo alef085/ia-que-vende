@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(git config *)",
+      "mcp__claude_ai_Zapier__list_enabled_zapier_actions",
+      "mcp__claude_ai_Zapier__discover_zapier_actions",
+      "mcp__claude_ai_Zapier__enable_zapier_action"
+    ]
+  }
+}

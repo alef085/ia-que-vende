@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA QUE VENDE — Guia Completo</title>
+  <style>
+/* Sem dependência externa — funciona 100% offline */
+:root {
+  --navy:       #0D1B2A;
+  --navy-mid:   #1E3050;
+  --navy-dot:   #18273D;
+  --cyan:       #00C8E8;
+  --cyan-dim:   #007A96;
+  --cyan-bg:    #E0F7FA;
+  --graphite:   #374151;
+  --gray-mid:   #6B7280;
+  --gray-light: #F1F5F9;
+  --gray-rule:  #E5E7EB;
+  --orange:     #F97316;
+  --orange-bg:  #FFF7ED;
+  --bg:         #F8FAFC;
+  --white:      #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── base ───────────────────────────────────────────── */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--graphite);
+  line-height: 1.65;
+  background: var(--white);
+}
+
+/* ══════════════════════════════════════════════════════
+   CAPA
+══════════════════════════════════════════════════════ */
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/* Bloco navy */
+.cover-navy {
+  flex: 0 0 60%;
+  background-color: var(--navy);
+  background-image: radial-gradient(var(--navy-dot) 1.3px, transparent 1.3px);
+  background-size: 20px 20px;
+  border-bottom: 3px solid var(--cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px 16px;
+  position: relative;
+}
+
+/* Circuit traces SVG (posição absoluta sobre o bloco navy) */
+.cover-traces {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.cover-top-label {
+  color: var(--cyan);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.cover-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  z-index: 1;
+}
+
+.cover-ia {
+  color: var(--white);
+  font-weight: 900;
+  line-height: .85;
+  letter-spacing: -.02em;
+}
+
+.cover-divider-line {
+  background: var(--cyan);
+  height: 2px;
+  width: 72%;
+  margin: 10px 0 8px;
+}
+
+.cover-que-vende {
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+
+.cover-tagline {
+  color: var(--cyan);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+/* Seção branca */
+.cover-white {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px 24px 10px;
+}
+
+.cover-subtitle { color: var(--graphite); text-align: center; line-height: 1.55; }
+.cover-sep {
+  border: none;
+  border-top: .5px solid var(--gray-rule);
+  width: 55%;
+  margin: 7px auto;
+}
+.cover-micro { color: var(--gray-mid); text-align: center; }
+
+/* Feature strip */
+.cover-features {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.cover-feat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.feat-num { color: var(--navy); font-weight: 700; line-height: 1; }
+.feat-accent { width: 18px; height: 2px; background: var(--cyan); margin: 3px 0; }
+.feat-lbl { color: var(--gray-mid); text-transform: uppercase; letter-spacing: .08em; font-weight: 500; }
+.feat-vsep { width: .5px; background: var(--gray-rule); align-self: stretch; }
+
+/* Badge hexagonal SVG */
+.cover-badge-wrap { display: flex; justify-content: center; }
+.cover-hex { display: block; }
+
+.cover-footer-text { color: var(--gray-mid); text-align: center; }
+
+/* ══════════════════════════════════════════════════════
+   CONTEÚDO
+══════════════════════════════════════════════════════ */
+.content-wrap { padding-top: 6pt; }
+
+/* ── Tipografia ─────────────────────────────────────── */
+h1.section-title {
+  font-size: 16pt; font-weight: 700; color: var(--navy);
+  margin: 22pt 0 10pt;
+  padding-bottom: 6pt;
+  border-bottom: 1.5pt solid var(--cyan);
+}
+h2 { font-size: 13pt; font-weight: 700; color: var(--navy); margin: 18pt 0 8pt; }
+h3 { font-size: 11pt; font-weight: 600; color: var(--navy-mid); margin: 14pt 0 6pt; }
+p  { margin: 6pt 0; orphans: 3; widows: 3; }
+strong { font-weight: 700; color: var(--navy); }
+em     { font-style: italic; color: var(--gray-mid); }
+code {
+  font-family: 'Courier New', monospace;
+  background: var(--gray-light);
+  padding: 1pt 4pt;
+  border-radius: 3pt;
+  color: var(--navy);
+}
+ul, ol { margin: 6pt 0 6pt 18pt; }
+li { margin: 3pt 0; line-height: 1.5; }
+hr { border: none; border-top: 1pt solid var(--gray-rule); margin: 18pt 0; }
+
+/* ── Module header ──────────────────────────────────── */
+.module-header {
+  background: var(--navy);
+  padding: 18pt 20pt 14pt;
+  margin-bottom: 20pt;
+  border-bottom: 3pt solid var(--cyan);
+}
+.module-num {
+  font-size: 8pt; color: var(--cyan);
+  text-transform: uppercase; letter-spacing: .12em; font-weight: 600;
+  margin-bottom: 4pt;
+}
+.module-title { font-size: 20pt; font-weight: 700; line-height: 1.2; color: var(--white); }
+
+/* ── Badges ─────────────────────────────────────────── */
+.prompt-badge {
+  display: inline-block;
+  background: var(--navy); color: var(--cyan);
+  font-size: 7.5pt; font-weight: 700;
+  padding: 2pt 9pt; border-radius: 3pt;
+  letter-spacing: .08em; margin-bottom: 8pt;
+}
+.use-tag {
+  display: inline-block;
+  background: var(--cyan-bg); color: var(--navy);
+  font-size: 8pt; font-weight: 600;
+  padding: 2pt 8pt; border-radius: 3pt;
+  letter-spacing: .04em; text-transform: uppercase;
+  margin-bottom: 8pt;
+}
+
+/* ── Blocos de conteúdo ─────────────────────────────── */
+.block-prompt {
+  background: #F8FAFC;
+  border: .5pt solid var(--gray-rule);
+  border-left: 4pt solid var(--cyan);
+  border-radius: 0 5pt 5pt 0;
+  padding: 12pt 14pt; margin: 10pt 0 14pt;
+}
+.block-prompt pre { font-family:'Courier New',monospace; color:var(--graphite); white-space:pre-wrap; word-break:break-word; line-height:1.55; margin:0; }
+
+.block-example {
+  background: var(--orange-bg);
+  border-left: 4pt solid var(--orange);
+  border-radius: 0 5pt 5pt 0;
+  padding: 10pt 14pt; margin: 8pt 0 12pt;
+}
+.block-example::before { content:"EXEMPLO PREENCHIDO"; display:block; font-size:7.5pt; font-weight:700; color:var(--orange); letter-spacing:.1em; margin-bottom:6pt; }
+.block-example pre { font-family:'Courier New',monospace; color:#7C3A10; white-space:pre-wrap; word-break:break-word; line-height:1.55; margin:0; }
+
+.block-checklist {
+  background: var(--cyan-bg);
+  border-left: 4pt solid var(--cyan);
+  border-radius: 0 5pt 5pt 0;
+  padding: 10pt 14pt; margin: 8pt 0 12pt;
+}
+.check-item { display:flex; align-items:flex-start; gap:8pt; margin:4pt 0; line-height:1.5; }
+.check-box { display:inline-block; width:11pt; height:11pt; border:1.5pt solid var(--cyan); border-radius:2pt; flex-shrink:0; margin-top:1pt; }
+
+.block-framework {
+  background: var(--gray-light);
+  border: .5pt solid var(--gray-rule);
+  border-radius: 5pt;
+  padding: 10pt 14pt; margin: 8pt 0 12pt;
+}
+.block-framework pre { font-family:'Courier New',monospace; color:var(--navy); white-space:pre-wrap; word-break:break-word; line-height:1.6; font-weight:500; margin:0; }
+
+/* ── Callouts ───────────────────────────────────────── */
+blockquote {
+  background: var(--gray-light);
+  border-left: 3.5pt solid var(--navy-mid);
+  padding: 8pt 12pt; margin: 10pt 0;
+  border-radius: 0 4pt 4pt 0; font-size: 9.5pt;
+}
+blockquote p { margin: 0; }
+.alert {
+  background: var(--orange-bg);
+  border-left: 3.5pt solid var(--orange);
+  padding: 8pt 12pt; margin: 10pt 0;
+  border-radius: 0 4pt 4pt 0; font-size: 9.5pt;
+}
+
+/* ── Tabelas ────────────────────────────────────────── */
+.table-wrap { width:100%; margin:10pt 0 14pt; }
+table { width:100%; border-collapse:collapse; }
+thead tr { background:var(--navy); color:var(--white); }
+thead th { padding:7pt 10pt; text-align:left; font-weight:600; letter-spacing:.04em; }
+tbody tr:nth-child(even) { background:var(--gray-light); }
+tbody tr:nth-child(odd)  { background:var(--white); }
+tbody td { padding:6pt 10pt; border-bottom:.5pt solid var(--gray-rule); vertical-align:top; line-height:1.5; }
+tbody tr:last-child td { border-bottom:none; }
+
+/* Intro stats */
+.stat-row { display:flex; gap:12pt; margin:12pt 0; }
+.stat-box { flex:1; text-align:center; border:.5pt solid var(--gray-rule); border-top:3pt solid var(--cyan); padding:10pt 8pt; border-radius:0 0 4pt 4pt; }
+.stat-box .num { font-size:22pt; font-weight:700; color:var(--navy); display:block; }
+.stat-box .lbl { font-size:8pt; color:var(--gray-mid); text-transform:uppercase; letter-spacing:.08em; }
+
+/* ══════════════════════════════════════════════════════
+   SCREEN — Desktop (preview tipo "documento")
+══════════════════════════════════════════════════════ */
+@media screen {
+  body { background: #D1D5DB; }
+
+  .cover-page {
+    max-width: 620px;
+    min-height: 877px;
+    margin: 28px auto 0;
+    box-shadow: 0 8px 40px rgba(0,0,0,.28);
+    border-radius: 2px;
+  }
+  .cover-navy       { min-height: 526px; }
+  .cover-ia         { font-size: clamp(70px, 18vw, 145px); }
+  .cover-que-vende  { font-size: clamp(32px, 8.5vw, 55px); }
+  .cover-top-label  { font-size: 7.5px; }
+  .cover-tagline    { font-size: 7.5px; }
+  .cover-subtitle   { font-size: 13px; }
+  .cover-micro      { font-size: 9px; }
+  .feat-num         { font-size: 22px; }
+  .feat-lbl         { font-size: 8px; }
+  .cover-hex        { width: 118px; height: 118px; }
+  .cover-footer-text{ font-size: 8px; }
+
+  .content-wrap {
+    max-width: 620px;
+    margin: 0 auto 48px;
+    background: var(--white);
+    padding: 20px 26px 36px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.10);
+  }
+
+  .module-header { margin-top: 32px; }
+  .table-wrap { overflow-x: auto; }
+
+  h1.section-title { font-size: 18px; }
+  h2 { font-size: 15px; }
+  h3 { font-size: 13px; }
+  body { font-size: 14px; }
+  .block-prompt pre, .block-example pre, .block-framework pre { font-size: 12.5px; }
+  .check-item { font-size: 13px; }
+  table { font-size: 12.5px; }
+  thead th { font-size: 11px; }
+}
+
+/* ══════════════════════════════════════════════════════
+   SCREEN — Mobile (≤ 640 px)
+══════════════════════════════════════════════════════ */
+@media screen and (max-width: 640px) {
+  body { background: var(--white); font-size: 15px; }
+
+  .cover-page {
+    max-width: 100%;
+    min-height: 100svh;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .cover-navy       { flex: 0 0 58%; min-height: 0; padding: 12px 16px 14px; }
+  .cover-ia         { font-size: 21vw; }
+  .cover-que-vende  { font-size: 11vw; }
+  .cover-divider-line{ margin: 8px 0 6px; }
+  .cover-top-label  { font-size: 6.5px; }
+  .cover-tagline    { font-size: 6.5px; }
+  .cover-white      { padding: 10px 16px 8px; }
+  .cover-subtitle   { font-size: 13px; }
+  .cover-micro      { font-size: 8.5px; }
+  .feat-num         { font-size: 20px; }
+  .feat-lbl         { font-size: 7.5px; }
+  .cover-hex        { width: 95px; height: 95px; }
+  .cover-footer-text{ font-size: 7.5px; }
+
+  .content-wrap {
+    max-width: 100%;
+    padding: 16px 14px 28px;
+    box-shadow: none;
+  }
+
+  h1.section-title { font-size: 17px; margin: 20px 0 9px; }
+  h2 { font-size: 14.5px; }
+  h3 { font-size: 12.5px; }
+
+  .module-header { padding: 14px 16px 11px; margin-bottom: 16px; }
+  .module-title  { font-size: 17px; }
+
+  .block-prompt pre,
+  .block-example pre,
+  .block-framework pre { font-size: 12px; }
+  .check-item    { font-size: 13px; }
+
+  .table-wrap    { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table          { font-size: 12px; min-width: 380px; }
+
+  .stat-row  { gap: 8px; flex-wrap: wrap; }
+  .stat-box  { min-width: calc(50% - 4px); }
+  .stat-box .num { font-size: 20px; }
+}
+
+/* ══════════════════════════════════════════════════════
+   PRINT — A4 PDF
+══════════════════════════════════════════════════════ */
+@media print {
+  /* ── Forçar impressão de cores de fundo ───────────────── */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+
+  body { background: var(--white); font-size: 10.5pt; }
+
+  /* Primeira página: sem margens (capa sangra até a borda) */
+  @page:first { margin: 0; }
+
+  /* Demais páginas: margens A4 + rodapé com número */
+  @page {
+    size: A4;
+    margin: 18mm 16mm 22mm 16mm;
+    @bottom-center {
+      content: "IA QUE VENDE  ·  " counter(page);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      font-size: 7pt; color: #9CA3AF; letter-spacing: .05em;
+    }
+    @top-right {
+      content: "inteligência artificial para pequenos negócios";
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      font-size: 6.5pt; color: #9CA3AF;
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+  }
+
+  /* Capa: ocupa A4 inteiro (sem margem na primeira página) */
+  .cover-page {
+    width: 210mm;
+    height: 297mm;
+    page-break-after: always;
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+  .cover-navy {
+    flex: 0 0 60%;
+    background-color: #0D1B2A !important;
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+  .cover-navy * {
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+  .cover-ia        { color: #FFFFFF !important; }
+  .cover-que-vende { color: #FFFFFF !important; }
+  .cover-top-label { color: #00C8E8 !important; }
+  .cover-tagline   { color: #00C8E8 !important; }
+
+  .cover-ia         { font-size: 132pt; }
+  .cover-que-vende  { font-size: 47pt; }
+  .cover-top-label  { font-size: 7pt; }
+  .cover-tagline    { font-size: 7pt; }
+  .cover-subtitle   { font-size: 11pt; }
+  .cover-micro      { font-size: 8pt; }
+  .feat-num         { font-size: 18pt; }
+  .feat-lbl         { font-size: 7pt; }
+  .cover-hex        { width: 112px; height: 112px; }
+  .cover-footer-text{ font-size: 7pt; }
+
+  /* Conteúdo: quebras de página */
+  .module-header {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+  .module-header:first-of-type { page-break-before: avoid; }
+  h1.section-title, h2, h3 { page-break-after: avoid; }
+
+  .block-prompt, .block-example, .block-checklist,
+  .block-framework, blockquote, .alert, .table-wrap {
+    page-break-inside: avoid;
+  }
+
+  /* Forçar cores em elementos específicos */
+  .module-header {
+    background-color: #0D1B2A !important;
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+  .module-title { color: #FFFFFF !important; }
+  .module-num   { color: #00C8E8 !important; }
+  thead tr {
+    background-color: #0D1B2A !important;
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+  thead th { color: #FFFFFF !important; }
+  .block-prompt, .block-example, .block-checklist, .block-framework {
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+
+  a::after { content: none !important; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+
+
+<div class="cover-page">
+
+  <!-- Bloco navy -->
+  <div class="cover-navy">
+
+    <!-- Circuit traces (SVG absoluto) -->
+    <svg class="cover-traces" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 620 530" preserveAspectRatio="none">
+      <!-- traço esquerda topo -->
+      <line x1="0"   y1="90" x2="140" y2="90"  stroke="#1E3A5F" stroke-width="1.5"/>
+      <line x1="140" y1="90" x2="140" y2="135" stroke="#1E3A5F" stroke-width="1.5"/>
+      <circle cx="140" cy="135" r="4" fill="#00C8E8"/>
+      <!-- traço direita topo -->
+      <line x1="480" y1="90" x2="620" y2="90"  stroke="#1E3A5F" stroke-width="1.5"/>
+      <line x1="480" y1="90" x2="480" y2="135" stroke="#1E3A5F" stroke-width="1.5"/>
+      <circle cx="480" cy="135" r="4" fill="#00C8E8"/>
+      <!-- traço esquerda base -->
+      <line x1="0"   y1="440" x2="76" y2="440" stroke="#1E3A5F" stroke-width="1.5"/>
+      <circle cx="76" cy="440" r="4" fill="#00C8E8"/>
+      <!-- traço direita base -->
+      <line x1="544" y1="440" x2="620" y2="440" stroke="#1E3A5F" stroke-width="1.5"/>
+      <circle cx="544" cy="440" r="4" fill="#00C8E8"/>
+    </svg>
+
+    <!-- Label topo -->
+    <div class="cover-top-label">GUIA DIGITAL &nbsp;·&nbsp; EDIÇÃO 2026</div>
+
+    <!-- Título -->
+    <div class="cover-title-wrap">
+      <div class="cover-ia">IA</div>
+      <div class="cover-divider-line"></div>
+      <div class="cover-que-vende">QUE VENDE</div>
+    </div>
+
+    <!-- Tagline -->
+    <div class="cover-tagline">INTELIGÊNCIA ARTIFICIAL PARA PEQUENOS NEGÓCIOS</div>
+
+  </div><!-- /cover-navy -->
+
+  <!-- Seção branca -->
+  <div class="cover-white">
+
+    <div class="cover-subtitle-wrap">
+      <p class="cover-subtitle">
+        Crie posts, artes, anúncios e mensagens de WhatsApp<br>
+        para atrair clientes usando inteligência artificial
+      </p>
+      <hr class="cover-sep">
+      <p class="cover-micro">
+        Para donos de pequenos negócios &nbsp;·&nbsp; Sem experiência técnica necessária
+      </p>
+    </div>
+
+    <!-- Feature strip: 13 | 15 (29 está no badge abaixo) -->
+    <div class="cover-features">
+      <div class="cover-feat">
+        <span class="feat-num">13</span>
+        <div class="feat-accent"></div>
+        <span class="feat-lbl">Módulos</span>
+      </div>
+      <div class="feat-vsep"></div>
+      <div class="cover-feat">
+        <span class="feat-num">15</span>
+        <div class="feat-accent"></div>
+        <span class="feat-lbl">Nichos</span>
+      </div>
+    </div>
+
+    <!-- Badge hexagonal SVG -->
+    <div class="cover-badge-wrap">
+      <svg class="cover-hex" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- hexágono externo navy -->
+        <polygon
+          points="126.3,37.5 126.3,102.5 70,135 13.7,102.5 13.7,37.5 70,5"
+          fill="#0D1B2A"/>
+        <!-- anel interno: só stroke ciano, sem preenchimento -->
+        <polygon
+          points="119.4,41.5 119.4,98.5 70,127 20.6,98.5 20.6,41.5 70,13"
+          fill="none" stroke="#00C8E8" stroke-width="2.5"/>
+        <!-- número -->
+        <text x="70" y="71"
+              text-anchor="middle"
+              font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+              font-weight="900" font-size="38"
+              fill="white">29</text>
+        <!-- linha separadora -->
+        <line x1="42" y1="78" x2="98" y2="78"
+              stroke="#007A96" stroke-width="1.2"/>
+        <!-- texto inferior -->
+        <text x="70" y="93"
+              text-anchor="middle"
+              font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+              font-weight="400" font-size="10"
+              fill="#00C8E8">MEGA-PROMPTS</text>
+        <text x="70" y="109"
+              text-anchor="middle"
+              font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+              font-weight="400" font-size="10"
+              fill="#00C8E8">PRONTOS</text>
+      </svg>
+    </div>
+
+    <p class="cover-footer-text">
+      Produto digital &nbsp;·&nbsp; Entrega instantânea após o pagamento
+    </p>
+
+  </div><!-- /cover-white -->
+
+</div><!-- /cover-page -->
+
+
+<div class="content-wrap">
+
+<div class="stat-row">
+  <div class="stat-box"><span class="num">13</span><span class="lbl">Módulos</span></div>
+  <div class="stat-box"><span class="num">29</span><span class="lbl">Mega-Prompts</span></div>
+  <div class="stat-box"><span class="num">15</span><span class="lbl">Nichos</span></div>
+  <div class="stat-box"><span class="num">7</span><span class="lbl">Dias de Desafio</span></div>
+</div>
+
+<h1 class="section-title">IA QUE VENDE</h1>
+<h2>Crie posts, artes, anúncios e mensagens de WhatsApp para atrair clientes usando inteligência artificial</h2>
+<blockquote><p><strong>Para quem é este guia:</strong> Donos de pequenos negócios que querem usar IA para criar conteúdo, melhorar ofertas, vender pelo WhatsApp e anunciar — mesmo sem saber escrever, sem contratar agência e sem perder horas no Canva.</p></blockquote>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">COMO USAR ESTE GUIA SEM SE PERDER</div></div>
+<p>Este guia é completo. Você não precisa usar tudo de uma vez.</p>
+<div class="table-wrap"><table><thead><tr><th>Seu problema hoje</th><th>Comece por aqui</th></tr></thead><tbody><tr><td>Não sei o que postar</td><td>Módulo 3 — Redes Sociais</td></tr><tr><td>Minha oferta parece fraca</td><td>Módulo 2 — Oferta</td></tr><tr><td>Perco muito tempo no Canva</td><td>Módulo 4 — Canva Nunca Mais</td></tr><tr><td>Recebo mensagem e não vendo</td><td>Módulo 5 — WhatsApp</td></tr><tr><td>Quero anunciar no Instagram</td><td>Módulo 6 — Meta Ads</td></tr><tr><td>Quero aparecer no Google</td><td>Módulo 7 — Google Meu Negócio / Perfil da Empresa no Google</td></tr><tr><td>Estou perdido, não sei por onde começar</td><td>Desafio de 7 Dias (no final do guia)</td></tr></tbody></table></div>
+<p><strong>Caminho recomendado para quem está começando:</strong> Desafio de 7 Dias → Módulo 2 → Módulo 3 → Módulo 5</p>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">5 PROMPTS INDISPENSÁVEIS PARA O SEU NEGÓCIO</div></div>
+<p>Este guia tem muitos prompts, mas você não precisa usar todos de uma vez.</p>
+<p>Se você está começando agora e quer resultado rápido, comece por estes 5 prompts obrigatórios. Eles formam a base mínima para qualquer pequeno negócio usar IA de forma estratégica.</p>
+<p><strong>1. Diagnóstico Completo do Negócio</strong> Use para entender a dor do cliente, o desejo principal, as objeções e o melhor tipo de conteúdo para atrair compradores. → Onde encontrar: <strong>Módulo 1 — Mega-Prompt 1</strong></p>
+<p><strong>2. Criador de Oferta Irresistível</strong> Use para transformar um produto ou serviço comum em uma oferta mais clara, desejável e fácil de vender. → Onde encontrar: <strong>Módulo 2 — Mega-Prompt 2</strong></p>
+<p><strong>3. Estratégia Editorial do Mês</strong> Use para criar um calendário de conteúdo com posts, temas, hooks e formatos para Instagram. → Onde encontrar: <strong>Módulo 3 — Mega-Prompt 3</strong></p>
+<p><strong>4. Criativo para Anúncio</strong> Use para criar imagens profissionais para anúncios, posts e campanhas sem perder horas no Canva. → Onde encontrar: <strong>Módulo 4 — Mega-Prompt 15</strong></p>
+<p><strong>5. Script Completo de Venda no WhatsApp</strong> Use para responder melhor os leads, conduzir a conversa e aumentar as chances de fechamento. → Onde encontrar: <strong>Módulo 5 — Mega-Prompt 21</strong></p>
+<blockquote><p>Use esses 5 primeiro. Eles organizam o básico: diagnóstico, oferta, conteúdo, criativo e atendimento. Depois que essa base estiver funcionando, avance para os outros prompts do guia.</p></blockquote>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">O QUE VOCÊ VAI ENCONTRAR NESTE GUIA</div></div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Módulo</th><th>O que você aprende</th></tr></thead><tbody><tr><td>1</td><td>Diagnóstico Estratégico</td><td>Entender a dor, o desejo e as objeções do seu cliente</td></tr><tr><td>2</td><td>Oferta Irresistível</td><td>Transformar serviço comum em oferta clara e desejável</td></tr><tr><td>3</td><td>Redes Sociais</td><td>Posts, carrosséis, Reels, Stories, bio e autoridade local</td></tr><tr><td>4</td><td>Canva Nunca Mais</td><td>Criar artes e criativos profissionais com IA</td></tr><tr><td>5</td><td>WhatsApp que Vende</td><td>Scripts, follow-up e análise de conversas reais</td></tr><tr><td>6</td><td>Meta Ads</td><td>Campanhas para WhatsApp, diagnóstico e Regra dos 3 Criativos</td></tr><tr><td>7</td><td>Google Meu Negócio / Perfil da Empresa no Google</td><td>Perfil otimizado, avaliações e visibilidade local</td></tr><tr><td>8</td><td>Biblioteca por Nicho</td><td>Prompts prontos para 15+ tipos de pequenos negócios</td></tr><tr><td>9</td><td>Matriz Dor × Conteúdo × Oferta</td><td>Parar de postar aleatoriamente e criar com propósito</td></tr><tr><td>10</td><td>Erros Comuns</td><td>O que faz a IA entregar respostas ruins e como corrigir</td></tr><tr><td>11</td><td>Banco de CTAs</td><td>Chamadas para ação prontas por canal</td></tr><tr><td>12</td><td>Banco de Hooks</td><td>30 primeiras linhas prontas para posts e anúncios</td></tr><tr><td>13</td><td>Planilha de Leads</td><td>Acompanhar, analisar e melhorar sua conversão</td></tr><tr><td>+</td><td>Desafio de 7 Dias</td><td>Aplicação prática para organizar sua oferta, conteúdo, criativo e WhatsApp</td></tr></tbody></table></div>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">AS IAs QUE VOCÊ VAI USAR</div></div>
+<div class="table-wrap"><table><thead><tr><th>IA</th><th>Acesso</th><th>Melhor para</th></tr></thead><tbody><tr><td><strong>ChatGPT</strong> (OpenAI)</td><td>chatgpt.com — gratuito com limites</td><td>Texto, imagens, análise — a mais completa</td></tr><tr><td><strong>Claude</strong> (Anthropic)</td><td>claude.ai — gratuito com limites</td><td>Textos longos, copy, estratégia</td></tr><tr><td><strong>Gemini</strong> (Google)</td><td>gemini.google.com — gratuito</td><td>Integração Google, pesquisa</td></tr><tr><td><strong>Copilot</strong> (Microsoft)</td><td>copilot.microsoft.com — gratuito</td><td>Integrado ao Windows e Office</td></tr></tbody></table></div>
+<blockquote><p><strong>Você não precisa usar todas. Comece com uma só.</strong> Para a maioria dos pequenos negócios, o ChatGPT já resolve texto, estratégia, análise e imagens em um só lugar. As demais são opções quando quiser expandir.</p></blockquote>
+<p><strong>Para geração de imagens:</strong></p>
+<ul>
+<li>ChatGPT com geração de imagens (como GPT-4o ou modelos disponíveis na sua conta)</li>
+<li>Adobe Firefly (firefly.adobe.com) — integrado ao Canva e Adobe</li>
+<li>Ideogram (ideogram.ai) — excelente para texto dentro de imagens</li>
+<li>Midjourney (midjourney.com) — foco em imagens artísticas</li>
+</ul>
+<blockquote><p><strong>Sobre limites gratuitos:</strong> A versão gratuita do ChatGPT permite criar imagens, mas com limite diário. Para quem vai criar muitos posts e criativos por semana, um plano pago elimina esse gargalo e economiza tempo.</p></blockquote>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">PARTE 1 — O ERRO QUE ARRUÍNA TUDO</div></div>
+<p>O problema não é a IA. É o que você pede para ela.</p>
+<p>❌ <strong>O que a maioria faz:</strong></p>
+<blockquote><p><em>"Crie um post para meu pet shop"</em></p></blockquote>
+<p>A IA não sabe se você vende ração premium ou faz banho e tosa barato. Não sabe se seu cliente é a dona que trata o cachorro como filho ou o casal que quer praticidade. Não sabe se você quer engajamento ou venda direta. Resultado: resposta genérica.</p>
+<p>✅ <strong>O que você vai aprender aqui:</strong></p>
+<blockquote><p><em>"Você é social media de um pet shop chamado PataFeliz, em Fortaleza, especializado em cuidados premium para cães de médio e grande porte. Nosso cliente típico é mulher, 30-45 anos, classe B, que trata o pet como membro da família, sente culpa quando trabalha muito e quer saber que seu animal está bem cuidado. Crie um carrossel para Instagram com 6 slides mostrando nossa rotina de banho e tosa. Objetivo: gerar salvamentos e visitas ao WhatsApp. Tom: acolhedor, especialista, sem linguagem técnica. Slide final: CTA para agendar pelo link da bio."</em></p></blockquote>
+<p>Essa diferença é a diferença entre post que ninguém vê e post que vende.</p>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">PARTE 2 — O FRAMEWORK C.O.A.T.</div></div>
+<p>Todo prompt poderoso tem 4 elementos:</p>
+<div class="block-framework"><pre>C — CONTEXTO    → Quem você é, onde está, o que faz
+O — OBJETIVO    → O que você quer que o leitor FAÇA ou SINTA
+A — AVATAR      → Para quem exatamente você está falando
+T — TOM         → Como sua marca fala e como NÃO fala</pre></div>
+<p>Quanto mais você preenche o C.O.A.T., mais a IA vira especialista no seu negócio.</p>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">PARTE 3 — PROMPT EM CAMADAS</div></div>
+<p>A maioria pede tudo de uma vez e recebe resposta rasa. Os que obtêm resultados excepcionais constroem com a IA em etapas:</p>
+<div class="block-framework"><pre>CAMADA 1 — CONTEXTO:    Quem é o negócio?
+CAMADA 2 — CLIENTE:     Quem compra? Qual a vida dele?
+CAMADA 3 — PROBLEMA:    Qual dor o cliente sente?
+CAMADA 4 — OFERTA:      O que será vendido?
+CAMADA 5 — CANAL:       Instagram, WhatsApp, Google, anúncio?
+CAMADA 6 — FORMATO:     Post, carrossel, mensagem, anúncio?
+CAMADA 7 — OTIMIZAÇÃO:  Peça melhoria, variações e ajustes.</pre></div>
+<p><strong>Na prática:</strong> Comece com as camadas 1-3. Depois adicione 4-5. Por último peça variações com a camada 7.</p>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">PARTE 4 — SEU BLOCO DE CONTEXTO PERMANENTE</div></div>
+<p>Preencha uma vez. Use em todos os prompts. Salve no celular.</p>
+<div class="block-framework"><pre>=== MEU NEGÓCIO ===
+Nome:
+Tipo de negócio:
+Cidade e bairro:
+Diferencial (por que me escolhem e não ao concorrente):
+Tom de voz: [descontraído / profissional / técnico / acolhedor]
+O que NÃO somos: (ex: não somos o mais barato, não fazemos de tudo)
+
+=== MEU CLIENTE IDEAL ===
+Quem é (descrição completa):
+Idade:
+Situação de vida (trabalha, tem filhos, rotina):
+Maior dor ou problema:
+Maior desejo:
+O que já tentou que não funcionou:
+Objeção que sempre aparece antes de comprar:
+Como fala (formal / gírias / emoji):
+
+=== REDES SOCIAIS ===
+Plataformas que uso:
+Frequência atual de posts:
+Objetivo principal: [vendas / autoridade / relacionamento]
+
+=== PRODUTO OU SERVIÇO PRINCIPAL ===
+O que vendo:
+Preço:
+Como entrego:</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 1</div><div class="module-title">DIAGNÓSTICO ESTRATÉGICO</div></div>
+<p>Antes de criar qualquer conteúdo, faça este diagnóstico.</p>
+<div class="prompt-badge">MEGA-PROMPT 1</div><h2>Diagnóstico Completo do Negócio</h2>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>Você será meu estrategista de marketing para pequenos negócios.
+
+Antes de criar qualquer conteúdo, analise meu negócio:
+
+[cole o bloco C.O.A.T.]
+
+Responda em 5 partes:
+
+1. Qual é a principal dor do meu cliente ideal?
+   (não a dor óbvia — a dor que ele sente mas não fala abertamente)
+
+2. Qual é o principal desejo que ele quer alcançar?
+   (o desejo emocional por trás, não o declarado)
+
+3. Qual é a objeção que mais impede a compra?
+   (o que ele pensa antes de dizer &quot;vou pensar&quot;)
+
+4. Qual mensagem minha marca deveria repetir com frequência?
+   (a frase que, se meu cliente ouvisse toda semana, me tornaria referência)
+
+5. Qual tipo de conteúdo tem mais chance de gerar clientes para mim?
+   (baseado no meu nicho, meu avatar e minha oferta)
+
+Depois me diga: quais informações estão faltando para criar
+respostas ainda mais precisas sobre meu negócio?</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 2</div><div class="module-title">OFERTA IRRESISTÍVEL</div></div>
+<p>A maioria dos pequenos negócios não tem problema de conteúdo. Tem problema de oferta fraca.</p>
+<p>Muita gente vende assim:</p>
+<ul>
+<li>"Faço limpeza de pele."</li>
+<li>"Tenho loja de importados."</li>
+<li>"Atendo pelo WhatsApp."</li>
+</ul>
+<p>Isso é fraco. Uma oferta forte tem: público específico, problema claro, resultado desejado, diferencial, bônus ou facilidade, redução de risco e chamada para ação clara.</p>
+<div class="prompt-badge">MEGA-PROMPT 2</div><h2>Criador de Oferta Irresistível</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em criação de ofertas para pequenos negócios.
+
+Meu negócio:
+[cole o bloco C.O.A.T.]
+
+Meu produto ou serviço principal:
+[descreva com detalhes]
+
+Hoje eu vendo assim (como divulgo atualmente):
+[descreva ou cole seu texto atual]
+
+Transforme essa oferta em algo mais desejável. Entregue:
+
+1. Diagnóstico da minha oferta atual: o que está fraco,
+   genérico ou pouco claro — seja honesto.
+
+2. Nova promessa principal.
+   (a transformação que o cliente experimenta, não o serviço)
+
+3. 5 formas diferentes de apresentar essa oferta para públicos
+   com mentalidades diferentes (urgente, desconfiado, comparador,
+   racional e emocional).
+
+4. 3 bônus simples que posso incluir sem aumentar muito meu custo
+   mas que aumentam o valor percebido.
+
+5. 3 garantias ou redutores de risco que façam sentido para meu negócio.
+
+6. 5 chamadas para ação para WhatsApp.
+
+7. Versão curta para bio do Instagram (máx. 150 caracteres).
+
+8. Versão para post de Instagram.
+
+9. Versão para anúncio pago no Meta Ads.
+
+10. Versão para mensagem direta de abordagem no WhatsApp.
+
+Importante: não crie promessa exagerada. Quero oferta forte, mas real.</pre></div>
+<p><strong>Exemplo preenchido — Loja de importados:</strong></p>
+<div class="block-example"><pre>Meu produto: acessórios importados (relógios, óculos, capinhas, gadgets)
+Hoje vendo assim: &quot;Loja de importados, tudo barato, chama no WhatsApp&quot;
+
+Após usar esse prompt:
+Nova promessa: &quot;Presentes e acessórios que parecem caros mas cabem no bolso —
+entregamos em [cidade] no mesmo dia&quot;
+Diferencial: curadoria de produtos que parecem premium mas custam pouco
+CTA: &quot;Me manda o que você precisa que eu te mando o preço agora&quot;</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 3</div><div class="module-title">REDES SOCIAIS</div></div>
+<h2>Os 4 Pilares de Conteúdo</h2>
+<div class="block-framework"><pre>40% → EDUCATIVO: ensina algo útil, gera salvamentos e alcance
+30% → PROVA SOCIAL: mostra resultados reais de clientes
+20% → BASTIDORES: humaniza, gera conexão e confiança
+10% → OFERTA DIRETA: vende sem pedir desculpa</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 3</div><h2>Estratégia Editorial do Mês</h2>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Crie uma estratégia de conteúdo completa para o mês de [MÊS/ANO].
+
+1. DIAGNÓSTICO: qual é meu maior problema de comunicação atual?
+
+2. TEMA DO MÊS: 1 tema central que deve permear todos os posts.
+
+3. CALENDÁRIO: 16 posts em 4 semanas com:
+   - Dia sugerido
+   - Formato (carrossel/reels/imagem/stories)
+   - Pilar (educativo/prova social/bastidores/oferta)
+   - Ideia central em 1 frase
+   - Hook (primeira linha que para o scroll)
+
+4. DATAS RELEVANTES do mês que posso usar de forma autêntica.
+
+5. Melhores dias e horários para postar baseado no meu avatar.
+
+Entregue em formato de tabela.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 4</div><h2>O Carrossel que Para o Scroll</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Crie um carrossel de alta performance para Instagram com objetivo
+de gerar SALVAMENTOS e novos seguidores qualificados.
+
+Slide 1 — GANCHO:
+Uma frase que cause curiosidade ou dor imediata. O leitor precisa
+pensar &quot;isso é exatamente o que sinto&quot;. Crie 3 opções de gancho
+e explique a psicologia por trás de cada um.
+
+Slides 2-5 — CONTEÚDO:
+Cada slide tem uma única ideia. Máximo 30 palavras por slide.
+Estrutura: PROBLEMA → CAUSA → SOLUÇÃO → RESULTADO
+
+Slide 6 — VIRADA:
+O insight mais surpreendente, que contradiz o senso comum do meu nicho.
+Algo que a pessoa vai querer mostrar para alguém.
+
+Slide 7 — CTA:
+Ação específica. Diga exatamente O QUE a pessoa ganha ao contatar.
+
+TEMA DO CARROSSEL: [descreva]
+
+Para cada slide inclua:
+- Texto do slide
+- Sugestão de cor de fundo
+- Qual imagem ou ícone usar
+- Por que esse slide funciona psicologicamente</pre></div>
+<p><strong>Exemplo preenchido — Açaí e sorveteria:</strong></p>
+<div class="block-example"><pre>Tema: &quot;Por que o açaí da esquina é diferente do nosso&quot;
+Gancho: &quot;Você sabe o que tem no açaí que você está comendo?&quot;
+Slide 2: &quot;A maioria usa base industrializada com corante e conservante.&quot;
+Slide 3: &quot;A gente usa polpa pura, congelada na origem, sem aditivo.&quot;
+Slide 4: &quot;O sabor não mente. Experimente e compare.&quot;
+Slide 5: &quot;Cada detalhe importa: fruta fresca, granola artesanal, leite de coco real.&quot;
+Slide 6: &quot;Preço igual. Qualidade completamente diferente.&quot;
+CTA: &quot;Manda &#x27;QUERO&#x27; que te mandamos o cardápio completo agora.&quot;</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 5</div><h2>Legenda que Converte (Método F.A.C.E.)</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Escreva uma legenda usando o método F.A.C.E. para este post:
+[descreva o post ou a foto que vai usar]
+
+FATO (2-3 linhas):
+Verdade que meu avatar vai ler e pensar &quot;isso é exatamente minha vida&quot;.
+Não pode parecer propaganda.
+
+AGITAÇÃO (3-4 linhas):
+Consequências de não resolver o problema.
+Use linguagem emocional, não técnica.
+Ex: não &quot;falta de organização financeira&quot;, mas &quot;aquela sensação de
+trabalhar o mês inteiro e não saber para onde o dinheiro foi&quot;.
+
+CONTEÚDO (4-6 linhas):
+2-3 insights reais que ajudam parcialmente o problema.
+Suficiente para provar que entende, insuficiente para resolver tudo
+— isso gera curiosidade para continuar.
+
+ENGAJAMENTO (2-3 linhas):
+CTA específico: &quot;Se você se identificou com [situação X], manda
+mensagem dizendo [palavra] e te mando [benefício específico]&quot;.
+
+HASHTAGS:
+10 hashtags estratégicas.
+3 grandes (+1M), 4 médias (100k-500k), 3 nichadas (-50k).
+Explique por que essa divisão funciona melhor.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 6</div><h2>Reels sem Aparecer na Câmera</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Preciso criar Reels que engajem sem aparecer na câmera.
+Entregue:
+
+1. 5 tipos de Reels sem câmera para meu negócio, com exemplo
+   específico e por que cada um funciona.
+
+2. Roteiro completo de 1 Reel:
+   - Duração ideal e por quê
+   - O que filmar (plano a plano, em linguagem simples)
+   - Texto na tela de cada cena (máx. 5 palavras por cena)
+   - Tipo de música e impacto de cada escolha no comportamento
+     do espectador
+   - 3 opções de gancho visual para os primeiros 3 segundos
+
+3. Frequência: quantos Reels vs carrossel vs imagem por semana?
+
+4. Métricas: quais números devo olhar e o que cada uma significa
+   para um negócio local como o meu?</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 7</div><h2>Stories que Vendem</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Crie sequência de Stories para vender [produto/serviço] de forma
+natural, sem parecer anúncio.
+
+Story 1 — GANCHO: pergunta ou afirmação que prende sem revelar o fim.
+
+Stories 2-4 — NARRATIVA: história real de um cliente.
+Estrutura: situação antes → problema → como chegou até mim → resultado.
+
+Stories 5-6 — PROVA: resultado concreto. Antes e depois.
+Dados, fotos, prints de conversa.
+
+Story 7 — OBJEÇÃO: antecipe e responda a maior dúvida do avatar
+antes dela ser levantada. Isso aumenta muito a confiança antes da oferta.
+
+Story 8 — URGÊNCIA REAL: razão verdadeira para agir agora.
+Não invente escassez. Se não há urgência, crie um bônus com prazo real.
+
+Story 9 — CTA: uma ação, apenas uma.
+
+Para cada Story: texto exato, fundo sugerido, elemento interativo e
+por que funciona psicologicamente.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 8</div><h2>Bio do Instagram que Converte</h2>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Minha bio atual: [cole ou diga &quot;não tenho bio boa&quot;]
+
+Analise e me diga:
+1. O que está faltando
+2. O que está sobrando
+3. Por que alguém que nunca me viu não seguiria com essa bio
+
+Reescreva seguindo essa estrutura:
+Linha 1: O que faço + para quem (específico, sem &quot;apaixonada por&quot;)
+Linha 2: Resultado que entrego (não serviço — resultado)
+Linha 3: Prova social ou diferencial (números ou afirmação forte)
+Linha 4: CTA com fricção zero
+
+Crie 3 versões:
+- Direta e profissional
+- Empática e próxima
+- Curiosa (provoca sem revelar)
+
+Para cada versão: qual avatar converte melhor e por quê.
+Depois: qual foto de perfil é ideal para meu tipo de negócio?</pre></div>
+<p><strong>Exemplo preenchido — Loja de importados:</strong></p>
+<div class="block-example"><pre>Bio fraca: &quot;Produtos importados e acessórios. Fazemos entrega. Chame no ZAP 📦&quot;
+
+Bio forte versão 1:
+&quot;Acessórios importados que parecem caros mas não são 🌍
+Entrego hoje em [cidade]
++500 clientes satisfeitos
+👇 Veja o catálogo&quot;
+
+Bio forte versão 2:
+&quot;Você não precisa gastar muito para parecer bem 😉
+Importados selecionados pra você
+Entrega rápida em [cidade]
+👇 Peça pelo link&quot;</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 9</div><h2>Prova Social que Converte</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Depoimento de cliente: [cole o depoimento real]
+
+1. ANÁLISE:
+   - Qual dor principal está implícita?
+   - Quem se identifica com essa história?
+   - Qual objeção esse depoimento quebra?
+
+2. POST COMPLETO:
+   - Começa pela DOR do cliente (não pelo resultado)
+   - Desenvolve a jornada
+   - Resultado específico (não &quot;melhorou muito&quot;)
+   - Termina com pergunta que convida quem tem a mesma situação
+
+3. VARIAÇÕES:
+   - Carrossel de 5 slides
+   - Sequência de 6 stories
+   - Roteiro de Reels de 30s sem mostrar o cliente
+
+4. RESPOSTA PARA COMENTÁRIOS:
+   Como mover quem comentou para o WhatsApp de forma natural?</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 10</div><h2>Responder DMs e Comentários para Vender</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Me ensine a responder comentários e DMs de forma que mova pessoas
+para o WhatsApp sem parecer vendedor insistente.
+
+1. RESPOSTA IDEAL para cada tipo de comentário:
+   - &quot;Que lindo/incrível!&quot; (elogio genérico)
+   - &quot;Quanto custa?&quot; (interesse direto)
+   - &quot;Tem em [cidade]?&quot; (logística)
+   - &quot;Eu precisava disso&quot; (dor identificada)
+   - &quot;Isso funciona mesmo?&quot; (ceticismo)
+   - &quot;Minha amiga precisa ver isso&quot; (indicação)
+   - Emoji apenas
+
+2. SCRIPT DE DM: roteiro de 6 mensagens que:
+   - Qualifica sem parecer interrogatório
+   - Apresenta produto de forma conversacional
+   - Lida com &quot;vou pensar&quot; sem pressionar
+   - Move para WhatsApp naturalmente
+
+3. CTAs ESPECÍFICOS para meu produto (crie 5 no estilo):
+   &quot;Manda &#x27;QUERO&#x27; que eu te explico.&quot;
+   &quot;Comenta &#x27;GUIA&#x27; que eu te mando o passo a passo.&quot;</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 11</div><h2>Análise do Concorrente</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Concorrente: [perfil/nome]
+Informações: [cole prints ou descrição do perfil]
+
+1. O QUE ELE FAZ BEM: quais posts têm mais engajamento e por quê?
+
+2. ONDE ELE É FRACO: o que ele não fala que meu avatar quer ouvir?
+
+3. MEU POSICIONAMENTO: qual ângulo diferente eu devo tomar?
+
+4. 5 POSTS que seriam impossíveis para meu concorrente fazer,
+   mas que são autênticos para mim. Explique por que cada um é
+   exclusivamente meu.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 12</div><h2>Autoridade Local</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Quero ser referência em [nicho] em [cidade/bairro].
+
+1. DIAGNÓSTICO: qual meu nível atual de autoridade percebida?
+
+2. OS 3 TIPOS DE POST DE AUTORIDADE:
+   - Post de expertise
+   - Post de bastidores profissional
+   - Post de posicionamento (quem atendo e quem NÃO atendo)
+
+3. USANDO REFERÊNCIAS LOCAIS: como usar eventos e notícias da
+   minha cidade para criar conteúdo que perfis nacionais não copiam?
+   Dê 3 exemplos para meu tipo de negócio.
+
+4. COLLAB LOCAL: quais negócios complementares eu poderia parceirar?
+   Escreva a mensagem de abordagem.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 13</div><h2>Método 3R: Reaproveite Todo Conteúdo</h2>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>Peguei este conteúdo que já criei:
+[cole o conteúdo]
+
+Transforme em:
+1. Carrossel de 7 slides
+2. Legenda para Instagram (método F.A.C.E.)
+3. Sequência de 5 stories
+4. Roteiro de Reels de 30 segundos
+5. Mensagem para lista de transmissão no WhatsApp
+6. Copy de anúncio (dor, desejo e oferta)
+7. Texto curto para bio ou destaques
+
+Mantenha a mesma ideia. Adapte linguagem e tamanho para cada canal.
+Explique o que mudou e por quê em cada versão.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 14</div><h2>Humanizador de Texto</h2>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>Reescreva o texto abaixo para parecer mais humano e natural:
+
+[cole o texto gerado pela IA]
+
+Regras:
+1. Remova frases genéricas (&quot;no mundo atual&quot;, &quot;é fundamental&quot;).
+2. Elimine tom robótico.
+3. Use linguagem simples como se falando para um amigo.
+4. Mantenha a mensagem persuasiva.
+5. Adapte para o público: [descreva].
+
+Crie 3 versões:
+- Mais direta (menos palavras, mais impacto)
+- Mais emocional (conecta com sentimento do avatar)
+- Mais profissional (autoridade sem ser frio)
+
+Para cada versão: qual cliente converte melhor e em qual canal funciona?</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 4</div><div class="module-title">CANVA NUNCA MAIS: CRIE POSTS E CRIATIVOS COM IA</div></div>
+<blockquote><p><strong>Ferramentas:</strong> ChatGPT com geração de imagens, Adobe Firefly, Ideogram, Midjourney</p></blockquote>
+<p>Durante anos o pequeno empreendedor perdeu horas no Canva. Escolhia modelo, mudava cor, trocava fonte, procurava imagem, arrastava elementos. No final ficava com uma arte parecida com a de todo mundo.</p>
+<p><strong>A nova lógica:</strong> ChatGPT cria. Canva ajusta só se precisar.</p>
+<blockquote><p><strong>Nota honesta:</strong> O ChatGPT acelera 90% do processo de criação visual. Para pequenos ajustes finais — trocar logo, corrigir tamanho, organizar carrossel — o Canva pode ajudar. A criação principal, a direção visual e a ideia do criativo saem da IA.</p></blockquote>
+<hr>
+<h2>⚠️ REGRA DE OURO: TEXTO EM IMAGENS GERADAS POR IA</h2>
+<p>Texto dentro de imagem gerada por IA ainda pode sair com erro dependendo da complexidade, fonte e quantidade de palavras.</p>
+<p><strong>Use no máximo:</strong></p>
+<ul>
+<li>1 título curto</li>
+<li>1 subtítulo direto</li>
+<li>1 CTA simples</li>
+</ul>
+<p>✅ <strong>Bom:</strong></p>
+<div class="block-framework"><pre>&quot;Limpeza de pele premium&quot;
+&quot;Pele leve e renovada&quot;
+&quot;Agende pelo WhatsApp&quot;</pre></div>
+<p>❌ <strong>Ruim:</strong></p>
+<div class="block-framework"><pre>&quot;Limpeza de pele premium com avaliação personalizada para mulheres
+que querem cuidar da pele, reduzir oleosidade, remover impurezas e
+melhorar a autoestima com atendimento profissional especializado.&quot;</pre></div>
+<p><strong>Se o texto sair errado:</strong> peça para a IA refazer com menos palavras, ou gere a imagem sem texto e adicione depois no Canva, CapCut ou editor do Instagram.</p>
+<hr>
+<h2>O Método R.C.T. para Criar Imagens com IA</h2>
+<p><strong>R — Referência:</strong> Mostre o estilo visual que você quer. Pode ser arte antiga, post de concorrente, imagem do Pinterest, print de anúncio ou foto do produto.</p>
+<p><strong>C — Contexto:</strong> Explique o negócio, público e objetivo da peça. Ex: "Sou loja de importados em Belém. Atendo jovens de 18-35 anos que querem acessórios estilosos por menos. Minha marca é jovem, moderna e acessível."</p>
+<p><strong>T — Texto:</strong> Informe exatamente o texto que deve aparecer. Ex: "Importados a partir de R$19,90 / Entrega hoje em Belém / Chama no WhatsApp"</p>
+<hr>
+<h2>Biblioteca de Estilos Visuais</h2>
+<p><strong>Estilo Premium</strong> — estética, odontologia, arquitetura, consultorias:</p>
+<blockquote><p>"Use estilo premium, fundo limpo, tons neutros, iluminação suave, composição elegante, poucos elementos e aparência sofisticada."</p></blockquote>
+<p><strong>Estilo Popular</strong> — promoções, restaurantes, lojas locais, ofertas rápidas:</p>
+<blockquote><p>"Use estilo popular, chamativo, com cores fortes, texto grande, sensação de oportunidade e CTA bem visível, sem poluir."</p></blockquote>
+<p><strong>Estilo Minimalista</strong> — marcas modernas e conteúdo educativo:</p>
+<blockquote><p>"Use estilo minimalista, bastante espaço em branco, poucos elementos, tipografia clara e composição limpa."</p></blockquote>
+<p><strong>Estilo Tecnológico</strong> — IA, automação, marketing digital, negócios online:</p>
+<blockquote><p>"Use estilo tecnológico, elementos digitais, luzes sutis, fundo moderno, sensação de inovação e alta performance."</p></blockquote>
+<p><strong>Estilo Humanizado</strong> — psicólogos, saúde, educação, serviços de confiança:</p>
+<blockquote><p>"Use estilo humanizado, acolhedor, cores suaves, sensação de proximidade, cuidado e segurança."</p></blockquote>
+<p><strong>Estilo Jovem e Urbano</strong> — lojas de importados, moda, acessórios, delivery:</p>
+<blockquote><p>"Use estilo jovem, urbano e dinâmico. Cores vibrantes, composição moderna, energia de descoberta e novidade."</p></blockquote>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 15</div><h2>Criativo para Anúncio</h2>
+<div class="use-tag">Use: ChatGPT com geração de imagens</div>
+<div class="block-prompt"><pre>Você é um diretor de arte especialista em criativos para anúncios
+de alta conversão no Meta Ads.
+
+CONTEXTO DO NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+PRODUTO OU SERVIÇO: [descreva]
+PÚBLICO-ALVO: [descreva]
+OBJETIVO: [WhatsApp / leads / venda / divulgar promoção]
+
+ESTILO VISUAL:
+[clean / premium / moderno / minimalista / popular / jovem / acolhedor]
+
+TEXTO QUE DEVE APARECER:
+Título: [texto curto]
+Subtítulo: [texto curto]
+CTA: [texto]
+
+REGRAS:
+1. Imagem legível no celular em 2 segundos.
+2. No máximo 3 elementos de texto.
+3. Não use excesso de elementos visuais.
+4. Arte com aparência profissional, não amadora.
+5. Formato 1:1 para feed ou 9:16 para stories.
+6. Não deixar aparência de panfleto poluído.
+
+Crie a imagem agora.</pre></div>
+<p><strong>Exemplo preenchido — Loja de importados:</strong></p>
+<div class="block-example"><pre>Título: &quot;Importados a partir de R$19&quot;
+Subtítulo: &quot;Entrega hoje em [cidade]&quot;
+CTA: &quot;Chama no WhatsApp&quot;
+Estilo: jovem, vibrante, cores vivas, aparência de descoberta</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 16</div><h2>Post para Instagram</h2>
+<div class="use-tag">Use: ChatGPT com geração de imagens ou Adobe Firefly</div>
+<div class="block-prompt"><pre>Você é designer e estrategista de conteúdo para Instagram.
+
+CONTEXTO DO NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+TEMA DO POST: [descreva]
+OBJETIVO: [educar / gerar autoridade / atrair clientes / divulgar oferta]
+MENSAGEM PRINCIPAL: [qual ideia a pessoa precisa entender]
+TEXTO DA ARTE: [cole exatamente o texto que deve aparecer]
+ESTILO: [clean / sofisticado / moderno / popular / premium / jovem]
+CORES: [descreva ou diga &quot;sugira para meu negócio&quot;]
+
+REGRAS:
+1. Arte visualmente forte para Instagram.
+2. Leitura rápida: título maior, apoio menor, CTA discreto.
+3. Arte não carregada nem poluída.
+4. Aparência de marca profissional.
+5. Formato quadrado 1:1.
+
+Gere a imagem.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 17</div><h2>Transformar Arte Antiga em Arte Profissional</h2>
+<div class="use-tag">Use: ChatGPT com geração de imagens — envie a imagem junto com o prompt</div>
+<div class="block-prompt"><pre>Você é diretor de arte especialista em melhorar criativos amadores
+e transformar em imagens profissionais.
+
+[ENVIE A IMAGEM JUNTO COM ESSE PROMPT]
+
+CONTEXTO DO NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+O QUE QUERO MANTER: [oferta, ideia, cores principais]
+O QUE QUERO MELHORAR: [mais profissional / clean / premium / menos poluído]
+TEXTO QUE DEVE APARECER: [cole o texto final]
+
+REGRAS:
+1. Não copie a arte antiga exatamente.
+2. Melhore composição, hierarquia, contraste, leitura e impacto.
+3. Deixe aparência profissional.
+4. Arte pronta para Instagram ou anúncio.
+
+Gere a nova imagem.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 18</div><h2>Pack de 5 Criativos para Campanha</h2>
+<div class="use-tag">Use: Claude ou ChatGPT para planejamento + ChatGPT com geração de imagens</div>
+<div class="block-prompt"><pre>Crie um pacote de criativos para campanha no Meta Ads.
+
+CONTEXTO DO NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+OFERTA: [descreva]
+PÚBLICO: [descreva]
+DESTINO: [WhatsApp / landing page / direct]
+
+Crie 5 variações com ângulos diferentes:
+
+Ângulo 1 — DOR: ideia visual + texto + CTA
+Ângulo 2 — DESEJO: ideia visual + texto + CTA
+Ângulo 3 — PROVA SOCIAL: ideia visual + texto + CTA
+Ângulo 4 — OFERTA DIRETA: ideia visual + texto + CTA
+Ângulo 5 — CURIOSIDADE: ideia visual + texto + CTA
+
+Para cada criativo:
+- Por que pode funcionar
+- Qual objeção quebra
+- Qual público tende a responder melhor
+
+Depois gere as 5 imagens sequencialmente.</pre></div>
+<hr>
+<h2>Comandos para Pedir Ajustes</h2>
+<div class="block-prompt"><pre>&quot;Gostei, mas deixe mais premium e menos colorido.&quot;
+&quot;Mantenha a composição mas aumente o destaque do título.&quot;
+&quot;Menos elementos e mais espaço em branco.&quot;
+&quot;Ficou bonita mas parece genérica. Deixe mais específica para [nicho].&quot;
+&quot;Reduza o texto para ficar mais legível no celular.&quot;
+&quot;Crie variação com fundo mais claro e aparência mais limpa.&quot;
+&quot;Faça versão mais popular, com mais impacto e chamada forte.&quot;</pre></div>
+<hr>
+<h2>Checklist Antes de Gerar uma Imagem</h2>
+<div class="block-checklist"><div class="check-item"><span class="check-box"></span>Defini o contexto do negócio</div><div class="check-item"><span class="check-box"></span>Descrevi o público-alvo</div><div class="check-item"><span class="check-box"></span>Informei o objetivo da imagem</div><div class="check-item"><span class="check-box"></span>Escolhi o canal (feed / story / reels / anúncio)</div><div class="check-item"><span class="check-box"></span>Defini o formato (1:1 / 9:16 / 4:5)</div><div class="check-item"><span class="check-box"></span>Escolhi o estilo visual</div><div class="check-item"><span class="check-box"></span>Copiei o texto exato (curto e simples)</div><div class="check-item"><span class="check-box"></span>Tenho referência visual para enviar</div><div class="check-item"><span class="check-box"></span>Defini o que NÃO quero</div><div class="check-item"><span class="check-box"></span>Incluí o CTA</div></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 5</div><div class="module-title">WHATSAPP: ONDE O DINHEIRO ENTRA</div></div>
+<h2>Os 5 Tipos de Lead no WhatsApp</h2>
+<ul>
+<li><strong>Curioso:</strong> pergunta preço e some. Precisa de curiosidade despertada.</li>
+<li><strong>Comparador:</strong> fala com vários concorrentes. Precisa do diferencial rápido.</li>
+<li><strong>Urgente:</strong> precisa resolver agora. Simplifique e acelere.</li>
+<li><strong>Desconfiado:</strong> quer prova, segurança e explicação. Prova social é essencial.</li>
+<li><strong>Pronto para comprar:</strong> só precisa de direcionamento. Facilite o pagamento.</li>
+</ul>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 19</div><h2>Classificador de Leads</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em vendas pelo WhatsApp.
+
+Analise esta conversa com um possível cliente:
+[cole a conversa exatamente como aconteceu]
+
+Classifique o lead em:
+1. Curioso  2. Comparador  3. Urgente  4. Desconfiado  5. Pronto
+
+Depois me diga:
+1. Por que classificou assim (cite partes da conversa)
+2. Qual é a intenção real por trás das mensagens
+3. Qual objeção ainda não foi resolvida
+4. Qual deve ser minha próxima mensagem (escreva ela pronta)
+5. O que NÃO devo responder agora
+6. Como conduzir para fechamento sem parecer insistente</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 20</div><h2>Resposta Estratégica para "Quanto Custa?"</h2>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Meu serviço: [descreva]
+Preço: [informe]
+
+Crie 5 respostas estratégicas para quando o cliente pergunta
+&quot;quanto custa?&quot; logo no início:
+
+1. Resposta curta e educada
+2. Resposta que qualifica o cliente
+3. Resposta que mostra valor antes do preço
+4. Resposta para cliente apressado
+5. Resposta para cliente que só está comparando preço
+
+Cada resposta: máximo 3 linhas, terminando com pergunta simples.
+Para cada uma: qual gatilho psicológico estou usando?</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 21</div><h2>Script Completo de Venda</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+O cliente mandou: [mensagem exata do cliente]
+
+Crie roteiro completo de conversa para essa situação.
+
+Para cada mensagem minha, explique:
+- Por que estou dizendo isso
+- O que estou tentando descobrir
+- O que fazer se o cliente responder diferente
+
+REGRAS:
+- Nunca enviar preço sem entender o problema
+- Uma pergunta por mensagem
+- A 3ª mensagem aprofunda a dor, não apresenta solução
+- Preço só aparece depois que o cliente verbalizou o problema
+- Sempre terminar com pergunta aberta
+
+INCLUA também:
+- Como lidar com &quot;quanto custa?&quot; logo no início
+- O que fazer quando o cliente some após o preço
+- Como distinguir cliente sem dinheiro de cliente sem valor percebido
+- A mensagem de última tentativa elegante</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 22</div><h2>Follow-up que Não Parece Desespero</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Cliente entrou em contato [X dias] atrás, chegamos até [ponto] e sumiu.
+
+Crie 3 mensagens de follow-up:
+
+Mensagem 1 (dia 2): Curiosidade — faz ele querer responder.
+Mensagem 2 (dia 5): Valor — entrega algo útil sem mencionar venda.
+Mensagem 3 (dia 10): Fechamento elegante com saída digna.
+
+REGRAS:
+- Nenhuma começa com &quot;Oi, sumiu?&quot; ou &quot;Viu minha mensagem?&quot;
+- Nenhuma tem tom de cobrança
+- Cada uma legível em 10 segundos
+- A 3ª abre a porta para o futuro
+
+Para cada mensagem: qual gatilho psicológico e por que funciona?</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 23</div><h2>EXCLUSIVO: Analise Suas Próprias Conversas com a IA</h2>
+<p>Esta é uma das funcionalidades mais poderosas que poucos empreendedores usam. Você exporta sua própria conversa real com clientes e pede para a IA analisar onde você está errando e como melhorar.</p>
+<div class="alert"><p>⚠️ <strong>Atenção antes de usar:</strong> Antes de colar conversas reais na IA, remova dados sensíveis do cliente, como telefone, endereço, CPF, dados de pagamento ou qualquer informação pessoal desnecessária. Substitua o nome do cliente por "Cliente" se preferir. Isso protege a privacidade das pessoas e mantém sua postura profissional.</p></div>
+<h3>Como exportar sua conversa do WhatsApp:</h3>
+<p><strong>No Android:</strong></p>
+<ol>
+<li>Abra a conversa com o cliente</li>
+<li>Toque nos 3 pontos (⋮) no canto superior direito</li>
+<li>Selecione "Mais"</li>
+<li>Toque em "Exportar conversa"</li>
+<li>Escolha "Sem mídia" (só o texto)</li>
+<li>Salve o arquivo .txt</li>
+</ol>
+<p><strong>No iPhone:</strong></p>
+<ol>
+<li>Abra a conversa com o cliente</li>
+<li>Toque no nome do contato no topo</li>
+<li>Desça a tela e toque em "Exportar conversa"</li>
+<li>Escolha "Sem mídia"</li>
+<li>Salve o arquivo</li>
+</ol>
+<p><strong>Como usar no ChatGPT ou Claude:</strong></p>
+<ul>
+<li>Abra o ChatGPT ou Claude</li>
+<li>Copie o texto da conversa exportada</li>
+<li>Use um dos prompts abaixo</li>
+</ul>
+<hr>
+<div class="prompt-badge">PROMPT A</div><h3>Diagnóstico Completo da Conversa</h3>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é um especialista em vendas pelo WhatsApp para pequenos negócios.
+
+Analise esta conversa real com um cliente potencial:
+
+[cole a conversa exportada aqui]
+
+Contexto do meu negócio:
+[cole o bloco C.O.A.T.]
+
+Faça uma análise completa:
+
+1. DIAGNÓSTICO GERAL:
+   - Em qual momento da conversa eu perdi a venda?
+   - Qual foi o erro principal?
+
+2. ANÁLISE MENSAGEM POR MENSAGEM:
+   Para as 5 mensagens mais críticas da conversa, me diga:
+   - O que eu disse
+   - O que eu deveria ter dito
+   - Por que a versão certa funciona melhor
+
+3. ERROS IDENTIFICADOS:
+   Liste todos os erros que cometei nessa conversa com explicação.
+
+4. ACERTOS:
+   O que fiz bem e devo manter?
+
+5. REESCRITA:
+   Reescreva os trechos mais problemáticos da conversa
+   mostrando como deveria ter sido.
+
+6. APRENDIZADO:
+   Qual é a principal lição dessa conversa que devo aplicar
+   em todos os atendimentos?</pre></div>
+<hr>
+<div class="prompt-badge">PROMPT B</div><h3>Análise de Padrão (Múltiplas Conversas)</h3>
+<p>Use quando quiser analisar várias conversas de uma vez.</p>
+<div class="use-tag">Use: Claude (melhor para textos longos) ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é especialista em vendas e atendimento pelo WhatsApp.
+
+Vou te enviar [X] conversas com clientes que não fecharam.
+Analise o padrão e me ajude a identificar o problema raiz.
+
+CONVERSA 1:
+[cole a conversa]
+
+CONVERSA 2:
+[cole a conversa]
+
+CONVERSA 3:
+[cole a conversa]
+
+Contexto do meu negócio:
+[cole o bloco C.O.A.T.]
+
+Após analisar todas as conversas, me responda:
+
+1. Qual é o padrão de erro que se repete em todas as conversas?
+
+2. Em que momento exato eu perco a maioria dos clientes?
+   (no início / após apresentar o preço / após a explicação)
+
+3. Quais são as 3 objeções mais frequentes?
+   Para cada uma, crie a resposta ideal.
+
+4. O problema está em: criativo/anúncio, oferta, atendimento
+   ou follow-up? Explique com base nas conversas.
+
+5. Crie um script melhorado para as próximas conversas,
+   corrigindo os erros identificados.
+
+6. O que devo testar nos próximos 7 dias para melhorar
+   minha conversão no WhatsApp?</pre></div>
+<hr>
+<div class="prompt-badge">PROMPT C</div><h3>Criador de Script Baseado em Conversa Real</h3>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é especialista em vendas pelo WhatsApp.
+
+Leia esta conversa onde consegui fechar uma venda:
+[cole a conversa de sucesso]
+
+E esta onde não fechei:
+[cole a conversa de fracasso]
+
+Contexto do meu negócio:
+[cole o bloco C.O.A.T.]
+
+Com base nessas duas conversas reais:
+
+1. O que fiz diferente na conversa que fechou?
+
+2. Quais foram as palavras ou perguntas que mais ajudaram
+   no fechamento?
+
+3. Crie um script novo baseado no que funcionou, eliminando
+   o que não funcionou.
+
+4. Crie 3 variações desse script para públicos diferentes:
+   - Cliente que pergunta preço logo de início
+   - Cliente que está comparando com concorrente
+   - Cliente que demonstra interesse mas some
+
+5. Como devo adaptar esse script para diferentes nichos
+   dentro do meu segmento?</pre></div>
+<hr>
+<div class="prompt-badge">PROMPT D</div><h3>Análise Rápida de Conversa (versão curta)</h3>
+<p>Para usar no dia a dia quando uma conversa não foi bem.</p>
+<div class="use-tag">Use: ChatGPT, Claude ou Gemini</div>
+<div class="block-prompt"><pre>Analise essa conversa de WhatsApp e me diga em 3 linhas:
+1. Onde errei
+2. O que deveria ter dito
+3. Como recuperar esse lead agora
+
+[cole a conversa]
+
+Meu negócio: [descreva brevemente]</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 6</div><div class="module-title">META ADS: ANÚNCIOS QUE GERAM CLIENTES</div></div>
+<h2>⚡ Regra dos 3 Criativos</h2>
+<p>Nunca suba apenas um criativo. Teste sempre:</p>
+<div class="block-framework"><pre>Criativo 1 — DOR: fala sobre o problema que o cliente sente
+Criativo 2 — DESEJO: fala sobre o resultado que ele quer
+Criativo 3 — OFERTA DIRETA: apresenta o produto com preço e CTA
+
+Após 3 a 7 dias, analise:
+- Custo por conversa
+- Qualidade dos leads (curioso vs. comprador)
+- Taxa de resposta no WhatsApp
+- Vendas geradas
+- Custo por venda
+
+Escale o que funciona. Pause o que não funciona.
+Nunca escolha criativo só porque você acha bonito.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 24</div><h2>Campanha Completa para WhatsApp</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é gestor de tráfego especialista em campanhas para WhatsApp
+para pequenos negócios locais.
+
+CONTEXTO DO NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+PRODUTO/SERVIÇO: [descreva]
+CIDADE/BAIRRO: [informe]
+ORÇAMENTO DIÁRIO: [informe]
+
+Crie estratégia de campanha no Meta Ads para gerar conversas
+qualificadas no WhatsApp. Entregue:
+
+1. Diagnóstico da minha oferta: está pronta para anúncio?
+
+2. Melhor objetivo de campanha para meu caso.
+
+3. Estrutura recomendada: campanha → conjunto → anúncios.
+
+4. Público inicial recomendado.
+
+5. 5 ideias de criativos (formato + ideia visual + texto).
+
+6. 5 copies com abordagens diferentes:
+   - Dor / Desejo / Prova social / Oferta direta / Curiosidade
+
+7. Primeira mensagem automática do WhatsApp quando o lead chegar.
+
+8. 3 perguntas de qualificação para separar curioso de comprador.
+
+9. Métricas que devo acompanhar e o que cada uma significa.
+
+10. Regras claras: quando pausar, manter ou escalar.</pre></div>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 25</div><h2>Diagnóstico de Anúncio Ruim</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é analista de tráfego pago.
+
+Meus números atuais:
+Investimento: R$
+Impressões:
+Alcance:
+Cliques:
+CTR:
+CPC: R$
+Conversas iniciadas:
+Custo por conversa: R$
+Vendas:
+Custo por venda: R$
+Ticket médio: R$
+
+Meu produto: [descreva]
+Destino: [WhatsApp / site / formulário / direct]
+
+Analise e me diga:
+1. O que está bom (não mude)
+2. O que está ruim (prioridade de ajuste)
+3. O problema está no criativo, público, oferta ou WhatsApp?
+4. Qual ajuste fazer PRIMEIRO
+5. O que NÃO mexer ainda
+6. Qual teste fazer nos próximos 3 dias
+7. Quando pausar definitivamente
+8. Quando aumentar orçamento com segurança</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 7</div><div class="module-title">GOOGLE MEU NEGÓCIO / PERFIL DA EMPRESA NO GOOGLE</div></div>
+<p>Muitas pessoas que pesquisam negócios locais no Google estão prontas para visitar, ligar ou pedir orçamento. Seu perfil no Google — conhecido como Google Meu Negócio ou Perfil da Empresa no Google — pode funcionar como um vendedor silencioso: aparece quando o cliente está pesquisando, mostra suas informações, exibe avaliações e facilita o contato.</p>
+<div class="prompt-badge">MEGA-PROMPT 26</div><h2>Dominar o Google Local</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Situação atual no Google Meu Negócio:
+[descreva ou diga &quot;não tenho perfil ainda&quot;]
+
+1. DIAGNÓSTICO: os 3 erros mais comuns que provavelmente estou
+   cometendo no GMB para meu tipo de negócio.
+
+2. DESCRIÇÃO OTIMIZADA: escreva a descrição completa com
+   palavras-chave que meu cliente usa, diferencial, área de
+   atendimento e CTA. Explique quais palavras-chave incluiu.
+
+3. CATEGORIAS: quais usar e como cada uma impacta quais buscas apareço.
+
+4. ESTRATÉGIA DE AVALIAÇÕES:
+   - Momento certo para pedir avaliação
+   - Mensagem de WhatsApp para solicitar (natural)
+   - Resposta para avaliação negativa que vira reputação positiva
+
+5. 4 POSTS PRONTOS para publicar um por semana no próximo mês.
+   (Perfis ativos e completos tendem a ter mais visibilidade local)</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 8</div><div class="module-title">BIBLIOTECA POR NICHO</div></div>
+<p>Use o prompt do seu nicho como ponto de partida. Ele já traz o contexto especializado que acelera o resultado.</p>
+<hr>
+<h2>Clínica de Estética e Beleza</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para clínicas de estética.
+
+Crie campanha de conteúdo e vendas para: [nome do procedimento]
+
+CONTEXTO DA CLÍNICA:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. 5 dores que esse público sente ANTES de procurar o procedimento
+   (as que ele pensa mas não fala abertamente)
+2. 5 desejos para usar em anúncios e posts
+3. 5 objeções comuns com resposta estratégica para cada
+4. 5 posts educativos (tema + gancho + estrutura)
+5. 5 stories de prova social contextualizada
+6. 3 copies para anúncio (dor, desejo e oferta)
+7. 3 mensagens de WhatsApp para quem pediu preço
+8. Sequência de follow-up para quem não fechou em 7 dias</pre></div>
+<hr>
+<h2>Restaurante, Delivery e Lanchonete</h2>
+<div class="use-tag">Use: ChatGPT ou Gemini</div>
+<div class="block-prompt"><pre>Você é estrategista de marketing para restaurantes e deliveries.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+PRODUTO QUE QUERO VENDER MAIS:
+[prato, combo, delivery, marmita, almoço executivo]
+
+Entregue:
+1. Oferta da semana (como posicionar sem dar desconto barato)
+2. 5 ideias de posts para feed
+3. 5 ideias de stories
+4. 3 anúncios para Meta Ads
+5. 3 mensagens para lista de transmissão no WhatsApp
+6. 2 ideias de promoção que valorizam, não desvalorizam
+7. Roteiro de vídeo de 30s mostrando o prato de forma apetitosa
+8. Como usar o iFood e WhatsApp em conjunto para vender mais</pre></div>
+<p><strong>Exemplo preenchido — Marmitaria:</strong></p>
+<div class="block-example"><pre>Gancho de post: &quot;Por que marmita de verdade não cabe em isopor barato?&quot;
+Ângulo de anúncio: &quot;Almoço saudável sem sair do trabalho — entregamos
+em [bairros] das 11h às 14h de segunda a sexta&quot;
+CTA WhatsApp: &quot;Manda seu endereço que a gente calcula o frete agora&quot;</pre></div>
+<hr>
+<h2>Salão de Beleza e Barbearia</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para salões e barbearias.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+SERVIÇO QUE QUERO DESTACAR: [descreva]
+
+Entregue:
+1. Por que o cliente cancela ou some após 3 meses
+   (a verdade que ninguém fala)
+2. Como criar conteúdo que faz o cliente voltar antes de sentir falta
+3. 5 posts que geram agendamentos sem dar desconto
+4. Script de WhatsApp para reativar cliente sumido há 60 dias
+5. Como usar antes e depois de forma ética e que realmente converte
+6. Programa de fidelidade simples sem aplicativo
+7. 3 copies de anúncio para atrair cliente novo</pre></div>
+<hr>
+<h2>Pet Shop e Clínica Veterinária</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para pet shops.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+SERVIÇO: [banho e tosa / ração / vacina / consulta / etc.]
+
+Entregue:
+1. As 5 culpas que o dono de pet sente e como sua comunicação
+   pode ser o alívio sem ser manipulador
+2. Como criar conteúdo que gera vínculo emocional com o tutor
+3. 5 posts de humanização que engajam e fidelizam
+4. Script para reagendar banho e tosa de cliente sumido
+5. Campanha de vacinas: como criar urgência real e ética
+6. 3 copies de anúncio que falam com o coração do tutor</pre></div>
+<hr>
+<h2>Academia e Personal Trainer</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para academias e trainers.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+SERVIÇO: [musculação / funcional / emagrecimento / hipertrofia]
+
+Entregue:
+1. Por que o aluno cancela nos primeiros 3 meses (razão real)
+2. Como criar conteúdo que mantém o aluno motivado entre as aulas
+3. 5 posts de resultado que não violam regras do Instagram
+4. Script para converter lead que pediu preço e sumiu
+5. Como vender plano anual sem parecer insistente
+6. Campanha de janeiro: como se destacar na concorrência
+7. 3 copies de anúncio para atrair aluno novo</pre></div>
+<hr>
+<h2>Loja de Roupas e Moda Local</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para lojas de moda e roupas locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+COLEÇÃO OU PRODUTO: [descreva]
+
+Entregue:
+1. Como criar desejo por produto de loja local num mercado
+   dominado por Shein, Shopee e e-commerce
+2. O que faz uma pessoa comprar roupa em loja física hoje
+   (a razão emocional, não racional)
+3. 5 posts que mostram o produto de forma que loja online não consegue
+4. Como usar stories para vender sem precisar de catálogo elaborado
+5. Script de WhatsApp para cliente que pediu foto e sumiu
+6. Como criar lançamento de nova coleção com engajamento
+7. 3 copies de anúncio para atrair cliente novo para a loja
+8. Como usar vídeo provando a roupa para vender mais</pre></div>
+<p><strong>Exemplo preenchido:</strong></p>
+<div class="block-example"><pre>Gancho: &quot;Roupa bonita, preço justo e você ainda pode provar antes de levar&quot;
+Ângulo que loja online não tem: &quot;Não vai ficar diferente do que você viu —
+porque você vai ver pessoalmente&quot;
+CTA: &quot;Me manda seu estilo que a gente separa as peças pra você&quot;</pre></div>
+<hr>
+<h2>Loja de Importados e Produtos Asiáticos</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para lojas de importados locais
+que vendem acessórios, eletrônicos, gadgets e produtos asiáticos
+(similar ao que está na Shopee e AliExpress, mas físico).
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+CATEGORIA DE PRODUTO: [acessórios / eletrônicos / casa / pet / kids]
+
+Entregue:
+1. O que faz o cliente preferir comprar na loja física em vez
+   de esperar o produto da Shopee
+   (a vantagem que você tem e precisa comunicar)
+2. Como mostrar que o produto tem qualidade sem parecer &quot;produto barato&quot;
+3. 5 posts que geram curiosidade e desejo de ir até a loja
+4. Como usar o &quot;unboxing&quot; para criar conteúdo viral de forma simples
+5. Script de WhatsApp para quando o cliente pergunta &quot;isso vem igual
+   aparece na foto?&quot;
+6. Como criar senso de novidade constante (a loja que sempre tem coisa nova)
+7. 3 copies de anúncio com ângulos diferentes:
+   - Preço surpresa (&quot;não acredita que é tão barato&quot;)
+   - Produto específico que virou febre
+   - Kit presenteável (&quot;presente que impressiona sem gastar muito&quot;)
+8. Como montar catálogo no WhatsApp Business de forma organizada</pre></div>
+<p><strong>Exemplo preenchido:</strong></p>
+<div class="block-example"><pre>Gancho: &quot;Esse produto está na Shopee por R$89. Aqui você leva por R$35 e
+retira hoje.&quot;
+Ângulo: &quot;Sem esperar 30 dias de entrega. Sem risco de produto diferente
+do anunciado. Você vê, você leva.&quot;
+CTA para anúncio: &quot;Manda foto do que você quer que eu vejo se tenho aqui&quot;
+Post de curiosidade: &quot;Chegou algo que parece ser de loja gringa mas custa
+menos de R$30. Conseguiu adivinhar?&quot;</pre></div>
+<hr>
+<h2>Mercearia, Minimercado e Armazém</h2>
+<div class="use-tag">Use: ChatGPT ou Gemini</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para mercearias e minimercados locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. O que faz o cliente escolher a mercearia do bairro em vez do
+   supermercado grande (razão emocional e prática)
+2. Como criar conteúdo que lembra o cliente de comprar aqui
+3. 5 posts para Instagram ou WhatsApp que geram visitas
+4. Como usar lista de transmissão no WhatsApp para divulgar
+   promoções sem parecer spam
+5. Estratégia de &quot;produto da semana&quot; para movimentar estoque
+6. Como criar fidelidade sem cartão de pontos complexo
+7. Como divulgar fiado e parcelamento de forma que não desvalorize</pre></div>
+<p><strong>Exemplo preenchido:</strong></p>
+<div class="block-example"><pre>Gancho: &quot;Por que tem gente que prefere pagar R$2 a mais aqui do que ir
+ao supermercado?&quot;
+Post de bastidores: &quot;Às 6h da manhã a gente já está aqui deixando tudo
+fresquinho para você&quot;
+CTA: &quot;Manda sua lista no WhatsApp que a gente separa aqui&quot;</pre></div>
+<hr>
+<h2>Padaria e Confeitaria</h2>
+<div class="use-tag">Use: ChatGPT ou Gemini</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para padarias e confeitarias locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+PRODUTO QUE QUERO DESTACAR: [descreva]
+
+Entregue:
+1. Como usar o cheiro, a textura e o visual do produto para vender
+   pelo Instagram (o que a foto precisa transmitir)
+2. 5 posts que fazem a pessoa sentir vontade de comprar só de ver
+3. Como usar stories de bastidores para criar desejo (pão saindo
+   do forno, bolo sendo decorado)
+4. Script para encomendas pelo WhatsApp sem perder nenhum detalhe
+5. Como criar caixas e kits presenteáveis para datas comemorativas
+6. 3 copies de anúncio para atrair clientes novos
+7. Como fazer a pessoa que passou na frente entrar — dica de vitrine
+   e comunicação visual</pre></div>
+<hr>
+<h2>Farmácia e Drogaria de Bairro</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para farmácias e drogarias locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. O que diferencia farmácia de bairro da rede grande
+   (o que você tem que eles não têm)
+2. Como criar conteúdo de saúde sem fazer promessa médica ou
+   violar regulamentação
+3. 5 posts educativos sobre saúde que geram autoridade e engajamento
+4. Como usar delivery de medicamentos como diferencial
+5. Script de WhatsApp para pedido de medicamento por entrega
+6. Como criar relacionamento com clientes idosos (maior fidelidade)
+7. 3 posts de produto (dermocosméticos, suplementos, higiene)
+   que vendem sem parecer anúncio</pre></div>
+<hr>
+<h2>Assistência Técnica e Oficina</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para assistências técnicas e oficinas.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+TIPO DE SERVIÇO: [celular / computador / carro / moto / eletrodoméstico]
+
+Entregue:
+1. Como criar confiança em serviço onde o cliente tem medo de ser enganado
+2. 5 posts que mostram competência e transparência
+3. Como usar antes e depois de conserto para gerar engajamento
+4. Script de WhatsApp para orçamento que não assusta o cliente
+5. Como lidar com cliente que questiona o preço do serviço
+6. Como pedir avaliação 5 estrelas após serviço bem feito
+7. 3 copies de anúncio para atrair clientes com problema específico</pre></div>
+<p><strong>Exemplo preenchido — Assistência de celular:</strong></p>
+<div class="block-example"><pre>Gancho: &quot;Tela quebrada? Antes de comprar celular novo, veja isso.&quot;
+Post de prova: &quot;Esse iPhone estava sendo dado como perdido. 2 horas depois...&quot;
+CTA: &quot;Me manda foto do problema que eu te dou um diagnóstico grátis aqui&quot;</pre></div>
+<hr>
+<h2>Escola de Idiomas e Cursos Livres</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para escolas e cursos locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+CURSO: [descreva]
+
+Entregue:
+1. Por que o aluno desiste nos primeiros 3 meses e como evitar
+2. Como criar conteúdo que demonstra resultado antes da matrícula
+3. 5 posts educativos que geram curiosidade pelo curso
+4. Script de WhatsApp para converter quem pediu informações
+5. Como usar aluno atual como prova social de forma autêntica
+6. Como criar urgência real para matrícula (sem inventar vagas)
+7. 3 copies de anúncio para atrair aluno novo</pre></div>
+<hr>
+<h2>Sorveteria, Açaí e Gelateria</h2>
+<div class="use-tag">Use: ChatGPT ou Gemini</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para sorveterias e açaiterias.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. Como criar conteúdo visual que faz a boca do cliente salivar
+2. 5 posts de produto que geram desejo imediato
+3. Como usar a sazonalidade (verão vs. inverno) a favor do negócio
+4. Estratégia de delivery para dias de calor
+5. Como criar combo e kit que aumenta o ticket médio
+6. Script de WhatsApp para pedidos de delivery
+7. Como usar cliente feliz para viralizar o produto</pre></div>
+<hr>
+<h2>Lavanderia e Lavagem de Roupa</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para lavanderias locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. O que faz alguém pagar lavanderia em vez de lavar em casa
+   (a razão real — tempo, resultado ou status?)
+2. 5 posts que vendem o serviço mostrando o resultado e o conforto
+3. Como usar o serviço de coleta e entrega como diferencial
+4. Script de WhatsApp para agendamento e coleta
+5. Como fidelizar cliente com frequência semanal ou quinzenal
+6. 3 copies de anúncio para atrair cliente novo</pre></div>
+<hr>
+<h2>Distribuidora de Bebidas e Conveniência</h2>
+<div class="use-tag">Use: ChatGPT ou Gemini</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para distribuidoras e conveniências.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. Como criar urgência para pedido de bebida (momento certo: churrasco,
+   reunião, viagem)
+2. 5 posts que criam desejo de pedir no momento de consumo
+3. Como usar lista de transmissão no WhatsApp para divulgar promoções
+4. Script para pedido rápido via WhatsApp
+5. Como criar combo de churrasco, aniversário e festa que aumenta ticket
+6. Estratégia de entrega rápida como diferencial competitivo</pre></div>
+<hr>
+<h2>Ótica e Óptico Local</h2>
+<div class="use-tag">Use: Claude ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para óticas locais.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. Como vender armação como acessório de moda, não só como necessidade
+2. 5 posts que mostram o produto de forma desejável e moderna
+3. Como usar antes e depois (sem e com óculos) de forma elegante
+4. Script de WhatsApp para quando cliente pergunta preço
+5. Como comunicar exame de vista gratuito sem desvalorizar
+6. Como criar campanha de troca de armação para cliente antigo
+7. 3 copies de anúncio para atrair cliente novo</pre></div>
+<hr>
+<h2>Advogado, Contador e Consultor</h2>
+<div class="use-tag">Use: Claude (costuma ser muito bom para textos longos e análises detalhadas) ou ChatGPT</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para profissionais liberais que precisam
+comunicar autoridade sem parecer arrogantes.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+ÁREA DE ATUAÇÃO: [descreva]
+
+Entregue:
+1. Como gerar autoridade no Instagram sem violar a ética profissional
+2. 5 posts educativos que mostram competência sem dar consultoria grátis
+3. Como usar casos reais sem violar sigilo
+4. Script de primeiro contato no WhatsApp que converte em consulta paga
+5. Como precificar consulta inicial com valor percebido alto
+6. 3 copies de anúncio que atraem o cliente certo (não os que querem
+   tirar dúvidas de graça)</pre></div>
+<hr>
+<h2>Papelaria, Material Escolar e Presente</h2>
+<div class="use-tag">Use: ChatGPT ou Gemini</div>
+<div class="block-prompt"><pre>Você é especialista em marketing para papelarias e lojas de presentes.
+
+MEU NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Entregue:
+1. Como se diferenciar de papelaria grande com preço menor
+2. Como transformar datas comemorativas em campanha recorrente
+3. 5 posts de produto personalizável que geram engajamento
+4. Como usar personalização como diferencial de preço
+5. Script de WhatsApp para encomenda de kit presenteável
+6. Como criar catálogo de presente por faixa de preço para facilitar
+   a decisão do cliente
+7. 3 copies de anúncio para atrair cliente novo</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 9</div><div class="module-title">MATRIZ DOR × CONTEÚDO × OFERTA</div></div>
+<p>Esta matriz é o conteúdo mais estratégico deste guia. Para de postar aleatoriamente e começa a criar com propósito.</p>
+<div class="table-wrap"><table><thead><tr><th>Dor do Cliente</th><th>Conteúdo Ideal</th><th>Oferta Conectada</th></tr></thead><tbody><tr><td>Não tem tempo</td><td>Post educativo rápido (resolve algo em 5 min)</td><td>Solução que economiza tempo</td></tr><tr><td>Tem medo de errar</td><td>Prova social com caso similar ao dele</td><td>Diagnóstico ou avaliação gratuita</td></tr><tr><td>Acha caro</td><td>Comparativo de custo (quanto custa não resolver)</td><td>Parcelamento ou condição especial</td></tr><tr><td>Não confia</td><td>Bastidores do processo + depoimento</td><td>Garantia de satisfação</td></tr><tr><td>Não sabe por onde começar</td><td>Guia passo a passo</td><td>Consultoria inicial ou kit básico</td></tr><tr><td>Tentou antes e não funcionou</td><td>Explicação do por que falhou + o que é diferente em você</td><td>Demonstração ou sessão grátis</td></tr><tr><td>Compara com concorrente mais barato</td><td>Comparativo de valor (não de preço)</td><td>Pacote com mais entregáveis</td></tr><tr><td>Não viu resultado ainda</td><td>Caso de cliente parecido com ele</td><td>Acompanhamento pós-venda</td></tr></tbody></table></div>
+<p><strong>Como usar:</strong> Identifique a dor principal do seu avatar hoje. Crie o conteúdo correspondente. Conecte com a oferta ligada a essa dor.</p>
+<div class="prompt-badge">MEGA-PROMPT 27</div><h2>Criador de Matriz Personalizada</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Crie minha Matriz Dor × Conteúdo × Oferta personalizada.
+
+Para cada dor que meu cliente sente:
+1. Descreva em linguagem que ele usaria (não jargão técnico)
+2. Sugira o melhor tipo de conteúdo para atrair quem sente essa dor
+3. Indique qual oferta minha se conecta com essa dor
+4. Crie um exemplo prático de post que faz essa conexão
+
+Liste pelo menos 8 dores diferentes do meu avatar.
+Entregue em formato de tabela.
+
+Depois me diga: qual dor atacar primeiro com conteúdo e por quê?</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 10</div><div class="module-title">ERROS QUE FAZEM A IA ENTREGAR RESPOSTAS RUINS</div></div>
+<div class="block-checklist"><div class="check-item"><span class="check-box"></span>Pedir &quot;faça um post&quot; sem contexto</div><div class="check-item"><span class="check-box"></span>Não informar público-alvo</div><div class="check-item"><span class="check-box"></span>Não informar objetivo do conteúdo</div><div class="check-item"><span class="check-box"></span>Usar a primeira resposta sem ajustar</div><div class="check-item"><span class="check-box"></span>Copiar texto com cara de robô (use o Prompt Humanizador)</div><div class="check-item"><span class="check-box"></span>Não adaptar para o jeito da sua marca</div><div class="check-item"><span class="check-box"></span>Pedir conteúdo, mas não ter oferta clara</div><div class="check-item"><span class="check-box"></span>Postar sem CTA (o que a pessoa deve fazer?)</div><div class="check-item"><span class="check-box"></span>Criar anúncio antes de arrumar o WhatsApp</div><div class="check-item"><span class="check-box"></span>Achar que IA substitui estratégia</div></div>
+<h2>Comandos de Refinamento (use sempre)</h2>
+<div class="block-framework"><pre>&quot;Melhore essa resposta deixando mais específica para meu público.&quot;
+&quot;Deixe esse texto menos genérico e mais persuasivo.&quot;
+&quot;Crie versão mais curta para Instagram (máx. 150 palavras).&quot;
+&quot;Transforme em linguagem de WhatsApp, mais casual e direto.&quot;
+&quot;Aponte o que está fraco nessa copy antes de reescrever.&quot;
+&quot;Crie 3 variações com abordagens diferentes.&quot;
+&quot;A primeira linha não prende atenção. Crie 5 opções de gancho.&quot;
+&quot;Reescreva como se fosse uma pessoa de carne e osso falando para
+um amigo próximo.&quot;</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 11</div><div class="module-title">BANCO DE CTAs PRONTOS</div></div>
+<p>Use estes CTAs em posts, stories, anúncios e conversas no WhatsApp.</p>
+<h2>Para Instagram</h2>
+<div class="block-framework"><pre>&quot;Manda &#x27;QUERO&#x27; no direct que eu te explico como funciona.&quot;
+&quot;Comenta &#x27;GUIA&#x27; que eu te envio o passo a passo.&quot;
+&quot;Escreve EU QUERO nos comentários que eu te mando os detalhes.&quot;
+&quot;Salva esse post para não perder quando precisar.&quot;
+&quot;Marca aquela pessoa que precisa ver isso.&quot;
+&quot;Compartilha nos stories se você também passa por isso.&quot;
+&quot;Qual desses é você? Comenta aqui embaixo.&quot;</pre></div>
+<h2>Para Stories</h2>
+<div class="block-framework"><pre>&quot;Arrasta pra cima e garanta o seu.&quot;
+&quot;Responde esse story com SIM e eu te mando mais detalhes.&quot;
+&quot;Clica no link e veja as opções.&quot;
+&quot;Manda mensagem agora — atendo pelo WhatsApp.&quot;</pre></div>
+<h2>Para WhatsApp</h2>
+<div class="block-framework"><pre>&quot;Me chama com a palavra QUERO que eu te explico.&quot;
+&quot;Manda AGENDA que eu vejo os horários disponíveis para você.&quot;
+&quot;Quer saber se isso serve para o seu caso? Me chama aqui.&quot;
+&quot;Peça seu orçamento agora — respondo em minutos.&quot;
+&quot;Me manda foto do que você precisa que eu te dou um diagnóstico.&quot;
+&quot;Manda seu endereço que eu calculo o frete para você agora.&quot;</pre></div>
+<h2>Para Anúncios</h2>
+<div class="block-framework"><pre>&quot;Agende sua avaliação.&quot;
+&quot;Consulte disponibilidade.&quot;
+&quot;Fale com um especialista.&quot;
+&quot;Peça o cardápio.&quot;
+&quot;Receba as opções agora.&quot;
+&quot;Saiba mais.&quot;
+&quot;Chame no WhatsApp.&quot;
+&quot;Ver detalhes.&quot;</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 12</div><div class="module-title">BANCO DE HOOKS (PRIMEIRAS LINHAS)</div></div>
+<p>A primeira linha decide se a pessoa vai ler ou passar. Use esses hooks prontos ou adapte para seu negócio.</p>
+<h2>Hooks de Dor</h2>
+<div class="block-framework"><pre>&quot;O erro que faz você perder clientes sem perceber.&quot;
+&quot;Você provavelmente está perdendo dinheiro por causa disso.&quot;
+&quot;Por que [problema comum] acontece com tanta gente?&quot;
+&quot;Ninguém te conta a verdade sobre [serviço/produto].&quot;
+&quot;Cansado de [problema do avatar]?&quot;
+&quot;Isso aqui acontece com quase todo dono de [negócio].&quot;</pre></div>
+<h2>Hooks de Curiosidade</h2>
+<div class="block-framework"><pre>&quot;Antes de comprar [produto], veja isso.&quot;
+&quot;Isso aqui separa um serviço comum de um profissional de verdade.&quot;
+&quot;O que a gente faz diferente que ninguém mostra por aqui.&quot;
+&quot;Um detalhe que a maioria ignora e faz toda a diferença.&quot;
+&quot;Esse post pode te economizar [tempo/dinheiro]. Salva antes de ler.&quot;
+&quot;Chegou algo novo que vale a pena você ver.&quot;</pre></div>
+<h2>Hooks de Prova Social</h2>
+<div class="block-framework"><pre>&quot;Ela estava prestes a desistir. Depois disso, mudou tudo.&quot;
+&quot;O que aconteceu com esse cliente me surpreendeu.&quot;
+&quot;Resultado de [tempo] trabalhando com a gente.&quot;
+&quot;Esse depoimento me deixou sem palavras.&quot;
+&quot;Cliente que achava que não ia conseguir. Veja o resultado.&quot;</pre></div>
+<h2>Hooks Locais (para negócios do bairro)</h2>
+<div class="block-framework"><pre>&quot;Se você mora em [bairro/cidade], isso é para você.&quot;
+&quot;Quantas vezes você já passou na frente e não sabia o que era?&quot;
+&quot;O [negócio] do seu bairro que as pessoas estão falando.&quot;
+&quot;Aqui pertinho de você tem [solução] que você talvez não conheça.&quot;</pre></div>
+<h2>Hooks de Oferta</h2>
+<div class="block-framework"><pre>&quot;Essa semana tem uma condição especial que não vai se repetir.&quot;
+&quot;Hoje a gente está com [produto/serviço] diferenciado.&quot;
+&quot;Essa promoção só vai até [data real].&quot;
+&quot;Poucas vagas disponíveis para [serviço] neste mês.&quot;</pre></div>
+<h2>Hooks de Reflexão e Decisão</h2>
+<div class="block-framework"><pre>&quot;Se você está esperando o momento certo para resolver [problema], leia isso.&quot;
+&quot;O que ninguém te explica antes de contratar [serviço].&quot;
+&quot;Esse detalhe simples muda completamente o resultado de [produto/serviço].&quot;
+&quot;Você não precisa gastar mais. Precisa escolher melhor.&quot;
+&quot;Antes de procurar o mais barato, veja o que realmente importa.&quot;</pre></div>
+<div class="prompt-badge">MEGA-PROMPT 28</div><h2>Gerador de Hooks Personalizados</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>[Cole seu Bloco de Contexto aqui]
+
+Crie 20 hooks personalizados para meu negócio para usar como:
+- Primeira linha de legenda no Instagram
+- Texto inicial de Stories
+- Frase de abertura de anúncio
+- Gancho de carrossel
+
+Distribua assim:
+5 hooks de dor (tocam na frustração do avatar)
+5 hooks de curiosidade (criam necessidade de saber mais)
+5 hooks de prova social (mostram resultado de outros)
+5 hooks locais (usam referência da minha cidade/bairro)
+
+Para cada hook, me diga:
+- Em qual formato funciona melhor (post, story, anúncio)
+- Qual público responde melhor a esse hook
+- Uma variação do mesmo hook com abordagem diferente</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">MÓDULO 13</div><div class="module-title">PLANILHA DE ACOMPANHAMENTO DE LEADS</div></div>
+<p>Use esta tabela simples para registrar e analisar seus leads do WhatsApp.</p>
+<h2>Modelo de Planilha (copie para o Excel ou Sheets)</h2>
+<div class="table-wrap"><table><thead><tr><th>Data</th><th>Origem</th><th>Nome</th><th>Interesse</th><th>Respondeu?</th><th>Fechou?</th><th>Motivo da Perda</th><th>Próx. Follow-up</th></tr></thead><tbody><tr><td>01/06</td><td>Anúncio IG</td><td>João</td><td>Serviço A</td><td>Sim</td><td>Não</td><td>Achou caro</td><td>05/06</td></tr><tr><td>02/06</td><td>Stories</td><td>Maria</td><td>Produto B</td><td>Sim</td><td>Sim</td><td>—</td><td>—</td></tr><tr><td>03/06</td><td>Indicação</td><td>Pedro</td><td>Serviço A</td><td>Não</td><td>Não</td><td>Sem resposta</td><td>06/06</td></tr></tbody></table></div>
+<p><strong>Origens para registrar:</strong> Anúncio Facebook, Anúncio Instagram, Stories, Bio, Post, Indicação, Google, Presencial, Outro.</p>
+<p><strong>Motivos de perda comuns:</strong> Achou caro, Foi pro concorrente, Sem resposta, Não era o momento, Não entendeu o produto, Desistiu sem explicar.</p>
+<hr>
+<div class="prompt-badge">MEGA-PROMPT 29</div><h2>Análise da Sua Planilha de Leads</h2>
+<div class="use-tag">Use: ChatGPT ou Claude</div>
+<div class="block-prompt"><pre>Você é especialista em vendas e análise de dados para pequenos negócios.
+
+Analise esta planilha de leads do meu WhatsApp:
+
+[cole os dados da planilha ou descreva o que aconteceu]
+
+CONTEXTO DO NEGÓCIO:
+[cole o bloco C.O.A.T.]
+
+Com base nos dados, me responda:
+
+1. Qual origem está trazendo leads mais qualificados?
+
+2. Em qual etapa estou perdendo mais vendas?
+   (no primeiro contato / após apresentar o produto / após o preço)
+
+3. Quais são os 3 motivos de perda mais frequentes?
+   Para cada um, crie a resposta ou abordagem que poderia evitar essa perda.
+
+4. Qual é minha taxa de conversão atual?
+   (vendas ÷ total de leads = %)
+   Isso está bom ou ruim para meu segmento?
+
+5. O problema está em: anúncio, oferta, atendimento ou follow-up?
+   Explique com base nos dados.
+
+6. Que ajuste devo fazer nos próximos 7 dias para melhorar
+   minha conversão?
+
+7. Se eu melhorar a conversão em 10%, quanto a mais vou faturar
+   no mês? Faça o cálculo.</pre></div>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">O QUE ESTE GUIA NÃO FAZ</div></div>
+<p>Este guia não promete vendas automáticas sem esforço.</p>
+<p>A inteligência artificial acelera sua criação de conteúdo, melhora suas ofertas, ajuda a criar anúncios, organiza seu WhatsApp e economiza tempo.</p>
+<p>Mas o resultado ainda depende de:</p>
+<ul>
+<li>qualidade do seu produto ou serviço;</li>
+<li>clareza da sua oferta;</li>
+<li>constância na aplicação;</li>
+<li>velocidade de resposta no WhatsApp;</li>
+<li>atendimento;</li>
+<li>verba de anúncio, se for anunciar;</li>
+<li>capacidade de entregar o que promete.</li>
+</ul>
+<p><strong>Use a IA como acelerador, não como milagre.</strong></p>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">DESAFIO DE 7 DIAS: MEU NEGÓCIO COM IA</div></div>
+<p>Siga dia a dia. Em 7 dias você terá seus primeiros conteúdos, oferta, WhatsApp e anúncio organizados com IA — a base funcionando para você continuar evoluindo.</p>
+<p><strong>Dia 1 — Preencha o Bloco de Contexto</strong> Objetivo: ensinar a IA sobre seu negócio antes de pedir qualquer coisa. Entrega: Bloco C.O.A.T. completo salvo no celular. Tempo: 20 minutos.</p>
+<p><strong>Dia 2 — Crie sua Oferta Principal</strong> Objetivo: sair de serviço genérico para oferta clara e desejável. Use: Módulo 2 — Mega-Prompt 2. Entrega: Uma oferta pronta para comunicar. Tempo: 30 minutos.</p>
+<p><strong>Dia 3 — Faça o Diagnóstico Estratégico</strong> Objetivo: entender o que sua comunicação está errando. Use: Módulo 1 — Mega-Prompt 1. Entrega: 5 insights sobre sua comunicação atual. Tempo: 20 minutos.</p>
+<p><strong>Dia 4 — Crie Seu Primeiro Carrossel e 5 Stories</strong> Objetivo: produzir conteúdo de atração e confiança. Use: Mega-Prompts 4 e 7. Entrega: 1 carrossel pronto + sequência de 5 stories. Tempo: 45 minutos.</p>
+<p><strong>Dia 5 — Monte Seu Script de WhatsApp</strong> Objetivo: parar de perder leads por falta de resposta estratégica. Use: Mega-Prompts 20 e 21. Entrega: Script de venda + respostas para as 3 principais objeções. Tempo: 30 minutos.</p>
+<p><strong>Dia 6 — Crie Seu Primeiro Anúncio</strong> Objetivo: transformar a oferta em campanha. Use: Mega-Prompts 18 e 24. Entrega: 3 copies + 3 criativos. Tempo: 45 minutos.</p>
+<p><strong>Dia 7 — Revise, Publique e Meça</strong> Objetivo: organizar a execução e publicar. Use: Checklists abaixo. Entrega: 1 post publicado + campanha pronta para subir. Tempo: 30 minutos.</p>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">CHECKLISTS DE EXECUÇÃO</div></div>
+<h2>Antes de Criar Conteúdo com IA</h2>
+<div class="block-checklist"><div class="check-item"><span class="check-box"></span>Defini quem é o público (não &quot;todo mundo&quot;)</div><div class="check-item"><span class="check-box"></span>Defini o objetivo do conteúdo (não &quot;aparecer&quot;)</div><div class="check-item"><span class="check-box"></span>Expliquei o tom de voz</div><div class="check-item"><span class="check-box"></span>Dei contexto completo sobre meu negócio</div><div class="check-item"><span class="check-box"></span>Informei o canal de publicação</div><div class="check-item"><span class="check-box"></span>Pedi ao menos 3 variações</div><div class="check-item"><span class="check-box"></span>Pedi melhoria da primeira resposta</div><div class="check-item"><span class="check-box"></span>Adaptei o texto para parecer meu, não da IA</div><div class="check-item"><span class="check-box"></span>Incluí um CTA específico</div><div class="check-item"><span class="check-box"></span>Revisei antes de publicar</div></div>
+<h2>Antes de Rodar Anúncio</h2>
+<div class="block-checklist"><div class="check-item"><span class="check-box"></span>Tenho uma oferta clara (não um serviço genérico)</div><div class="check-item"><span class="check-box"></span>Tenho WhatsApp Business configurado com mensagem automática</div><div class="check-item"><span class="check-box"></span>Tenho pelo menos 3 criativos para testar</div><div class="check-item"><span class="check-box"></span>Sei quais perguntas fazer ao lead para qualificá-lo</div><div class="check-item"><span class="check-box"></span>Tenho planilha simples de acompanhamento de leads</div><div class="check-item"><span class="check-box"></span>Sei qual métrica define sucesso para mim</div><div class="check-item"><span class="check-box"></span>Tenho verba para testar por pelo menos 7 dias</div><div class="check-item"><span class="check-box"></span>Sei quando pausar e quando escalar</div></div>
+<h2>WhatsApp que Vende</h2>
+<div class="block-checklist"><div class="check-item"><span class="check-box"></span>Respondo em menos de 1 hora (idealmente menos de 15 min)</div><div class="check-item"><span class="check-box"></span>Nunca mando preço seco sem entender o problema</div><div class="check-item"><span class="check-box"></span>Faço uma pergunta por mensagem (não interrogatório)</div><div class="check-item"><span class="check-box"></span>Entendo o problema antes de oferecer a solução</div><div class="check-item"><span class="check-box"></span>Uso prova social durante a conversa</div><div class="check-item"><span class="check-box"></span>Tenho follow-up definido (2 dias, 5 dias, 10 dias)</div><div class="check-item"><span class="check-box"></span>Registro os motivos de perda</div><div class="check-item"><span class="check-box"></span>Analiso minhas conversas com IA mensalmente</div></div>
+<hr>
+<div class="module-header"><div class="module-num">SEÇÃO</div><div class="module-title">BÔNUS — QUANDO A IA ERRA: O QUE FAZER</div></div>
+<p><strong>Ela não teve contexto suficiente:</strong> Solução: adicione mais camadas ao prompt (C.O.A.T. + Camadas).</p>
+<p><strong>Ela entendeu errado:</strong> Solução: "Não é isso. O que quero é [especifique]. Tente novamente."</p>
+<p><strong>A resposta está boa mas genérica:</strong> Solução: "Essa resposta está boa. Agora a torne 3x mais específica para [nicho] e [avatar]. Dê exemplos reais."</p>
+<p><strong>O texto parece robotizado:</strong> Solução: use o Prompt Humanizador (Módulo 3) ou diga: "Reescreva como se fosse uma pessoa de carne e osso falando para um amigo próximo."</p>
+<p><strong>A imagem saiu com texto errado:</strong> Solução: "Refaça com menos texto. Use apenas: [título curto] / [subtítulo curto] / [CTA simples]."</p>
+<p><strong>A imagem ficou genérica:</strong> Solução: "Muito genérico. Meu negócio é [descreva]. Meu cliente é [descreva]. Refaça com esse contexto específico."</p>
+<hr>
+<blockquote><p><strong>Este guia tem 29 Mega-Prompts + metodologia C.O.A.T. + Prompt em Camadas + Método F.A.C.E. + Método R.C.T. + Análise de Conversa WhatsApp + Matriz Dor × Conteúdo × Oferta + Banco de CTAs + Banco de Hooks + Planilha de Leads + Desafio de 7 Dias + Checklists de execução + 15 nichos detalhados.</strong></p></blockquote>
+<blockquote><p><strong>Use. Adapte. Venda mais.</strong></p></blockquote>
+<hr>
+<p><em>IA que Vende — Todos os direitos reservados</em> <em>Produto digital — entrega instantânea após o pagamento</em></p>
+
+<hr>
+<p style="text-align:center;font-size:8.5pt;color:#9CA3AF;margin-top:20pt;">
+  <strong>IA QUE VENDE</strong> &nbsp;·&nbsp; Produto digital &nbsp;·&nbsp;
+  Entrega instantânea após o pagamento<br>
+  Todos os direitos reservados &nbsp;·&nbsp; &copy; 2026
+</p>
+
+</div><!-- /content-wrap -->
+</body>
+</html>

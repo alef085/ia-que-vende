@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA que Vende — Transforme o ChatGPT no Assistente de Marketing do seu Pequeno Negócio</title>
+<meta name="description" content="Guia prático com 29 comandos estratégicos para criar posts, criativos, scripts de WhatsApp e anúncios usando IA. Para donos de pequenos negócios locais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & TOKENS ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:        #080809;
+  --surface:   #0F0F11;
+  --surface2:  #161618;
+  --border:    #242428;
+  --amber:     #F5A623;
+  --amber-dim: rgba(245,166,35,0.10);
+  --teal:      #00D4AA;
+  --teal-dim:  rgba(0,212,170,0.10);
+  --red:       #FF4757;
+  --text:      #EEEAE4;
+  --muted:     #6E6E78;
+  --subtle:    #3A3A42;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+section { padding: 100px 0; position: relative; }
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4 {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+h1 { font-size: clamp(34px, 5vw, 62px); font-weight: 800; }
+h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 800; }
+h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 700; }
+p { color: var(--muted); }
+
+/* ========== TAGS ========== */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Syne Mono', monospace; font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--amber); background: var(--amber-dim);
+  border: 1px solid rgba(245,166,35,0.25);
+  padding: 5px 12px; border-radius: 2px;
+  margin-bottom: 20px;
+}
+.tag.teal { color: var(--teal); background: var(--teal-dim); border-color: rgba(0,212,170,0.2); }
+.tag.red { color: var(--red); background: rgba(255,71,87,0.08); border-color: rgba(255,71,87,0.2); }
+
+/* ========== BUTTONS ========== */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--amber); color: #000;
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px;
+  padding: 16px 32px; border-radius: 3px; text-decoration: none;
+  transition: all 0.25s; letter-spacing: 0.01em; cursor: pointer; border: none;
+}
+.btn-primary:hover {
+  background: #FFB740;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(245,166,35,0.30);
+}
+.btn-primary.full { width: 100%; justify-content: center; }
+.btn-primary.large { font-size: 17px; padding: 18px 40px; }
+
+.btn-whatsapp {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25D366; color: #fff;
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
+  padding: 13px 24px; border-radius: 3px; text-decoration: none;
+  transition: all 0.2s; cursor: pointer; border: none;
+}
+.btn-whatsapp:hover { background: #1ebe59; transform: translateY(-1px); }
+.btn-whatsapp.full { width: 100%; }
+.btn-whatsapp.sm { font-size: 13px; padding: 10px 20px; }
+
+/* ========== SCROLL REVEAL ========== */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+
+/* ========== CHECK LIST ========== */
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.check-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 15px; color: var(--text);
+}
+.ck-amber { color: var(--amber); font-family: 'Syne Mono', monospace; font-size: 13px; margin-top: 2px; flex-shrink: 0; }
+
+/* ========== 00. ANNOUNCEMENT BAR ========== */
+#announcement-bar {
+  background: linear-gradient(90deg, #1a1205, #1e1508, #1a1205);
+  border-bottom: 1px solid rgba(245,166,35,0.2);
+  padding: 8px 16px;
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+  font-size: 12px;
+  color: var(--amber);
+  letter-spacing: 0.06em;
+  position: relative; z-index: 101;
+}
+#announcement-bar span.white { color: var(--text); }
+#timer { font-weight: 700; color: var(--amber); }
+
+/* ========== 01. NAV ========== */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(8,8,9,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  height: 60px;
+  display: flex; align-items: center;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px;
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px;
+  letter-spacing: -0.03em; color: var(--text);
+}
+.nav-logo .dot { color: var(--amber); }
+
+/* ========== 02. HERO ========== */
+#hero {
+  padding: 80px 0 100px;
+  position: relative; overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 60% 50%, rgba(245,166,35,0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 10% 80%, rgba(0,212,170,0.04) 0%, transparent 70%);
+}
+.hero-grid-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+}
+.hero-layout {
+  display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.hero-tags .tag { margin-bottom: 0; }
+.hero-h1 { margin-bottom: 20px; }
+.hero-h1 em { font-style: normal; color: var(--amber); }
+.hero-sub {
+  font-size: 17px; color: var(--muted); max-width: 520px;
+  margin-bottom: 28px; line-height: 1.7;
+}
+.hero-badges {
+  display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 36px;
+  font-family: 'Syne Mono', monospace; font-size: 11px;
+  color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.hero-badge { display: flex; align-items: center; }
+.hero-badge + .hero-badge::before { content: '·'; margin: 0 10px; color: var(--subtle); }
+.hero-cta-group { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.hero-price-note {
+  font-family: 'Syne Mono', monospace; font-size: 12px;
+  color: var(--muted); letter-spacing: 0.06em;
+}
+.hero-price-note s { color: var(--subtle); }
+
+/* Hero Card */
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: relative; z-index: 1;
+}
+.hero-card-header {
+  background: #1A1305;
+  border-bottom: 1px solid rgba(245,166,35,0.15);
+  padding: 20px 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+.hero-card-icon {
+  width: 44px; height: 44px;
+  background: var(--amber-dim); border: 1px solid rgba(245,166,35,0.3);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.hero-card-title {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px;
+  color: var(--text); letter-spacing: -0.02em;
+}
+.hero-card-sub {
+  font-family: 'Syne Mono', monospace; font-size: 10px;
+  color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: 2px;
+}
+.hero-card-body { padding: 24px; }
+.hc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.hc-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--text);
+}
+.hc-list li .ck { color: var(--teal); font-family: 'Syne Mono', monospace; font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+.hero-card-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.hero-card-price {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 32px;
+  color: var(--amber); letter-spacing: -0.03em; line-height: 1;
+}
+.hero-card-price-note {
+  font-family: 'Syne Mono', monospace; font-size: 10px;
+  color: var(--muted); letter-spacing: 0.06em; margin-top: 4px;
+}
+.btn-card {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--amber); color: #000;
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px;
+  padding: 12px 20px; border-radius: 3px; white-space: nowrap;
+  transition: all 0.2s;
+}
+.btn-card:hover { background: #FFB740; transform: translateY(-1px); }
+
+/* ========== 03. NÃO É PACK ========== */
+#nao-e-pack { padding: 60px 0; background: var(--surface); }
+.center-block { text-align: center; }
+.center-block h2 { max-width: 680px; margin: 0 auto 16px; }
+.center-block > p { max-width: 600px; margin: 0 auto 48px; font-size: 17px; }
+.tres-pilares { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 40px; }
+.pilar-card {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+  padding: 28px 24px; text-align: center; transition: all 0.25s;
+}
+.pilar-card:hover { transform: translateY(-3px); border-color: var(--amber); }
+.pilar-emoji { font-size: 28px; margin-bottom: 14px; display: block; }
+.pilar-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
+.pilar-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ========== 04. CANVA NUNCA MAIS ========== */
+#canva { background: var(--bg); position: relative; overflow: hidden; }
+#canva::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 600px; height: 400px; pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(245,166,35,0.06) 0%, transparent 70%);
+}
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.terminal-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.terminal-bar {
+  background: var(--surface2); border-bottom: 1px solid var(--border);
+  padding: 10px 16px; display: flex; align-items: center; gap: 8px;
+}
+.t-dots { display: flex; gap: 6px; }
+.td { width: 12px; height: 12px; border-radius: 50%; }
+.td.r { background: #FF5F56; } .td.y { background: #FFBD2E; } .td.g { background: #27C93F; }
+.terminal-filename { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; margin-left: 8px; }
+.terminal-body { padding: 20px; }
+.t-label { font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+.t-code { display: flex; flex-direction: column; gap: 6px; }
+.code-line { font-family: 'Syne Mono', monospace; font-size: 13px; line-height: 1.5; }
+.code-key { color: var(--teal); } .code-val { color: var(--text); }
+.ia-resp {
+  margin-top: 16px; background: var(--surface2);
+  border: 1px solid rgba(0,212,170,0.15); border-radius: 6px; padding: 16px;
+}
+.ia-resp-label {
+  font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--teal);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.ia-resp-label::before { content: '⚡'; font-size: 12px; }
+.ia-resp-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ========== 05. WHATSAPP QUE VENDE ========== */
+#whatsapp { background: var(--surface); }
+.wa-card { background: #0A1929; border: 1px solid rgba(37,211,102,0.15); border-radius: 8px; overflow: hidden; }
+.wa-header {
+  background: #1A2D1A; border-bottom: 1px solid rgba(37,211,102,0.1);
+  padding: 14px 20px; display: flex; align-items: center; gap: 12px;
+}
+.wa-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: #fff; font-family: 'Syne', sans-serif; flex-shrink: 0;
+}
+.wa-contact-name { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px; color: #E9EDEF; }
+.wa-online { font-size: 11px; color: #25D366; margin-top: 1px; }
+.wa-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.wa-sec-label { font-family: 'Syne Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+.wa-sec-label.before { color: var(--red); } .wa-sec-label.after { color: var(--teal); }
+.wa-divider-label { text-align: center; font-family: 'Syne Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--subtle); margin: 4px 0; }
+.msg { padding: 10px 14px; border-radius: 8px; font-size: 13px; max-width: 85%; line-height: 1.5; }
+.msg.recv { background: #1E2A38; color: #E9EDEF; align-self: flex-start; border-radius: 0 8px 8px 8px; }
+.msg.sent { background: #005C4B; color: #E9EDEF; align-self: flex-end; border-radius: 8px 0 8px 8px; }
+.msg.sent.bad { background: #2A1E1E; color: var(--muted); }
+.msg-gone { font-size: 12px; color: var(--red); opacity: 0.7; font-style: italic; text-align: center; }
+
+/* ========== 06. 5 PROMPTS ========== */
+#cinco-prompts { background: var(--bg); }
+.prompts-header { text-align: center; margin-bottom: 56px; }
+.prompts-header h2 { max-width: 680px; margin: 0 auto 14px; }
+.prompts-header p { max-width: 560px; margin: 0 auto; font-size: 16px; }
+.prompts-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; }
+.prompt-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 28px 20px; transition: all 0.25s; }
+.prompt-card:hover { transform: translateY(-3px); border-color: var(--amber); }
+.prompt-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 40px; color: var(--amber); opacity: 0.25; line-height: 1; margin-bottom: 12px; letter-spacing: -0.05em; }
+.prompt-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
+.prompt-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+/* ========== 07. O QUE VEM DENTRO ========== */
+#dentro { background: var(--surface); }
+.dentro-layout { display: grid; grid-template-columns: 1fr 360px; gap: 64px; align-items: start; }
+.dentro-list-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 32px; margin-top: 32px; }
+.dentro-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); }
+.dentro-item::before { content: '✓'; color: var(--amber); font-family: 'Syne Mono', monospace; font-size: 12px; margin-top: 2px; flex-shrink: 0; font-weight: 700; }
+.price-panel { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 28px 24px; position: sticky; top: 80px; }
+.price-panel-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 4px; letter-spacing: -0.02em; }
+.price-panel-sub { font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; }
+.price-big { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 48px; color: var(--amber); letter-spacing: -0.04em; line-height: 1; margin-bottom: 4px; }
+.price-from { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.price-from s { color: var(--subtle); }
+.panel-divider { height: 1px; background: var(--border); margin: 20px 0; }
+.panel-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.panel-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text); }
+.panel-list li::before { content: '✓'; color: var(--teal); font-family: 'Syne Mono', monospace; font-size: 11px; margin-top: 2px; flex-shrink: 0; }
+.panel-trust { font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.06em; text-align: center; margin-top: 12px; }
+
+/* ========== 08. NICHOS ========== */
+#nichos { background: var(--bg); }
+.nichos-header { text-align: center; margin-bottom: 48px; }
+.nichos-header h2 { margin-bottom: 14px; }
+.nichos-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.nicho-chip {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+  padding: 10px 18px; font-size: 14px; color: var(--text); cursor: default;
+  transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+}
+.nicho-chip:hover { border-color: var(--amber); color: var(--amber); transform: translateY(-2px); }
+.nicho-chip.highlight { border-color: rgba(245,166,35,0.3); color: var(--amber); background: var(--amber-dim); }
+
+/* ========== 09. COAT ========== */
+#coat { background: var(--surface); }
+.coat-header { text-align: center; margin-bottom: 56px; }
+.coat-header h2 { margin-bottom: 14px; }
+.coat-header p { max-width: 540px; margin: 0 auto; font-size: 16px; }
+.coat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.coat-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 32px 24px; transition: all 0.25s; }
+.coat-card:hover { transform: translateY(-3px); border-color: var(--amber); }
+.coat-letter {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 56px;
+  background: linear-gradient(135deg, var(--amber), #FF8C00);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; letter-spacing: -0.05em; line-height: 1; margin-bottom: 4px;
+}
+.coat-word { font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--amber); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+.coat-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ========== 10. DESAFIO ========== */
+#desafio { background: var(--bg); }
+.desafio-layout { display: grid; grid-template-columns: 1fr 320px; gap: 64px; align-items: start; }
+.desafio-header { margin-bottom: 56px; }
+.desafio-timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+.desafio-timeline::before {
+  content: ''; position: absolute; left: 16px; top: 20px; bottom: 20px;
+  width: 1px; background: linear-gradient(180deg, var(--amber), var(--teal)); opacity: 0.25;
+}
+.dia-item { display: flex; gap: 24px; align-items: flex-start; padding: 16px 0; position: relative; }
+.dia-dot {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  border: 2px solid var(--border); background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--muted);
+  z-index: 1; transition: all 0.2s;
+}
+.dia-item:hover .dia-dot { border-color: var(--amber); color: var(--amber); background: var(--amber-dim); }
+.dia-item.destaque .dia-dot { border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
+.dia-label { font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+.dia-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: var(--text); margin-bottom: 4px; letter-spacing: -0.02em; }
+.dia-item.destaque .dia-title { color: var(--teal); }
+.dia-desc { font-size: 14px; color: var(--muted); line-height: 1.55; }
+.desafio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 32px 28px; position: sticky; top: 80px; text-align: center; }
+.desafio-num {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 96px;
+  background: linear-gradient(135deg, var(--amber), #FF8C00);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; letter-spacing: -0.06em; line-height: 1; margin-bottom: 8px;
+}
+.desafio-card h3 { font-size: 20px; color: var(--text); margin-bottom: 12px; text-align: left; }
+.desafio-card p { font-size: 14px; text-align: left; margin-bottom: 24px; }
+
+/* ========== 11. PARA QUEM É ========== */
+#para-quem { background: var(--surface); }
+.pq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.pq-card { background: var(--surface2); border-radius: 8px; padding: 32px 28px; }
+.pq-card.sim { border: 1px solid rgba(0,212,170,0.2); }
+.pq-card.nao { border: 1px solid rgba(255,71,87,0.15); }
+.pq-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 20px; letter-spacing: -0.02em; }
+.pq-card.sim .pq-title { color: var(--teal); }
+.pq-card.nao .pq-title { color: var(--red); }
+.pq-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.pq-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.5; }
+.pq-list.sim li::before { content: '✓'; color: var(--teal); font-family: 'Syne Mono', monospace; font-size: 12px; margin-top: 1px; flex-shrink: 0; }
+.pq-list.nao li::before { content: '✗'; color: var(--red); font-family: 'Syne Mono', monospace; font-size: 12px; margin-top: 1px; flex-shrink: 0; }
+
+/* ========== 12. OFERTA ========== */
+#oferta { background: var(--bg); }
+.oferta-header { text-align: center; margin-bottom: 48px; }
+.oferta-header h2 { margin-bottom: 14px; }
+.oferta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 48px; max-width: 720px; margin: 0 auto; }
+.oferta-price-area { text-align: center; margin: 24px 0; }
+.oferta-price { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 64px; color: var(--amber); letter-spacing: -0.05em; line-height: 1; }
+.oferta-from { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.oferta-from s { color: var(--subtle); }
+.oferta-divider { height: 1px; background: var(--border); margin: 28px 0; }
+.oferta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 32px; margin-bottom: 32px; }
+.oferta-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--text); }
+.oferta-item::before { content: '✓'; color: var(--teal); font-family: 'Syne Mono', monospace; font-size: 11px; margin-top: 2px; flex-shrink: 0; }
+.oferta-trust { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-align: center; margin: 12px 0; }
+
+/* ========== 13. GARANTIA ========== */
+#garantia { background: var(--surface); }
+.garantia-inner { display: flex; gap: 40px; align-items: flex-start; max-width: 800px; margin: 0 auto; }
+.garantia-icon {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--teal-dim); border: 1px solid rgba(0,212,170,0.2);
+  display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0;
+}
+.garantia-content h3 { margin-bottom: 12px; color: var(--text); }
+.garantia-content p { font-size: 16px; color: var(--muted); line-height: 1.7; }
+
+/* ========== 14. EXEMPLOS ========== */
+#exemplos { background: var(--bg); }
+.exemplos-header { text-align: center; margin-bottom: 16px; }
+.exemplos-header h2 { margin-bottom: 12px; }
+.exemplos-sub { text-align: center; font-size: 12px; color: var(--subtle); margin-bottom: 48px; font-family: 'Syne Mono', monospace; letter-spacing: 0.06em; }
+.exemplos-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+.exemplo-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 28px 24px; transition: all 0.25s; }
+.exemplo-card:hover { transform: translateY(-3px); border-color: var(--amber); }
+.exemplo-nicho { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.exemplo-emoji { font-size: 24px; }
+.exemplo-nicho-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: var(--text); letter-spacing: -0.02em; }
+.exemplo-text { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+/* ========== 15. FAQ ========== */
+#faq { background: var(--surface); }
+.faq-header { text-align: center; margin-bottom: 48px; }
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); overflow: hidden; }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-question {
+  width: 100%; background: none; border: none; text-align: left; cursor: pointer;
+  padding: 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  font-family: 'Syne', sans-serif; font-weight: 600; font-size: 16px;
+  color: var(--text); letter-spacing: -0.02em; transition: color 0.2s;
+}
+.faq-question:hover { color: var(--amber); }
+.faq-icon {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all 0.25s; font-size: 14px; color: var(--muted);
+}
+.faq-item.open .faq-icon { background: var(--amber-dim); border-color: rgba(245,166,35,0.3); color: var(--amber); transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+.faq-item.open .faq-answer { max-height: 300px; padding-bottom: 20px; }
+.faq-answer p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+/* ========== 16. CTA FINAL ========== */
+#cta-final { background: var(--bg); text-align: center; position: relative; overflow: hidden; }
+#cta-final::before {
+  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 600px; height: 400px; pointer-events: none;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,166,35,0.06) 0%, transparent 70%);
+}
+.cta-final-inner { max-width: 620px; margin: 0 auto; position: relative; }
+.cta-final-inner h2 { margin-bottom: 16px; }
+.cta-final-inner > p { font-size: 17px; margin-bottom: 36px; }
+.cta-trust-line {
+  font-family: 'Syne Mono', monospace; font-size: 11px;
+  color: var(--muted); letter-spacing: 0.06em; margin: 14px 0;
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+.cta-trust-line span { display: flex; align-items: center; gap: 6px; }
+
+/* ========== 17. FOOTER ========== */
+footer { background: var(--bg); border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
+.footer-copy { font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.7; }
+.footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-family: 'Syne Mono', monospace; font-size: 11px; letter-spacing: 0.06em; }
+.footer-links a { color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--amber); }
+
+/* ========== 18. STICKY BAR MOBILE ========== */
+#sticky-bar {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(8,8,9,0.96); backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  padding: 12px 20px;
+  align-items: center; justify-content: space-between; gap: 12px;
+}
+.sticky-label { font-family: 'Syne Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.sticky-price { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; color: var(--amber); letter-spacing: -0.03em; line-height: 1; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  section { padding: 64px 0; }
+  #nao-e-pack { padding: 48px 0; }
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .hero-cta-group { align-items: stretch; }
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-whatsapp { justify-content: center; }
+  .two-col { grid-template-columns: 1fr; gap: 40px; }
+  .tres-pilares { grid-template-columns: 1fr; gap: 16px; }
+  .prompts-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .coat-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pq-grid { grid-template-columns: 1fr; gap: 20px; }
+  .exemplos-grid { grid-template-columns: 1fr; gap: 16px; }
+  .dentro-layout { grid-template-columns: 1fr; }
+  .dentro-list-grid { grid-template-columns: 1fr; gap: 8px; }
+  .desafio-layout { grid-template-columns: 1fr; }
+  .desafio-card { position: static; }
+  .oferta-card { padding: 28px 20px; }
+  .oferta-grid { grid-template-columns: 1fr; gap: 8px; }
+  .garantia-inner { flex-direction: column; align-items: center; text-align: center; }
+  .garantia-icon { margin-bottom: 8px; }
+  .nav-cta .btn-primary { font-size: 13px; padding: 12px 18px; }
+  .price-panel { position: static; }
+  #sticky-bar { display: flex; }
+  body { padding-bottom: 72px; }
+}
+@media (max-width: 600px) {
+  .prompts-grid { grid-template-columns: 1fr; }
+  .coat-grid { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: clamp(30px, 7vw, 44px); }
+  h2 { font-size: clamp(24px, 6vw, 38px); }
+  .oferta-price { font-size: 52px; }
+  .hero-badges { font-size: 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 00. ANNOUNCEMENT BAR -->
+<div id="announcement-bar">
+  ⚡ Oferta de lançamento · Preço sobe em: <strong id="timer">--:--:--</strong> · <span class="white">Preço sobe para R$97</span>
+</div>
+
+<!-- 01. NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><span class="dot">·</span>IA<span class="dot">.</span>que<span class="dot">.</span>Vende</div>
+    <div class="nav-cta">
+      <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary">Quero acessar por R$67 →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 02. HERO -->
+<section id="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-layout">
+      <div>
+        <div class="hero-tags reveal">
+          <span class="tag">🚀 Lançamento · Acesso Imediato</span>
+          <span class="tag teal">⚡ Material Digital</span>
+        </div>
+        <h1 class="hero-h1 reveal reveal-delay-1">
+          Transforme o ChatGPT no <em>assistente de marketing</em> do seu pequeno negócio.
+        </h1>
+        <p class="hero-sub reveal reveal-delay-2">
+          Um guia prático para criar posts, artes, anúncios e mensagens de WhatsApp usando inteligência artificial — sem depender de agência, designer ou criatividade do zero.
+        </p>
+        <div class="hero-badges reveal reveal-delay-2">
+          <span class="hero-badge">📄 Material Digital</span>
+          <span class="hero-badge">29 Comandos prontos</span>
+          <span class="hero-badge">13 Módulos</span>
+          <span class="hero-badge">15 Nichos</span>
+        </div>
+        <div class="hero-cta-group reveal reveal-delay-3">
+          <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary large">Quero acessar por R$67 →</a>
+          <p class="hero-price-note"><s>De R$197</s> · Preço de lançamento · Acesso imediato após o pagamento</p>
+          <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Tire sua dúvida no WhatsApp
+          </a>
+        </div>
+      </div>
+      <!-- Card oculto no mobile -->
+      <div class="hero-card reveal reveal-delay-4" aria-hidden="true">
+        <div class="hero-card-header">
+          <div class="hero-card-icon">🤖</div>
+          <div>
+            <div class="hero-card-title">IA que Vende</div>
+            <div class="hero-card-sub">Material Digital · Acesso Imediato</div>
+          </div>
+        </div>
+        <div class="hero-card-body">
+          <ul class="hc-list">
+            <li><span class="ck">✓</span> 29 Comandos estratégicos prontos para copiar</li>
+            <li><span class="ck">✓</span> Método C.O.A.T. completo</li>
+            <li><span class="ck">✓</span> Módulo WhatsApp que Vende + análise de conversa</li>
+            <li><span class="ck">✓</span> Biblioteca por nicho — 15 nichos</li>
+            <li><span class="ck">✓</span> Desafio de 7 Dias com execução guiada</li>
+            <li><span class="ck">✓</span> Google Meu Negócio + Meta Ads com IA</li>
+          </ul>
+        </div>
+        <div class="hero-card-footer">
+          <div>
+            <div class="hero-card-price">R$67</div>
+            <div class="hero-card-price-note">DE R$197 · LANÇAMENTO</div>
+          </div>
+          <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-card">Acessar agora →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 03. NÃO É PACK DE PROMPTS -->
+<section id="nao-e-pack">
+  <div class="container">
+    <div class="center-block">
+      <div class="reveal"><span class="tag">O produto</span></div>
+      <h2 class="reveal">O IA que Vende não é um pack de prompts.<br>É um sistema prático.</h2>
+      <p class="reveal">Dentro do material você encontra comandos estratégicos prontos para usar no ChatGPT ou em qualquer IA — mas cada um vem com contexto, objetivo e estratégia de uso. Para que a IA entregue resultado real, não resposta genérica.</p>
+      <div class="tres-pilares">
+        <div class="pilar-card reveal reveal-delay-1">
+          <span class="pilar-emoji">🎯</span>
+          <div class="pilar-title">Contexto de negócio</div>
+          <p class="pilar-desc">Como apresentar sua empresa para a IA antes de pedir qualquer coisa. Nicho, público, tom.</p>
+        </div>
+        <div class="pilar-card reveal reveal-delay-2">
+          <span class="pilar-emoji">📋</span>
+          <div class="pilar-title">Objetivo por uso</div>
+          <p class="pilar-desc">O que pedir de forma que a IA entenda e entregue do jeito certo — não de forma genérica.</p>
+        </div>
+        <div class="pilar-card reveal reveal-delay-3">
+          <span class="pilar-emoji">💪</span>
+          <div class="pilar-title">Por nicho</div>
+          <p class="pilar-desc">O que funciona para salão é diferente de pet shop. Temos comandos para os dois — e mais 13.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 04. CANVA NUNCA MAIS -->
+<section id="canva">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="reveal"><span class="tag">Módulo 01</span></div>
+        <h2 class="reveal">Canva Nunca Mais.</h2>
+        <p class="reveal" style="font-size:17px; margin-top:12px; margin-bottom:0;">Aprenda a descrever o que precisa e deixar a IA criar posts, stories e criativos de anúncio por você. Sem arrastar um elemento sequer.</p>
+        <ul class="check-list reveal">
+          <li><span class="ck-amber">✓</span> Posts para feed e stories</li>
+          <li><span class="ck-amber">✓</span> Criativos para anúncios no Instagram</li>
+          <li><span class="ck-amber">✓</span> Artes para WhatsApp e grupos</li>
+          <li><span class="ck-amber">✓</span> Banners de oferta e promoção</li>
+          <li><span class="ck-amber">✓</span> Imagens para Google Meu Negócio</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <div class="t-dots"><div class="td r"></div><div class="td y"></div><div class="td g"></div></div>
+            <span class="terminal-filename">criativo-anuncio.txt</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-label">Seu comando para a IA:</div>
+            <div class="t-code">
+              <div class="code-line"><span class="code-key">Negócio:</span> <span class="code-val">[nome do seu negócio]</span></div>
+              <div class="code-line"><span class="code-key">Nicho:</span> <span class="code-val">[seu nicho]</span></div>
+              <div class="code-line"><span class="code-key">Objetivo:</span> <span class="code-val">arte para anúncio de oferta</span></div>
+              <div class="code-line"><span class="code-key">Formato:</span> <span class="code-val">stories 9:16</span></div>
+              <div class="code-line"><span class="code-key">Tom:</span> <span class="code-val">descontraído e direto</span></div>
+            </div>
+            <div class="ia-resp">
+              <div class="ia-resp-label">IA GEROU EM 3 SEGUNDOS</div>
+              <div class="ia-resp-text">
+                Título: <strong style="color:var(--text)">Só hoje — 30% OFF</strong><br>
+                Cor de fundo: laranja vibrante com texto branco em negrito.<br>
+                Subtítulo: Aproveite antes que acabe!<br>
+                Rodapé: [nome do negócio] · [telefone]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 05. WHATSAPP QUE VENDE -->
+<section id="whatsapp">
+  <div class="container">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="wa-card">
+          <div class="wa-header">
+            <div class="wa-avatar">C</div>
+            <div>
+              <div class="wa-contact-name">Cliente</div>
+              <div class="wa-online">online</div>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-sec-label before">— Antes do guia —</div>
+            <div class="msg recv">Quanto custa?</div>
+            <div class="msg sent bad">R$ 80,00 😊</div>
+            <div class="msg recv">Ok, obrigado!</div>
+            <div class="msg-gone">Cliente sumiu...</div>
+            <div class="wa-divider-label">——————</div>
+            <div class="wa-sec-label after">— Com o guia —</div>
+            <div class="msg recv">Quanto custa?</div>
+            <div class="msg sent">Oi! Depende do serviço 😊 Me conta melhor o que você precisa que te passo um valor certinho. O que está acontecendo?</div>
+            <div class="msg recv">Pode me mandar o link pra eu fechar? 🙌</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="reveal"><span class="tag">Módulo 02</span></div>
+        <h2 class="reveal">WhatsApp que Vende.</h2>
+        <p class="reveal" style="font-size:17px; margin-top:12px;">Cole sua conversa real do WhatsApp e a IA aponta exatamente onde você perdeu a atenção do cliente — e o que dizer diferente da próxima vez.</p>
+        <ul class="check-list reveal">
+          <li><span class="ck-amber">✓</span> Script para "quanto custa?" sem espantar o cliente</li>
+          <li><span class="ck-amber">✓</span> Follow-up para cliente que sumiu</li>
+          <li><span class="ck-amber">✓</span> Respostas para as 5 objeções mais comuns</li>
+          <li><span class="ck-amber">✓</span> Mensagem de fechamento sem parecer insistente</li>
+          <li><span class="ck-amber">✓</span> Análise da sua conversa real com feedback da IA</li>
+        </ul>
+        <div style="margin-top:24px;" class="reveal">
+          <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende" class="btn-whatsapp sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Tire sua dúvida sobre esse módulo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 06. 5 PROMPTS INDISPENSÁVEIS -->
+<section id="cinco-prompts">
+  <div class="container">
+    <div class="prompts-header">
+      <div class="reveal"><span class="tag">Módulo 03</span></div>
+      <h2 class="reveal">5 Comandos que mudam o jogo<br>desde o primeiro uso.</h2>
+      <p class="reveal">Cinco comandos estratégicos que cobrem os maiores gargalos do marketing de um pequeno negócio.</p>
+    </div>
+    <div class="prompts-grid">
+      <div class="prompt-card reveal">
+        <div class="prompt-num">01</div>
+        <div class="prompt-title">Diagnóstico do negócio</div>
+        <p class="prompt-desc">A IA mapeia pontos fortes, fracos e oportunidades em 10 minutos.</p>
+      </div>
+      <div class="prompt-card reveal reveal-delay-1">
+        <div class="prompt-num">02</div>
+        <div class="prompt-title">Criador de oferta</div>
+        <p class="prompt-desc">Monte uma oferta clara e desejável com estrutura e argumentos definidos.</p>
+      </div>
+      <div class="prompt-card reveal reveal-delay-2">
+        <div class="prompt-num">03</div>
+        <div class="prompt-title">Calendário editorial</div>
+        <p class="prompt-desc">30 ideias de conteúdo geradas em 10 minutos, já no formato do seu nicho.</p>
+      </div>
+      <div class="prompt-card reveal reveal-delay-3">
+        <div class="prompt-num">04</div>
+        <div class="prompt-title">Criativo de anúncio</div>
+        <p class="prompt-desc">Headline + copy + descrição visual. Pronto para subir no Instagram.</p>
+      </div>
+      <div class="prompt-card reveal reveal-delay-4">
+        <div class="prompt-num">05</div>
+        <div class="prompt-title">Script de WhatsApp</div>
+        <p class="prompt-desc">Da abordagem ao fechamento, com respostas para cada etapa da conversa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 07. O QUE VEM DENTRO -->
+<section id="dentro">
+  <div class="container">
+    <div class="dentro-layout">
+      <div>
+        <div class="reveal"><span class="tag">O que você recebe</span></div>
+        <h2 class="reveal">Tudo que vem no<br>material digital.</h2>
+        <p class="reveal" style="font-size:16px; margin-top:12px;">13 módulos práticos, organizados para você aplicar do zero. Sem enrolação, sem teoria desnecessária.</p>
+        <div class="dentro-list-grid reveal">
+          <div class="dentro-item">29 Comandos estratégicos prontos</div>
+          <div class="dentro-item">13 módulos práticos</div>
+          <div class="dentro-item">Método C.O.A.T. completo</div>
+          <div class="dentro-item">5 Comandos Indispensáveis</div>
+          <div class="dentro-item">Módulo Canva Nunca Mais</div>
+          <div class="dentro-item">Criador de Oferta</div>
+          <div class="dentro-item">WhatsApp que Vende</div>
+          <div class="dentro-item">Análise de conversa real</div>
+          <div class="dentro-item">Meta Ads para WhatsApp</div>
+          <div class="dentro-item">Google Meu Negócio com IA</div>
+          <div class="dentro-item">Biblioteca — 15 nichos</div>
+          <div class="dentro-item">Banco de Hooks e CTAs</div>
+          <div class="dentro-item">Calendário editorial mensal</div>
+          <div class="dentro-item">Desafio de 7 Dias guiado</div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="price-panel">
+          <div style="margin-bottom:14px;"><span class="tag teal">🔥 LANÇAMENTO</span></div>
+          <div class="price-panel-title">IA que Vende — Material Digital</div>
+          <div class="price-panel-sub">Acesso imediato após o pagamento</div>
+          <div class="price-big">R$67</div>
+          <div class="price-from">De <s>R$197</s> — preço de lançamento</div>
+          <div class="panel-divider"></div>
+          <ul class="panel-list">
+            <li>Material digital completo — 13 módulos</li>
+            <li>29 Comandos estratégicos prontos</li>
+            <li>WhatsApp que Vende + análise real</li>
+            <li>Biblioteca com 15 nichos</li>
+            <li>Planilha de leads + Desafio 7 Dias</li>
+          </ul>
+          <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary full" style="margin-bottom:10px;">Quero acessar por R$67 →</a>
+          <div class="panel-trust">🔒 Kirvano · Pix ou Cartão</div>
+          <div style="margin-top:10px;">
+            <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende" class="btn-whatsapp full sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Dúvidas? Fale no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 08. BIBLIOTECA POR NICHO -->
+<section id="nichos">
+  <div class="container">
+    <div class="nichos-header">
+      <div class="reveal"><span class="tag">Feito para o seu negócio</span></div>
+      <h2 class="reveal">15 nichos de pequenos negócios locais.</h2>
+      <p class="reveal" style="max-width:560px; margin:0 auto; font-size:16px;">O material tem uma biblioteca segmentada por nicho. Porque o que funciona para um salão é diferente do que funciona para uma assistência técnica.</p>
+    </div>
+    <div class="nichos-grid reveal">
+      <div class="nicho-chip">💅 Estética</div>
+      <div class="nicho-chip">✂️ Salão & Barbearia</div>
+      <div class="nicho-chip">🍽️ Restaurante & Delivery</div>
+      <div class="nicho-chip">🐾 Pet Shop</div>
+      <div class="nicho-chip">🪑 Academia</div>
+      <div class="nicho-chip">👗 Moda & Roupas</div>
+      <div class="nicho-chip">👗 Importados</div>
+      <div class="nicho-chip">🥖 Mercearia & Padaria</div>
+      <div class="nicho-chip">💊 Farmácia</div>
+      <div class="nicho-chip">🔧 Assistência Técnica</div>
+      <div class="nicho-chip">👓 Ótica</div>
+      <div class="nicho-chip">📚 Papelaria</div>
+      <div class="nicho-chip">🏥 Clínica</div>
+      <div class="nicho-chip">🏠 Serviços Locais</div>
+      <div class="nicho-chip highlight">+ seu nicho →</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 09. MÉTODO C.O.A.T. -->
+<section id="coat">
+  <div class="container">
+    <div class="coat-header">
+      <div class="reveal"><span class="tag">O método</span></div>
+      <h2 class="reveal">O Método C.O.A.T.</h2>
+      <p class="reveal">É a estrutura por trás de cada comando do material. Quando você segue esse método, a IA deixa de dar respostas genéricas e começa a trabalhar de verdade para o seu negócio.</p>
+    </div>
+    <div class="coat-grid">
+      <div class="coat-card reveal">
+        <div class="coat-letter">C</div>
+        <div class="coat-word">Contexto</div>
+        <p class="coat-desc">Apresente seu negócio para a IA antes de qualquer coisa. Nicho, público, tom. Sem contexto, resposta genérica.</p>
+      </div>
+      <div class="coat-card reveal reveal-delay-1">
+        <div class="coat-letter">O</div>
+        <div class="coat-word">Objetivo</div>
+        <p class="coat-desc">Diga exatamente o que quer criar. Post, oferta, script? O objetivo muda tudo que a IA entrega.</p>
+      </div>
+      <div class="coat-card reveal reveal-delay-2">
+        <div class="coat-letter">A</div>
+        <div class="coat-word">Ação</div>
+        <p class="coat-desc">Os 29 comandos do material. Você copia, cola, adapta o nome do negócio e envia. Sem tentar adivinhar.</p>
+      </div>
+      <div class="coat-card reveal reveal-delay-3">
+        <div class="coat-letter">T</div>
+        <div class="coat-word">Tom</div>
+        <p class="coat-desc">Ajuste para a sua voz. O material ensina a calibrar para que o conteúdo pareça que você escreveu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 10. DESAFIO DE 7 DIAS -->
+<section id="desafio">
+  <div class="container">
+    <div class="desafio-header">
+      <div class="reveal"><span class="tag">Execução guiada</span></div>
+      <h2 class="reveal">Desafio de 7 Dias.</h2>
+      <p class="reveal" style="font-size:16px; max-width:560px; margin-top:12px;">O material não é para "ler depois". O Desafio garante que você aplica uma coisa por dia — e no 7º dia tem algo real para mostrar.</p>
+    </div>
+    <div class="desafio-layout">
+      <div class="desafio-timeline">
+        <div class="dia-item reveal"><div class="dia-dot">1</div><div class="dia-content"><div class="dia-label">DIA 1</div><div class="dia-title">Diagnóstico completo do seu negócio</div><p class="dia-desc">A IA mapeia seus pontos fortes, fracos e oportunidades em 10 minutos.</p></div></div>
+        <div class="dia-item reveal"><div class="dia-dot">2</div><div class="dia-content"><div class="dia-label">DIA 2</div><div class="dia-title">Sua oferta criada com IA</div><p class="dia-desc">Monte uma oferta clara, com estrutura e argumentos definidos.</p></div></div>
+        <div class="dia-item reveal"><div class="dia-dot">3</div><div class="dia-content"><div class="dia-label">DIA 3</div><div class="dia-title">Calendário de conteúdo do mês inteiro</div><p class="dia-desc">30 ideias de post em 10 minutos, já formatadas para o seu nicho.</p></div></div>
+        <div class="dia-item reveal"><div class="dia-dot">4</div><div class="dia-content"><div class="dia-label">DIA 4</div><div class="dia-title">Seu primeiro criativo de anúncio</div><p class="dia-desc">Headline + copy + descrição visual. Pronto para subir no Instagram.</p></div></div>
+        <div class="dia-item reveal"><div class="dia-dot">5</div><div class="dia-content"><div class="dia-label">DIA 5</div><div class="dia-title">Script de WhatsApp que converte</div><p class="dia-desc">Resposta para "quanto custa?", objeções e follow-up sem ser insistente.</p></div></div>
+        <div class="dia-item reveal"><div class="dia-dot">6</div><div class="dia-content"><div class="dia-label">DIA 6</div><div class="dia-title">Análise da sua conversa real</div><p class="dia-desc">Cole uma conversa onde perdeu a atenção. A IA aponta o que mudar.</p></div></div>
+        <div class="dia-item destaque reveal"><div class="dia-dot">7</div><div class="dia-content"><div class="dia-label">DIA 7</div><div class="dia-title">Primeira execução publicada</div><p class="dia-desc">Post no ar, script pronto, oferta definida. Sistema rodando.</p></div></div>
+      </div>
+      <div class="desafio-card reveal reveal-delay-2">
+        <div class="desafio-num">7</div>
+        <h3>dias para sua primeira execução com IA</h3>
+        <p>Em menos de uma semana você sai do "tentei e não funcionou" para um sistema aplicado no seu negócio.</p>
+        <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary full" style="margin-bottom:10px;">Quero acessar por R$67 →</a>
+        <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende" class="btn-whatsapp full sm">Prefere tirar uma dúvida antes?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 11. PARA QUEM É / NÃO É -->
+<section id="para-quem">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="reveal"><span class="tag">Seja honesto</span></div>
+      <h2 class="reveal">Para quem é este material?</h2>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-card sim reveal">
+        <div class="pq-title">✓ É para você se…</div>
+        <ul class="pq-list sim">
+          <li>Você tem um pequeno negócio local</li>
+          <li>Vende pelo WhatsApp ou quer melhorar seu atendimento</li>
+          <li>Faz o marketing sozinho, sem agência</li>
+          <li>Quer criar conteúdo e anúncios, mas não sabe por onde começar</li>
+          <li>Já tentou usar IA mas as respostas eram genéricas</li>
+          <li>Quer aplicação prática, não teoria</li>
+        </ul>
+      </div>
+      <div class="pq-card nao reveal reveal-delay-2">
+        <div class="pq-title">✗ Não é para você se…</div>
+        <ul class="pq-list nao">
+          <li>Você procura fórmula mágica sem nenhum esforço</li>
+          <li>Acha que IA trabalha sozinha sem você aplicar</li>
+          <li>Não tem produto, serviço ou negócio real</li>
+          <li>Não está disposto a dedicar 15 minutos por dia</li>
+          <li>Quer resultado sem organizar sua oferta e atendimento</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 12. OFERTA -->
+<section id="oferta">
+  <div class="container">
+    <div class="oferta-header">
+      <div class="reveal"><span class="tag">🔥 Lançamento</span></div>
+      <h2 class="reveal">Comece hoje a aplicar IA<br>no seu negócio.</h2>
+    </div>
+    <div class="oferta-card reveal">
+      <div style="text-align:center;"><span class="tag teal">PREÇO DE LANÇAMENTO</span></div>
+      <h3 style="text-align:center; margin-top:16px; font-size:20px; color:var(--text);">IA que Vende — Material Digital</h3>
+      <div class="oferta-price-area">
+        <div class="oferta-price">R$67</div>
+        <div class="oferta-from">De <s>R$197</s> — disponível por tempo limitado</div>
+      </div>
+      <div class="oferta-divider"></div>
+      <div class="oferta-grid">
+        <div class="oferta-item">Material digital completo — 13 módulos</div>
+        <div class="oferta-item">29 Comandos estratégicos prontos</div>
+        <div class="oferta-item">Método C.O.A.T. completo</div>
+        <div class="oferta-item">Módulo Canva Nunca Mais</div>
+        <div class="oferta-item">WhatsApp que Vende + análise real</div>
+        <div class="oferta-item">Biblioteca por nicho — 15 nichos</div>
+        <div class="oferta-item">Banco de Hooks e CTAs</div>
+        <div class="oferta-item">Planilha de leads + Desafio 7 Dias</div>
+      </div>
+      <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary full large">Quero acessar agora por R$67 →</a>
+      <div class="oferta-trust">🔒 Pagamento seguro · Kirvano · Pix ou Cartão</div>
+      <div style="margin-top:12px;">
+        <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende" class="btn-whatsapp full sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Tem dúvidas? Fale comigo no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 13. GARANTIA -->
+<section id="garantia">
+  <div class="container">
+    <div class="garantia-inner">
+      <div class="garantia-icon reveal">🛡️</div>
+      <div class="reveal">
+        <div style="margin-bottom:8px;"><span class="tag teal">Risco zero</span></div>
+        <h3>Garantia de 7 dias</h3>
+        <p class="garantia-content" style="font-size:16px; margin-top:12px; color:var(--muted);">Você tem 7 dias para acessar o material, aplicar os comandos e ver se faz sentido para o seu negócio. Se por qualquer motivo não atender ao que você esperava, basta solicitar o reembolso dentro do prazo — sem perguntas, sem burocracia, 100% devolvido via plataforma Kirvano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 14. EXEMPLOS DE APLICAÇÃO -->
+<section id="exemplos">
+  <div class="container">
+    <div class="exemplos-header">
+      <div class="reveal"><span class="tag">Exemplos de aplicação</span></div>
+      <h2 class="reveal">Veja como outros negócios<br>podem aplicar o material.</h2>
+    </div>
+    <p class="exemplos-sub reveal">⚠ Estes são exemplos hipotéticos de uso do guia por nicho.</p>
+    <div class="exemplos-grid">
+      <div class="exemplo-card reveal">
+        <div class="exemplo-nicho"><span class="exemplo-emoji">✂️</span><span class="exemplo-nicho-name">Salão de Beleza</span></div>
+        <p class="exemplo-text">Com o módulo Canva Nunca Mais, a IA gera 3 opções de arte para post de promoção — você escolhe, ajusta o nome do salão e publica. Sem arrastar elemento nenhum.</p>
+      </div>
+      <div class="exemplo-card reveal reveal-delay-1">
+        <div class="exemplo-nicho"><span class="exemplo-emoji">🔧</span><span class="exemplo-nicho-name">Assistência Técnica</span></div>
+        <p class="exemplo-text">Com o script do WhatsApp que Vende, o atendimento de "quanto custa conserto de tela?" tem resposta estruturada para apresentar o preço sem perder o cliente.</p>
+      </div>
+      <div class="exemplo-card reveal reveal-delay-2">
+        <div class="exemplo-nicho"><span class="exemplo-emoji">🐾</span><span class="exemplo-nicho-name">Pet Shop</span></div>
+        <p class="exemplo-text">A biblioteca de nicho tem comandos específicos para promoção de ração, serviços de banho e tosa, e lembretes de vacinação — adaptáveis em minutos.</p>
+      </div>
+      <div class="exemplo-card reveal reveal-delay-3">
+        <div class="exemplo-nicho"><span class="exemplo-emoji">🍔</span><span class="exemplo-nicho-name">Delivery de Comida</span></div>
+        <p class="exemplo-text">O calendário editorial do mês sai em 10 minutos: promoção de quarta, combo de fim de semana, post de bastidores — tudo no tom certo para o nicho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 15. FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="reveal"><span class="tag">Dúvidas frequentes</span></div>
+      <h2 class="reveal">Perguntas e respostas.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Preciso pagar o ChatGPT para usar o material?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Não precisa começar pagando. A versão gratuita do ChatGPT funciona para a maioria dos comandos. A versão paga só faz sentido se você for criar muitos criativos por semana — e o material explica quando isso vale a pena.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">O que é exatamente o material?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>É um documento digital com 29 comandos estratégicos prontos para usar em qualquer IA, organizados em 13 módulos práticos. Cada comando vem com contexto, objetivo e estratégia de uso. Não é um curso — é material de execução direta.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Serve para o meu tipo de negócio?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>O material foi criado para pequenos negócios locais e inclui biblioteca com 15 nichos. Se o seu negócio não estiver na lista, o método C.O.A.T. permite adaptar qualquer comando para qualquer tipo de negócio.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Quando recebo o acesso?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Acesso imediato. Após a confirmação do pagamento, você recebe o link do material por e-mail e pode acessar pelo celular, computador ou tablet.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Preciso saber de marketing para usar?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Não. O material foi criado para quem quer aplicar IA de forma simples e prática no dia a dia do negócio, sem formação em marketing ou tecnologia.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">O material garante vendas?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Não. Nenhum material pode garantir isso honestamente. O que ele faz é te dar o sistema para organizar seu conteúdo, oferta, criativos e atendimento com IA. O resultado depende da sua oferta, atendimento, constância e execução.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">E se eu não gostar?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Você tem 7 dias de garantia total. Se por qualquer motivo não fizer sentido, basta solicitar o reembolso dentro do prazo — sem perguntas, 100% devolvido via Kirvano.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 16. CTA FINAL -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-final-inner">
+      <div class="reveal"><span class="tag">Última chamada</span></div>
+      <h2 class="reveal">Seu negócio está esperando.<br>A IA está pronta.</h2>
+      <p class="reveal">Basta você dar o primeiro passo.<br>Acesso imediato, preço de lançamento, garantia total.</p>
+      <div class="reveal">
+        <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary large">Quero o IA que Vende por R$67 →</a>
+      </div>
+      <div class="cta-trust-line reveal">
+        <span>🛡️ Garantia de 7 dias</span>
+        <span>⚡ Acesso imediato</span>
+        <span>🔒 Pagamento seguro</span>
+      </div>
+      <div class="reveal" style="margin-top:8px;">
+        <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende" class="btn-whatsapp sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Prefere falar comigo antes de comprar?
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 17. FOOTER -->
+<footer>
+  <div class="footer-copy">
+    © 2026 Ale IA Negócios · aleianegocios.com.br · Todos os direitos reservados.<br>
+    Este produto é um material digital. Os resultados dependem da aplicação individual de cada usuário.
+  </div>
+  <div class="footer-links">
+    <a href="#">Política de Privacidade</a>
+    <a href="#">Termos de Uso</a>
+    <a href="https://wa.me/559185166656?text=Oi%20vim%20do%20site%2C%20quero%20saber%20mais%20sobre%20o%20guia%20IA%20que%20Vende">Suporte via WhatsApp</a>
+  </div>
+</footer>
+
+<!-- 18. STICKY BAR MOBILE -->
+<div id="sticky-bar">
+  <div>
+    <div class="sticky-label">Lançamento</div>
+    <div class="sticky-price">R$67</div>
+  </div>
+  <a href="https://pay.kirvano.com/37239c4b-0086-4729-866f-1232cda1f4c8" class="btn-primary">Quero acessar →</a>
+</div>
+
+<script>
+// SCROLL REVEAL
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if (!window.IntersectionObserver) { els.forEach(function(e){e.classList.add('visible');}); return; }
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(function(el){ obs.observe(el); });
+})();
+
+// COUNTDOWN TIMER
+(function(){
+  var el = document.getElementById('timer');
+  if (!el) return;
+  function update(){
+    var now = new Date(), midnight = new Date(now);
+    midnight.setHours(24,0,0,0);
+    var diff = Math.max(0, midnight - now);
+    var h = String(Math.floor(diff/3600000)).padStart(2,'0');
+    var m = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    var s = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    el.textContent = h+':'+m+':'+s;
+  }
+  update(); setInterval(update, 1000);
+})();
+
+// FAQ ACCORDION
+(function(){
+  document.querySelectorAll('.faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = this.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+      this.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+})();
+
+// STICKY BAR (show after hero scrolls out)
+(function(){
+  var bar = document.getElementById('sticky-bar');
+  var hero = document.getElementById('hero');
+  if (!bar || !hero || !window.IntersectionObserver) return;
+  var obs = new IntersectionObserver(function(entries){
+    bar.style.display = entries[0].isIntersecting ? 'none' : 'flex';
+  }, { threshold: 0 });
+  obs.observe(hero);
+})();
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,992 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - img
+      - generic [ref=e4]: GUIA DIGITAL · EDIÇÃO 2026
+      - generic [ref=e5]:
+        - generic [ref=e6]: IA
+        - generic [ref=e8]: QUE VENDE
+      - generic [ref=e9]: INTELIGÊNCIA ARTIFICIAL PARA PEQUENOS NEGÓCIOS
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - paragraph [ref=e12]:
+          - text: Crie posts, artes, anúncios e mensagens de WhatsApp
+          - text: para atrair clientes usando inteligência artificial
+        - separator [ref=e13]
+        - paragraph [ref=e14]: Para donos de pequenos negócios · Sem experiência técnica necessária
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: "13"
+          - generic [ref=e19]: Módulos
+        - generic [ref=e21]:
+          - generic [ref=e22]: "15"
+          - generic [ref=e24]: Nichos
+      - img [ref=e26]:
+        - generic [ref=e29]: "29"
+        - generic [ref=e30]: MEGA-PROMPTS
+        - generic [ref=e31]: PRONTOS
+      - paragraph [ref=e32]: Produto digital · Entrega instantânea após o pagamento
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]: "13"
+        - text: Módulos
+      - generic [ref=e37]:
+        - generic [ref=e38]: "29"
+        - text: Mega-Prompts
+      - generic [ref=e39]:
+        - generic [ref=e40]: "15"
+        - text: Nichos
+      - generic [ref=e41]:
+        - generic [ref=e42]: "7"
+        - text: Dias de Desafio
+    - heading "IA QUE VENDE" [level=1] [ref=e43]
+    - heading "Crie posts, artes, anúncios e mensagens de WhatsApp para atrair clientes usando inteligência artificial" [level=2] [ref=e44]
+    - blockquote [ref=e45]:
+      - paragraph [ref=e46]:
+        - strong [ref=e47]: "Para quem é este guia:"
+        - text: Donos de pequenos negócios que querem usar IA para criar conteúdo, melhorar ofertas, vender pelo WhatsApp e anunciar — mesmo sem saber escrever, sem contratar agência e sem perder horas no Canva.
+    - separator [ref=e48]
+    - generic [ref=e49]:
+      - generic [ref=e50]: SEÇÃO
+      - generic [ref=e51]: COMO USAR ESTE GUIA SEM SE PERDER
+    - paragraph [ref=e52]: Este guia é completo. Você não precisa usar tudo de uma vez.
+    - table [ref=e54]:
+      - rowgroup [ref=e55]:
+        - row "Seu problema hoje Comece por aqui" [ref=e56]:
+          - columnheader "Seu problema hoje" [ref=e57]
+          - columnheader "Comece por aqui" [ref=e58]
+      - rowgroup [ref=e59]:
+        - row "Não sei o que postar Módulo 3 — Redes Sociais" [ref=e60]:
+          - cell "Não sei o que postar" [ref=e61]
+          - cell "Módulo 3 — Redes Sociais" [ref=e62]
+        - row "Minha oferta parece fraca Módulo 2 — Oferta" [ref=e63]:
+          - cell "Minha oferta parece fraca" [ref=e64]
+          - cell "Módulo 2 — Oferta" [ref=e65]
+        - row "Perco muito tempo no Canva Módulo 4 — Canva Nunca Mais" [ref=e66]:
+          - cell "Perco muito tempo no Canva" [ref=e67]
+          - cell "Módulo 4 — Canva Nunca Mais" [ref=e68]
+        - row "Recebo mensagem e não vendo Módulo 5 — WhatsApp" [ref=e69]:
+          - cell "Recebo mensagem e não vendo" [ref=e70]
+          - cell "Módulo 5 — WhatsApp" [ref=e71]
+        - row "Quero anunciar no Instagram Módulo 6 — Meta Ads" [ref=e72]:
+          - cell "Quero anunciar no Instagram" [ref=e73]
+          - cell "Módulo 6 — Meta Ads" [ref=e74]
+        - row "Quero aparecer no Google Módulo 7 — Google Meu Negócio / Perfil da Empresa no Google" [ref=e75]:
+          - cell "Quero aparecer no Google" [ref=e76]
+          - cell "Módulo 7 — Google Meu Negócio / Perfil da Empresa no Google" [ref=e77]
+        - row "Estou perdido, não sei por onde começar Desafio de 7 Dias (no final do guia)" [ref=e78]:
+          - cell "Estou perdido, não sei por onde começar" [ref=e79]
+          - cell "Desafio de 7 Dias (no final do guia)" [ref=e80]
+    - paragraph [ref=e81]:
+      - strong [ref=e82]: "Caminho recomendado para quem está começando:"
+      - text: Desafio de 7 Dias → Módulo 2 → Módulo 3 → Módulo 5
+    - separator [ref=e83]
+    - generic [ref=e84]:
+      - generic [ref=e85]: SEÇÃO
+      - generic [ref=e86]: 5 PROMPTS INDISPENSÁVEIS PARA O SEU NEGÓCIO
+    - paragraph [ref=e87]: Este guia tem muitos prompts, mas você não precisa usar todos de uma vez.
+    - paragraph [ref=e88]: Se você está começando agora e quer resultado rápido, comece por estes 5 prompts obrigatórios. Eles formam a base mínima para qualquer pequeno negócio usar IA de forma estratégica.
+    - paragraph [ref=e89]:
+      - strong [ref=e90]: 1. Diagnóstico Completo do Negócio
+      - text: "Use para entender a dor do cliente, o desejo principal, as objeções e o melhor tipo de conteúdo para atrair compradores. → Onde encontrar:"
+      - strong [ref=e91]: Módulo 1 — Mega-Prompt 1
+    - paragraph [ref=e92]:
+      - strong [ref=e93]: 2. Criador de Oferta Irresistível
+      - text: "Use para transformar um produto ou serviço comum em uma oferta mais clara, desejável e fácil de vender. → Onde encontrar:"
+      - strong [ref=e94]: Módulo 2 — Mega-Prompt 2
+    - paragraph [ref=e95]:
+      - strong [ref=e96]: 3. Estratégia Editorial do Mês
+      - text: "Use para criar um calendário de conteúdo com posts, temas, hooks e formatos para Instagram. → Onde encontrar:"
+      - strong [ref=e97]: Módulo 3 — Mega-Prompt 3
+    - paragraph [ref=e98]:
+      - strong [ref=e99]: 4. Criativo para Anúncio
+      - text: "Use para criar imagens profissionais para anúncios, posts e campanhas sem perder horas no Canva. → Onde encontrar:"
+      - strong [ref=e100]: Módulo 4 — Mega-Prompt 15
+    - paragraph [ref=e101]:
+      - strong [ref=e102]: 5. Script Completo de Venda no WhatsApp
+      - text: "Use para responder melhor os leads, conduzir a conversa e aumentar as chances de fechamento. → Onde encontrar:"
+      - strong [ref=e103]: Módulo 5 — Mega-Prompt 21
+    - blockquote [ref=e104]:
+      - paragraph [ref=e105]: "Use esses 5 primeiro. Eles organizam o básico: diagnóstico, oferta, conteúdo, criativo e atendimento. Depois que essa base estiver funcionando, avance para os outros prompts do guia."
+    - separator [ref=e106]
+    - generic [ref=e107]:
+      - generic [ref=e108]: SEÇÃO
+      - generic [ref=e109]: O QUE VOCÊ VAI ENCONTRAR NESTE GUIA
+    - table [ref=e111]:
+      - rowgroup [ref=e112]:
+        - row "# Módulo O que você aprende" [ref=e113]:
+          - columnheader "#" [ref=e114]
+          - columnheader "Módulo" [ref=e115]
+          - columnheader "O que você aprende" [ref=e116]
+      - rowgroup [ref=e117]:
+        - row "1 Diagnóstico Estratégico Entender a dor, o desejo e as objeções do seu cliente" [ref=e118]:
+          - cell "1" [ref=e119]
+          - cell "Diagnóstico Estratégico" [ref=e120]
+          - cell "Entender a dor, o desejo e as objeções do seu cliente" [ref=e121]
+        - row "2 Oferta Irresistível Transformar serviço comum em oferta clara e desejável" [ref=e122]:
+          - cell "2" [ref=e123]
+          - cell "Oferta Irresistível" [ref=e124]
+          - cell "Transformar serviço comum em oferta clara e desejável" [ref=e125]
+        - row "3 Redes Sociais Posts, carrosséis, Reels, Stories, bio e autoridade local" [ref=e126]:
+          - cell "3" [ref=e127]
+          - cell "Redes Sociais" [ref=e128]
+          - cell "Posts, carrosséis, Reels, Stories, bio e autoridade local" [ref=e129]
+        - row "4 Canva Nunca Mais Criar artes e criativos profissionais com IA" [ref=e130]:
+          - cell "4" [ref=e131]
+          - cell "Canva Nunca Mais" [ref=e132]
+          - cell "Criar artes e criativos profissionais com IA" [ref=e133]
+        - row "5 WhatsApp que Vende Scripts, follow-up e análise de conversas reais" [ref=e134]:
+          - cell "5" [ref=e135]
+          - cell "WhatsApp que Vende" [ref=e136]
+          - cell "Scripts, follow-up e análise de conversas reais" [ref=e137]
+        - row "6 Meta Ads Campanhas para WhatsApp, diagnóstico e Regra dos 3 Criativos" [ref=e138]:
+          - cell "6" [ref=e139]
+          - cell "Meta Ads" [ref=e140]
+          - cell "Campanhas para WhatsApp, diagnóstico e Regra dos 3 Criativos" [ref=e141]
+        - row "7 Google Meu Negócio / Perfil da Empresa no Google Perfil otimizado, avaliações e visibilidade local" [ref=e142]:
+          - cell "7" [ref=e143]
+          - cell "Google Meu Negócio / Perfil da Empresa no Google" [ref=e144]
+          - cell "Perfil otimizado, avaliações e visibilidade local" [ref=e145]
+        - row "8 Biblioteca por Nicho Prompts prontos para 15+ tipos de pequenos negócios" [ref=e146]:
+          - cell "8" [ref=e147]
+          - cell "Biblioteca por Nicho" [ref=e148]
+          - cell "Prompts prontos para 15+ tipos de pequenos negócios" [ref=e149]
+        - row "9 Matriz Dor × Conteúdo × Oferta Parar de postar aleatoriamente e criar com propósito" [ref=e150]:
+          - cell "9" [ref=e151]
+          - cell "Matriz Dor × Conteúdo × Oferta" [ref=e152]
+          - cell "Parar de postar aleatoriamente e criar com propósito" [ref=e153]
+        - row "10 Erros Comuns O que faz a IA entregar respostas ruins e como corrigir" [ref=e154]:
+          - cell "10" [ref=e155]
+          - cell "Erros Comuns" [ref=e156]
+          - cell "O que faz a IA entregar respostas ruins e como corrigir" [ref=e157]
+        - row "11 Banco de CTAs Chamadas para ação prontas por canal" [ref=e158]:
+          - cell "11" [ref=e159]
+          - cell "Banco de CTAs" [ref=e160]
+          - cell "Chamadas para ação prontas por canal" [ref=e161]
+        - row "12 Banco de Hooks 30 primeiras linhas prontas para posts e anúncios" [ref=e162]:
+          - cell "12" [ref=e163]
+          - cell "Banco de Hooks" [ref=e164]
+          - cell "30 primeiras linhas prontas para posts e anúncios" [ref=e165]
+        - row "13 Planilha de Leads Acompanhar, analisar e melhorar sua conversão" [ref=e166]:
+          - cell "13" [ref=e167]
+          - cell "Planilha de Leads" [ref=e168]
+          - cell "Acompanhar, analisar e melhorar sua conversão" [ref=e169]
+        - row "+ Desafio de 7 Dias Aplicação prática para organizar sua oferta, conteúdo, criativo e WhatsApp" [ref=e170]:
+          - cell "+" [ref=e171]
+          - cell "Desafio de 7 Dias" [ref=e172]
+          - cell "Aplicação prática para organizar sua oferta, conteúdo, criativo e WhatsApp" [ref=e173]
+    - separator [ref=e174]
+    - generic [ref=e175]:
+      - generic [ref=e176]: SEÇÃO
+      - generic [ref=e177]: AS IAs QUE VOCÊ VAI USAR
+    - table [ref=e179]:
+      - rowgroup [ref=e180]:
+        - row "IA Acesso Melhor para" [ref=e181]:
+          - columnheader "IA" [ref=e182]
+          - columnheader "Acesso" [ref=e183]
+          - columnheader "Melhor para" [ref=e184]
+      - rowgroup [ref=e185]:
+        - row "ChatGPT (OpenAI) chatgpt.com — gratuito com limites Texto, imagens, análise — a mais completa" [ref=e186]:
+          - cell "ChatGPT (OpenAI)" [ref=e187]:
+            - strong [ref=e188]: ChatGPT
+            - text: (OpenAI)
+          - cell "chatgpt.com — gratuito com limites" [ref=e189]
+          - cell "Texto, imagens, análise — a mais completa" [ref=e190]
+        - row "Claude (Anthropic) claude.ai — gratuito com limites Textos longos, copy, estratégia" [ref=e191]:
+          - cell "Claude (Anthropic)" [ref=e192]:
+            - strong [ref=e193]: Claude
+            - text: (Anthropic)
+          - cell "claude.ai — gratuito com limites" [ref=e194]
+          - cell "Textos longos, copy, estratégia" [ref=e195]
+        - row "Gemini (Google) gemini.google.com — gratuito Integração Google, pesquisa" [ref=e196]:
+          - cell "Gemini (Google)" [ref=e197]:
+            - strong [ref=e198]: Gemini
+            - text: (Google)
+          - cell "gemini.google.com — gratuito" [ref=e199]
+          - cell "Integração Google, pesquisa" [ref=e200]
+        - row "Copilot (Microsoft) copilot.microsoft.com — gratuito Integrado ao Windows e Office" [ref=e201]:
+          - cell "Copilot (Microsoft)" [ref=e202]:
+            - strong [ref=e203]: Copilot
+            - text: (Microsoft)
+          - cell "copilot.microsoft.com — gratuito" [ref=e204]
+          - cell "Integrado ao Windows e Office" [ref=e205]
+    - blockquote [ref=e206]:
+      - paragraph [ref=e207]:
+        - strong [ref=e208]: Você não precisa usar todas. Comece com uma só.
+        - text: Para a maioria dos pequenos negócios, o ChatGPT já resolve texto, estratégia, análise e imagens em um só lugar. As demais são opções quando quiser expandir.
+    - paragraph [ref=e209]:
+      - strong [ref=e210]: "Para geração de imagens:"
+    - list [ref=e211]:
+      - listitem [ref=e212]: ChatGPT com geração de imagens (como GPT-4o ou modelos disponíveis na sua conta)
+      - listitem [ref=e213]: Adobe Firefly (firefly.adobe.com) — integrado ao Canva e Adobe
+      - listitem [ref=e214]: Ideogram (ideogram.ai) — excelente para texto dentro de imagens
+      - listitem [ref=e215]: Midjourney (midjourney.com) — foco em imagens artísticas
+    - blockquote [ref=e216]:
+      - paragraph [ref=e217]:
+        - strong [ref=e218]: "Sobre limites gratuitos:"
+        - text: A versão gratuita do ChatGPT permite criar imagens, mas com limite diário. Para quem vai criar muitos posts e criativos por semana, um plano pago elimina esse gargalo e economiza tempo.
+    - separator [ref=e219]
+    - generic [ref=e220]:
+      - generic [ref=e221]: SEÇÃO
+      - generic [ref=e222]: PARTE 1 — O ERRO QUE ARRUÍNA TUDO
+    - paragraph [ref=e223]: O problema não é a IA. É o que você pede para ela.
+    - paragraph [ref=e224]:
+      - text: ❌
+      - strong [ref=e225]: "O que a maioria faz:"
+    - blockquote [ref=e226]:
+      - paragraph [ref=e227]:
+        - emphasis [ref=e228]: "\"Crie um post para meu pet shop\""
+    - paragraph [ref=e229]: "A IA não sabe se você vende ração premium ou faz banho e tosa barato. Não sabe se seu cliente é a dona que trata o cachorro como filho ou o casal que quer praticidade. Não sabe se você quer engajamento ou venda direta. Resultado: resposta genérica."
+    - paragraph [ref=e230]:
+      - text: ✅
+      - strong [ref=e231]: "O que você vai aprender aqui:"
+    - blockquote [ref=e232]:
+      - paragraph [ref=e233]:
+        - emphasis [ref=e234]: "\"Você é social media de um pet shop chamado PataFeliz, em Fortaleza, especializado em cuidados premium para cães de médio e grande porte. Nosso cliente típico é mulher, 30-45 anos, classe B, que trata o pet como membro da família, sente culpa quando trabalha muito e quer saber que seu animal está bem cuidado. Crie um carrossel para Instagram com 6 slides mostrando nossa rotina de banho e tosa. Objetivo: gerar salvamentos e visitas ao WhatsApp. Tom: acolhedor, especialista, sem linguagem técnica. Slide final: CTA para agendar pelo link da bio.\""
+    - paragraph [ref=e235]: Essa diferença é a diferença entre post que ninguém vê e post que vende.
+    - separator [ref=e236]
+    - generic [ref=e237]:
+      - generic [ref=e238]: SEÇÃO
+      - generic [ref=e239]: PARTE 2 — O FRAMEWORK C.O.A.T.
+    - paragraph [ref=e240]: "Todo prompt poderoso tem 4 elementos:"
+    - generic [ref=e242]: C — CONTEXTO → Quem você é, onde está, o que faz O — OBJETIVO → O que você quer que o leitor FAÇA ou SINTA A — AVATAR → Para quem exatamente você está falando T — TOM → Como sua marca fala e como NÃO fala
+    - paragraph [ref=e243]: Quanto mais você preenche o C.O.A.T., mais a IA vira especialista no seu negócio.
+    - separator [ref=e244]
+    - generic [ref=e245]:
+      - generic [ref=e246]: SEÇÃO
+      - generic [ref=e247]: PARTE 3 — PROMPT EM CAMADAS
+    - paragraph [ref=e248]: "A maioria pede tudo de uma vez e recebe resposta rasa. Os que obtêm resultados excepcionais constroem com a IA em etapas:"
+    - generic [ref=e250]: "CAMADA 1 — CONTEXTO: Quem é o negócio? CAMADA 2 — CLIENTE: Quem compra? Qual a vida dele? CAMADA 3 — PROBLEMA: Qual dor o cliente sente? CAMADA 4 — OFERTA: O que será vendido? CAMADA 5 — CANAL: Instagram, WhatsApp, Google, anúncio? CAMADA 6 — FORMATO: Post, carrossel, mensagem, anúncio? CAMADA 7 — OTIMIZAÇÃO: Peça melhoria, variações e ajustes."
+    - paragraph [ref=e251]:
+      - strong [ref=e252]: "Na prática:"
+      - text: Comece com as camadas 1-3. Depois adicione 4-5. Por último peça variações com a camada 7.
+    - separator [ref=e253]
+    - generic [ref=e254]:
+      - generic [ref=e255]: SEÇÃO
+      - generic [ref=e256]: PARTE 4 — SEU BLOCO DE CONTEXTO PERMANENTE
+    - paragraph [ref=e257]: Preencha uma vez. Use em todos os prompts. Salve no celular.
+    - generic [ref=e259]: "=== MEU NEGÓCIO === Nome: Tipo de negócio: Cidade e bairro: Diferencial (por que me escolhem e não ao concorrente): Tom de voz: [descontraído / profissional / técnico / acolhedor] O que NÃO somos: (ex: não somos o mais barato, não fazemos de tudo) === MEU CLIENTE IDEAL === Quem é (descrição completa): Idade: Situação de vida (trabalha, tem filhos, rotina): Maior dor ou problema: Maior desejo: O que já tentou que não funcionou: Objeção que sempre aparece antes de comprar: Como fala (formal / gírias / emoji): === REDES SOCIAIS === Plataformas que uso: Frequência atual de posts: Objetivo principal: [vendas / autoridade / relacionamento] === PRODUTO OU SERVIÇO PRINCIPAL === O que vendo: Preço: Como entrego:"
+    - separator [ref=e260]
+    - generic [ref=e261]:
+      - generic [ref=e262]: MÓDULO 1
+      - generic [ref=e263]: DIAGNÓSTICO ESTRATÉGICO
+    - paragraph [ref=e264]: Antes de criar qualquer conteúdo, faça este diagnóstico.
+    - generic [ref=e265]: MEGA-PROMPT 1
+    - heading "Diagnóstico Completo do Negócio" [level=2] [ref=e266]
+    - generic [ref=e267]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e269]: "Você será meu estrategista de marketing para pequenos negócios. Antes de criar qualquer conteúdo, analise meu negócio: [cole o bloco C.O.A.T.] Responda em 5 partes: 1. Qual é a principal dor do meu cliente ideal? (não a dor óbvia — a dor que ele sente mas não fala abertamente) 2. Qual é o principal desejo que ele quer alcançar? (o desejo emocional por trás, não o declarado) 3. Qual é a objeção que mais impede a compra? (o que ele pensa antes de dizer \"vou pensar\") 4. Qual mensagem minha marca deveria repetir com frequência? (a frase que, se meu cliente ouvisse toda semana, me tornaria referência) 5. Qual tipo de conteúdo tem mais chance de gerar clientes para mim? (baseado no meu nicho, meu avatar e minha oferta) Depois me diga: quais informações estão faltando para criar respostas ainda mais precisas sobre meu negócio?"
+    - separator [ref=e270]
+    - generic [ref=e271]:
+      - generic [ref=e272]: MÓDULO 2
+      - generic [ref=e273]: OFERTA IRRESISTÍVEL
+    - paragraph [ref=e274]: A maioria dos pequenos negócios não tem problema de conteúdo. Tem problema de oferta fraca.
+    - paragraph [ref=e275]: "Muita gente vende assim:"
+    - list [ref=e276]:
+      - listitem [ref=e277]: "\"Faço limpeza de pele.\""
+      - listitem [ref=e278]: "\"Tenho loja de importados.\""
+      - listitem [ref=e279]: "\"Atendo pelo WhatsApp.\""
+    - paragraph [ref=e280]: "Isso é fraco. Uma oferta forte tem: público específico, problema claro, resultado desejado, diferencial, bônus ou facilidade, redução de risco e chamada para ação clara."
+    - generic [ref=e281]: MEGA-PROMPT 2
+    - heading "Criador de Oferta Irresistível" [level=2] [ref=e282]
+    - generic [ref=e283]: "Use: ChatGPT ou Claude"
+    - generic [ref=e285]: "Você é especialista em criação de ofertas para pequenos negócios. Meu negócio: [cole o bloco C.O.A.T.] Meu produto ou serviço principal: [descreva com detalhes] Hoje eu vendo assim (como divulgo atualmente): [descreva ou cole seu texto atual] Transforme essa oferta em algo mais desejável. Entregue: 1. Diagnóstico da minha oferta atual: o que está fraco, genérico ou pouco claro — seja honesto. 2. Nova promessa principal. (a transformação que o cliente experimenta, não o serviço) 3. 5 formas diferentes de apresentar essa oferta para públicos com mentalidades diferentes (urgente, desconfiado, comparador, racional e emocional). 4. 3 bônus simples que posso incluir sem aumentar muito meu custo mas que aumentam o valor percebido. 5. 3 garantias ou redutores de risco que façam sentido para meu negócio. 6. 5 chamadas para ação para WhatsApp. 7. Versão curta para bio do Instagram (máx. 150 caracteres). 8. Versão para post de Instagram. 9. Versão para anúncio pago no Meta Ads. 10. Versão para mensagem direta de abordagem no WhatsApp. Importante: não crie promessa exagerada. Quero oferta forte, mas real."
+    - paragraph [ref=e286]:
+      - strong [ref=e287]: "Exemplo preenchido — Loja de importados:"
+    - generic [ref=e288]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e289]: "Meu produto: acessórios importados (relógios, óculos, capinhas, gadgets) Hoje vendo assim: \"Loja de importados, tudo barato, chama no WhatsApp\" Após usar esse prompt: Nova promessa: \"Presentes e acessórios que parecem caros mas cabem no bolso — entregamos em [cidade] no mesmo dia\" Diferencial: curadoria de produtos que parecem premium mas custam pouco CTA: \"Me manda o que você precisa que eu te mando o preço agora\""
+    - separator [ref=e290]
+    - generic [ref=e291]:
+      - generic [ref=e292]: MÓDULO 3
+      - generic [ref=e293]: REDES SOCIAIS
+    - heading "Os 4 Pilares de Conteúdo" [level=2] [ref=e294]
+    - generic [ref=e296]: "40% → EDUCATIVO: ensina algo útil, gera salvamentos e alcance 30% → PROVA SOCIAL: mostra resultados reais de clientes 20% → BASTIDORES: humaniza, gera conexão e confiança 10% → OFERTA DIRETA: vende sem pedir desculpa"
+    - separator [ref=e297]
+    - generic [ref=e298]: MEGA-PROMPT 3
+    - heading "Estratégia Editorial do Mês" [level=2] [ref=e299]
+    - generic [ref=e300]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e302]: "[Cole seu Bloco de Contexto aqui] Crie uma estratégia de conteúdo completa para o mês de [MÊS/ANO]. 1. DIAGNÓSTICO: qual é meu maior problema de comunicação atual? 2. TEMA DO MÊS: 1 tema central que deve permear todos os posts. 3. CALENDÁRIO: 16 posts em 4 semanas com: - Dia sugerido - Formato (carrossel/reels/imagem/stories) - Pilar (educativo/prova social/bastidores/oferta) - Ideia central em 1 frase - Hook (primeira linha que para o scroll) 4. DATAS RELEVANTES do mês que posso usar de forma autêntica. 5. Melhores dias e horários para postar baseado no meu avatar. Entregue em formato de tabela."
+    - separator [ref=e303]
+    - generic [ref=e304]: MEGA-PROMPT 4
+    - heading "O Carrossel que Para o Scroll" [level=2] [ref=e305]
+    - generic [ref=e306]: "Use: ChatGPT ou Claude"
+    - generic [ref=e308]: "[Cole seu Bloco de Contexto aqui] Crie um carrossel de alta performance para Instagram com objetivo de gerar SALVAMENTOS e novos seguidores qualificados. Slide 1 — GANCHO: Uma frase que cause curiosidade ou dor imediata. O leitor precisa pensar \"isso é exatamente o que sinto\". Crie 3 opções de gancho e explique a psicologia por trás de cada um. Slides 2-5 — CONTEÚDO: Cada slide tem uma única ideia. Máximo 30 palavras por slide. Estrutura: PROBLEMA → CAUSA → SOLUÇÃO → RESULTADO Slide 6 — VIRADA: O insight mais surpreendente, que contradiz o senso comum do meu nicho. Algo que a pessoa vai querer mostrar para alguém. Slide 7 — CTA: Ação específica. Diga exatamente O QUE a pessoa ganha ao contatar. TEMA DO CARROSSEL: [descreva] Para cada slide inclua: - Texto do slide - Sugestão de cor de fundo - Qual imagem ou ícone usar - Por que esse slide funciona psicologicamente"
+    - paragraph [ref=e309]:
+      - strong [ref=e310]: "Exemplo preenchido — Açaí e sorveteria:"
+    - generic [ref=e311]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e312]: "Tema: \"Por que o açaí da esquina é diferente do nosso\" Gancho: \"Você sabe o que tem no açaí que você está comendo?\" Slide 2: \"A maioria usa base industrializada com corante e conservante.\" Slide 3: \"A gente usa polpa pura, congelada na origem, sem aditivo.\" Slide 4: \"O sabor não mente. Experimente e compare.\" Slide 5: \"Cada detalhe importa: fruta fresca, granola artesanal, leite de coco real.\" Slide 6: \"Preço igual. Qualidade completamente diferente.\" CTA: \"Manda 'QUERO' que te mandamos o cardápio completo agora.\""
+    - separator [ref=e313]
+    - generic [ref=e314]: MEGA-PROMPT 5
+    - heading "Legenda que Converte (Método F.A.C.E.)" [level=2] [ref=e315]
+    - generic [ref=e316]: "Use: Claude ou ChatGPT"
+    - generic [ref=e318]: "[Cole seu Bloco de Contexto aqui] Escreva uma legenda usando o método F.A.C.E. para este post: [descreva o post ou a foto que vai usar] FATO (2-3 linhas): Verdade que meu avatar vai ler e pensar \"isso é exatamente minha vida\". Não pode parecer propaganda. AGITAÇÃO (3-4 linhas): Consequências de não resolver o problema. Use linguagem emocional, não técnica. Ex: não \"falta de organização financeira\", mas \"aquela sensação de trabalhar o mês inteiro e não saber para onde o dinheiro foi\". CONTEÚDO (4-6 linhas): 2-3 insights reais que ajudam parcialmente o problema. Suficiente para provar que entende, insuficiente para resolver tudo — isso gera curiosidade para continuar. ENGAJAMENTO (2-3 linhas): CTA específico: \"Se você se identificou com [situação X], manda mensagem dizendo [palavra] e te mando [benefício específico]\". HASHTAGS: 10 hashtags estratégicas. 3 grandes (+1M), 4 médias (100k-500k), 3 nichadas (-50k). Explique por que essa divisão funciona melhor."
+    - separator [ref=e319]
+    - generic [ref=e320]: MEGA-PROMPT 6
+    - heading "Reels sem Aparecer na Câmera" [level=2] [ref=e321]
+    - generic [ref=e322]: "Use: ChatGPT ou Claude"
+    - generic [ref=e324]: "[Cole seu Bloco de Contexto aqui] Preciso criar Reels que engajem sem aparecer na câmera. Entregue: 1. 5 tipos de Reels sem câmera para meu negócio, com exemplo específico e por que cada um funciona. 2. Roteiro completo de 1 Reel: - Duração ideal e por quê - O que filmar (plano a plano, em linguagem simples) - Texto na tela de cada cena (máx. 5 palavras por cena) - Tipo de música e impacto de cada escolha no comportamento do espectador - 3 opções de gancho visual para os primeiros 3 segundos 3. Frequência: quantos Reels vs carrossel vs imagem por semana? 4. Métricas: quais números devo olhar e o que cada uma significa para um negócio local como o meu?"
+    - separator [ref=e325]
+    - generic [ref=e326]: MEGA-PROMPT 7
+    - heading "Stories que Vendem" [level=2] [ref=e327]
+    - generic [ref=e328]: "Use: ChatGPT ou Claude"
+    - generic [ref=e330]: "[Cole seu Bloco de Contexto aqui] Crie sequência de Stories para vender [produto/serviço] de forma natural, sem parecer anúncio. Story 1 — GANCHO: pergunta ou afirmação que prende sem revelar o fim. Stories 2-4 — NARRATIVA: história real de um cliente. Estrutura: situação antes → problema → como chegou até mim → resultado. Stories 5-6 — PROVA: resultado concreto. Antes e depois. Dados, fotos, prints de conversa. Story 7 — OBJEÇÃO: antecipe e responda a maior dúvida do avatar antes dela ser levantada. Isso aumenta muito a confiança antes da oferta. Story 8 — URGÊNCIA REAL: razão verdadeira para agir agora. Não invente escassez. Se não há urgência, crie um bônus com prazo real. Story 9 — CTA: uma ação, apenas uma. Para cada Story: texto exato, fundo sugerido, elemento interativo e por que funciona psicologicamente."
+    - separator [ref=e331]
+    - generic [ref=e332]: MEGA-PROMPT 8
+    - heading "Bio do Instagram que Converte" [level=2] [ref=e333]
+    - generic [ref=e334]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e336]: "[Cole seu Bloco de Contexto aqui] Minha bio atual: [cole ou diga \"não tenho bio boa\"] Analise e me diga: 1. O que está faltando 2. O que está sobrando 3. Por que alguém que nunca me viu não seguiria com essa bio Reescreva seguindo essa estrutura: Linha 1: O que faço + para quem (específico, sem \"apaixonada por\") Linha 2: Resultado que entrego (não serviço — resultado) Linha 3: Prova social ou diferencial (números ou afirmação forte) Linha 4: CTA com fricção zero Crie 3 versões: - Direta e profissional - Empática e próxima - Curiosa (provoca sem revelar) Para cada versão: qual avatar converte melhor e por quê. Depois: qual foto de perfil é ideal para meu tipo de negócio?"
+    - paragraph [ref=e337]:
+      - strong [ref=e338]: "Exemplo preenchido — Loja de importados:"
+    - generic [ref=e339]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e340]: "Bio fraca: \"Produtos importados e acessórios. Fazemos entrega. Chame no ZAP 📦\" Bio forte versão 1: \"Acessórios importados que parecem caros mas não são 🌍 Entrego hoje em [cidade] +500 clientes satisfeitos 👇 Veja o catálogo\" Bio forte versão 2: \"Você não precisa gastar muito para parecer bem 😉 Importados selecionados pra você Entrega rápida em [cidade] 👇 Peça pelo link\""
+    - separator [ref=e341]
+    - generic [ref=e342]: MEGA-PROMPT 9
+    - heading "Prova Social que Converte" [level=2] [ref=e343]
+    - generic [ref=e344]: "Use: Claude ou ChatGPT"
+    - generic [ref=e346]: "[Cole seu Bloco de Contexto aqui] Depoimento de cliente: [cole o depoimento real] 1. ANÁLISE: - Qual dor principal está implícita? - Quem se identifica com essa história? - Qual objeção esse depoimento quebra? 2. POST COMPLETO: - Começa pela DOR do cliente (não pelo resultado) - Desenvolve a jornada - Resultado específico (não \"melhorou muito\") - Termina com pergunta que convida quem tem a mesma situação 3. VARIAÇÕES: - Carrossel de 5 slides - Sequência de 6 stories - Roteiro de Reels de 30s sem mostrar o cliente 4. RESPOSTA PARA COMENTÁRIOS: Como mover quem comentou para o WhatsApp de forma natural?"
+    - separator [ref=e347]
+    - generic [ref=e348]: MEGA-PROMPT 10
+    - heading "Responder DMs e Comentários para Vender" [level=2] [ref=e349]
+    - generic [ref=e350]: "Use: ChatGPT ou Claude"
+    - generic [ref=e352]: "[Cole seu Bloco de Contexto aqui] Me ensine a responder comentários e DMs de forma que mova pessoas para o WhatsApp sem parecer vendedor insistente. 1. RESPOSTA IDEAL para cada tipo de comentário: - \"Que lindo/incrível!\" (elogio genérico) - \"Quanto custa?\" (interesse direto) - \"Tem em [cidade]?\" (logística) - \"Eu precisava disso\" (dor identificada) - \"Isso funciona mesmo?\" (ceticismo) - \"Minha amiga precisa ver isso\" (indicação) - Emoji apenas 2. SCRIPT DE DM: roteiro de 6 mensagens que: - Qualifica sem parecer interrogatório - Apresenta produto de forma conversacional - Lida com \"vou pensar\" sem pressionar - Move para WhatsApp naturalmente 3. CTAs ESPECÍFICOS para meu produto (crie 5 no estilo): \"Manda 'QUERO' que eu te explico.\" \"Comenta 'GUIA' que eu te mando o passo a passo.\""
+    - separator [ref=e353]
+    - generic [ref=e354]: MEGA-PROMPT 11
+    - heading "Análise do Concorrente" [level=2] [ref=e355]
+    - generic [ref=e356]: "Use: ChatGPT ou Claude"
+    - generic [ref=e358]: "[Cole seu Bloco de Contexto aqui] Concorrente: [perfil/nome] Informações: [cole prints ou descrição do perfil] 1. O QUE ELE FAZ BEM: quais posts têm mais engajamento e por quê? 2. ONDE ELE É FRACO: o que ele não fala que meu avatar quer ouvir? 3. MEU POSICIONAMENTO: qual ângulo diferente eu devo tomar? 4. 5 POSTS que seriam impossíveis para meu concorrente fazer, mas que são autênticos para mim. Explique por que cada um é exclusivamente meu."
+    - separator [ref=e359]
+    - generic [ref=e360]: MEGA-PROMPT 12
+    - heading "Autoridade Local" [level=2] [ref=e361]
+    - generic [ref=e362]: "Use: Claude ou ChatGPT"
+    - generic [ref=e364]: "[Cole seu Bloco de Contexto aqui] Quero ser referência em [nicho] em [cidade/bairro]. 1. DIAGNÓSTICO: qual meu nível atual de autoridade percebida? 2. OS 3 TIPOS DE POST DE AUTORIDADE: - Post de expertise - Post de bastidores profissional - Post de posicionamento (quem atendo e quem NÃO atendo) 3. USANDO REFERÊNCIAS LOCAIS: como usar eventos e notícias da minha cidade para criar conteúdo que perfis nacionais não copiam? Dê 3 exemplos para meu tipo de negócio. 4. COLLAB LOCAL: quais negócios complementares eu poderia parceirar? Escreva a mensagem de abordagem."
+    - separator [ref=e365]
+    - generic [ref=e366]: MEGA-PROMPT 13
+    - 'heading "Método 3R: Reaproveite Todo Conteúdo" [level=2] [ref=e367]'
+    - generic [ref=e368]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e370]: "Peguei este conteúdo que já criei: [cole o conteúdo] Transforme em: 1. Carrossel de 7 slides 2. Legenda para Instagram (método F.A.C.E.) 3. Sequência de 5 stories 4. Roteiro de Reels de 30 segundos 5. Mensagem para lista de transmissão no WhatsApp 6. Copy de anúncio (dor, desejo e oferta) 7. Texto curto para bio ou destaques Mantenha a mesma ideia. Adapte linguagem e tamanho para cada canal. Explique o que mudou e por quê em cada versão."
+    - separator [ref=e371]
+    - generic [ref=e372]: MEGA-PROMPT 14
+    - heading "Humanizador de Texto" [level=2] [ref=e373]
+    - generic [ref=e374]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e376]: "Reescreva o texto abaixo para parecer mais humano e natural: [cole o texto gerado pela IA] Regras: 1. Remova frases genéricas (\"no mundo atual\", \"é fundamental\"). 2. Elimine tom robótico. 3. Use linguagem simples como se falando para um amigo. 4. Mantenha a mensagem persuasiva. 5. Adapte para o público: [descreva]. Crie 3 versões: - Mais direta (menos palavras, mais impacto) - Mais emocional (conecta com sentimento do avatar) - Mais profissional (autoridade sem ser frio) Para cada versão: qual cliente converte melhor e em qual canal funciona?"
+    - separator [ref=e377]
+    - generic [ref=e378]:
+      - generic [ref=e379]: MÓDULO 4
+      - generic [ref=e380]: "CANVA NUNCA MAIS: CRIE POSTS E CRIATIVOS COM IA"
+    - blockquote [ref=e381]:
+      - paragraph [ref=e382]:
+        - strong [ref=e383]: "Ferramentas:"
+        - text: ChatGPT com geração de imagens, Adobe Firefly, Ideogram, Midjourney
+    - paragraph [ref=e384]: Durante anos o pequeno empreendedor perdeu horas no Canva. Escolhia modelo, mudava cor, trocava fonte, procurava imagem, arrastava elementos. No final ficava com uma arte parecida com a de todo mundo.
+    - paragraph [ref=e385]:
+      - strong [ref=e386]: "A nova lógica:"
+      - text: ChatGPT cria. Canva ajusta só se precisar.
+    - blockquote [ref=e387]:
+      - paragraph [ref=e388]:
+        - strong [ref=e389]: "Nota honesta:"
+        - text: O ChatGPT acelera 90% do processo de criação visual. Para pequenos ajustes finais — trocar logo, corrigir tamanho, organizar carrossel — o Canva pode ajudar. A criação principal, a direção visual e a ideia do criativo saem da IA.
+    - separator [ref=e390]
+    - 'heading "⚠️ REGRA DE OURO: TEXTO EM IMAGENS GERADAS POR IA" [level=2] [ref=e391]'
+    - paragraph [ref=e392]: Texto dentro de imagem gerada por IA ainda pode sair com erro dependendo da complexidade, fonte e quantidade de palavras.
+    - paragraph [ref=e393]:
+      - strong [ref=e394]: "Use no máximo:"
+    - list [ref=e395]:
+      - listitem [ref=e396]: 1 título curto
+      - listitem [ref=e397]: 1 subtítulo direto
+      - listitem [ref=e398]: 1 CTA simples
+    - paragraph [ref=e399]:
+      - text: ✅
+      - strong [ref=e400]: "Bom:"
+    - generic [ref=e402]: "\"Limpeza de pele premium\" \"Pele leve e renovada\" \"Agende pelo WhatsApp\""
+    - paragraph [ref=e403]:
+      - text: ❌
+      - strong [ref=e404]: "Ruim:"
+    - generic [ref=e406]: "\"Limpeza de pele premium com avaliação personalizada para mulheres que querem cuidar da pele, reduzir oleosidade, remover impurezas e melhorar a autoestima com atendimento profissional especializado.\""
+    - paragraph [ref=e407]:
+      - strong [ref=e408]: "Se o texto sair errado:"
+      - text: peça para a IA refazer com menos palavras, ou gere a imagem sem texto e adicione depois no Canva, CapCut ou editor do Instagram.
+    - separator [ref=e409]
+    - heading "O Método R.C.T. para Criar Imagens com IA" [level=2] [ref=e410]
+    - paragraph [ref=e411]:
+      - strong [ref=e412]: "R — Referência:"
+      - text: Mostre o estilo visual que você quer. Pode ser arte antiga, post de concorrente, imagem do Pinterest, print de anúncio ou foto do produto.
+    - paragraph [ref=e413]:
+      - strong [ref=e414]: "C — Contexto:"
+      - text: "Explique o negócio, público e objetivo da peça. Ex: \"Sou loja de importados em Belém. Atendo jovens de 18-35 anos que querem acessórios estilosos por menos. Minha marca é jovem, moderna e acessível.\""
+    - paragraph [ref=e415]:
+      - strong [ref=e416]: "T — Texto:"
+      - text: "Informe exatamente o texto que deve aparecer. Ex: \"Importados a partir de R$19,90 / Entrega hoje em Belém / Chama no WhatsApp\""
+    - separator [ref=e417]
+    - heading "Biblioteca de Estilos Visuais" [level=2] [ref=e418]
+    - paragraph [ref=e419]:
+      - strong [ref=e420]: Estilo Premium
+      - text: "— estética, odontologia, arquitetura, consultorias:"
+    - blockquote [ref=e421]:
+      - paragraph [ref=e422]: "\"Use estilo premium, fundo limpo, tons neutros, iluminação suave, composição elegante, poucos elementos e aparência sofisticada.\""
+    - paragraph [ref=e423]:
+      - strong [ref=e424]: Estilo Popular
+      - text: "— promoções, restaurantes, lojas locais, ofertas rápidas:"
+    - blockquote [ref=e425]:
+      - paragraph [ref=e426]: "\"Use estilo popular, chamativo, com cores fortes, texto grande, sensação de oportunidade e CTA bem visível, sem poluir.\""
+    - paragraph [ref=e427]:
+      - strong [ref=e428]: Estilo Minimalista
+      - text: "— marcas modernas e conteúdo educativo:"
+    - blockquote [ref=e429]:
+      - paragraph [ref=e430]: "\"Use estilo minimalista, bastante espaço em branco, poucos elementos, tipografia clara e composição limpa.\""
+    - paragraph [ref=e431]:
+      - strong [ref=e432]: Estilo Tecnológico
+      - text: "— IA, automação, marketing digital, negócios online:"
+    - blockquote [ref=e433]:
+      - paragraph [ref=e434]: "\"Use estilo tecnológico, elementos digitais, luzes sutis, fundo moderno, sensação de inovação e alta performance.\""
+    - paragraph [ref=e435]:
+      - strong [ref=e436]: Estilo Humanizado
+      - text: "— psicólogos, saúde, educação, serviços de confiança:"
+    - blockquote [ref=e437]:
+      - paragraph [ref=e438]: "\"Use estilo humanizado, acolhedor, cores suaves, sensação de proximidade, cuidado e segurança.\""
+    - paragraph [ref=e439]:
+      - strong [ref=e440]: Estilo Jovem e Urbano
+      - text: "— lojas de importados, moda, acessórios, delivery:"
+    - blockquote [ref=e441]:
+      - paragraph [ref=e442]: "\"Use estilo jovem, urbano e dinâmico. Cores vibrantes, composição moderna, energia de descoberta e novidade.\""
+    - separator [ref=e443]
+    - generic [ref=e444]: MEGA-PROMPT 15
+    - heading "Criativo para Anúncio" [level=2] [ref=e445]
+    - generic [ref=e446]: "Use: ChatGPT com geração de imagens"
+    - generic [ref=e448]: "Você é um diretor de arte especialista em criativos para anúncios de alta conversão no Meta Ads. CONTEXTO DO NEGÓCIO: [cole o bloco C.O.A.T.] PRODUTO OU SERVIÇO: [descreva] PÚBLICO-ALVO: [descreva] OBJETIVO: [WhatsApp / leads / venda / divulgar promoção] ESTILO VISUAL: [clean / premium / moderno / minimalista / popular / jovem / acolhedor] TEXTO QUE DEVE APARECER: Título: [texto curto] Subtítulo: [texto curto] CTA: [texto] REGRAS: 1. Imagem legível no celular em 2 segundos. 2. No máximo 3 elementos de texto. 3. Não use excesso de elementos visuais. 4. Arte com aparência profissional, não amadora. 5. Formato 1:1 para feed ou 9:16 para stories. 6. Não deixar aparência de panfleto poluído. Crie a imagem agora."
+    - paragraph [ref=e449]:
+      - strong [ref=e450]: "Exemplo preenchido — Loja de importados:"
+    - generic [ref=e451]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e452]: "Título: \"Importados a partir de R$19\" Subtítulo: \"Entrega hoje em [cidade]\" CTA: \"Chama no WhatsApp\" Estilo: jovem, vibrante, cores vivas, aparência de descoberta"
+    - separator [ref=e453]
+    - generic [ref=e454]: MEGA-PROMPT 16
+    - heading "Post para Instagram" [level=2] [ref=e455]
+    - generic [ref=e456]: "Use: ChatGPT com geração de imagens ou Adobe Firefly"
+    - generic [ref=e458]: "Você é designer e estrategista de conteúdo para Instagram. CONTEXTO DO NEGÓCIO: [cole o bloco C.O.A.T.] TEMA DO POST: [descreva] OBJETIVO: [educar / gerar autoridade / atrair clientes / divulgar oferta] MENSAGEM PRINCIPAL: [qual ideia a pessoa precisa entender] TEXTO DA ARTE: [cole exatamente o texto que deve aparecer] ESTILO: [clean / sofisticado / moderno / popular / premium / jovem] CORES: [descreva ou diga \"sugira para meu negócio\"] REGRAS: 1. Arte visualmente forte para Instagram. 2. Leitura rápida: título maior, apoio menor, CTA discreto. 3. Arte não carregada nem poluída. 4. Aparência de marca profissional. 5. Formato quadrado 1:1. Gere a imagem."
+    - separator [ref=e459]
+    - generic [ref=e460]: MEGA-PROMPT 17
+    - heading "Transformar Arte Antiga em Arte Profissional" [level=2] [ref=e461]
+    - generic [ref=e462]: "Use: ChatGPT com geração de imagens — envie a imagem junto com o prompt"
+    - generic [ref=e464]: "Você é diretor de arte especialista em melhorar criativos amadores e transformar em imagens profissionais. [ENVIE A IMAGEM JUNTO COM ESSE PROMPT] CONTEXTO DO NEGÓCIO: [cole o bloco C.O.A.T.] O QUE QUERO MANTER: [oferta, ideia, cores principais] O QUE QUERO MELHORAR: [mais profissional / clean / premium / menos poluído] TEXTO QUE DEVE APARECER: [cole o texto final] REGRAS: 1. Não copie a arte antiga exatamente. 2. Melhore composição, hierarquia, contraste, leitura e impacto. 3. Deixe aparência profissional. 4. Arte pronta para Instagram ou anúncio. Gere a nova imagem."
+    - separator [ref=e465]
+    - generic [ref=e466]: MEGA-PROMPT 18
+    - heading "Pack de 5 Criativos para Campanha" [level=2] [ref=e467]
+    - generic [ref=e468]: "Use: Claude ou ChatGPT para planejamento + ChatGPT com geração de imagens"
+    - generic [ref=e470]: "Crie um pacote de criativos para campanha no Meta Ads. CONTEXTO DO NEGÓCIO: [cole o bloco C.O.A.T.] OFERTA: [descreva] PÚBLICO: [descreva] DESTINO: [WhatsApp / landing page / direct] Crie 5 variações com ângulos diferentes: Ângulo 1 — DOR: ideia visual + texto + CTA Ângulo 2 — DESEJO: ideia visual + texto + CTA Ângulo 3 — PROVA SOCIAL: ideia visual + texto + CTA Ângulo 4 — OFERTA DIRETA: ideia visual + texto + CTA Ângulo 5 — CURIOSIDADE: ideia visual + texto + CTA Para cada criativo: - Por que pode funcionar - Qual objeção quebra - Qual público tende a responder melhor Depois gere as 5 imagens sequencialmente."
+    - separator [ref=e471]
+    - heading "Comandos para Pedir Ajustes" [level=2] [ref=e472]
+    - generic [ref=e474]: "\"Gostei, mas deixe mais premium e menos colorido.\" \"Mantenha a composição mas aumente o destaque do título.\" \"Menos elementos e mais espaço em branco.\" \"Ficou bonita mas parece genérica. Deixe mais específica para [nicho].\" \"Reduza o texto para ficar mais legível no celular.\" \"Crie variação com fundo mais claro e aparência mais limpa.\" \"Faça versão mais popular, com mais impacto e chamada forte.\""
+    - separator [ref=e475]
+    - heading "Checklist Antes de Gerar uma Imagem" [level=2] [ref=e476]
+    - generic [ref=e477]:
+      - generic [ref=e478]: Defini o contexto do negócio
+      - generic [ref=e480]: Descrevi o público-alvo
+      - generic [ref=e482]: Informei o objetivo da imagem
+      - generic [ref=e484]: Escolhi o canal (feed / story / reels / anúncio)
+      - generic [ref=e486]: Defini o formato (1:1 / 9:16 / 4:5)
+      - generic [ref=e488]: Escolhi o estilo visual
+      - generic [ref=e490]: Copiei o texto exato (curto e simples)
+      - generic [ref=e492]: Tenho referência visual para enviar
+      - generic [ref=e494]: Defini o que NÃO quero
+      - generic [ref=e496]: Incluí o CTA
+    - separator [ref=e498]
+    - generic [ref=e499]:
+      - generic [ref=e500]: MÓDULO 5
+      - generic [ref=e501]: "WHATSAPP: ONDE O DINHEIRO ENTRA"
+    - heading "Os 5 Tipos de Lead no WhatsApp" [level=2] [ref=e502]
+    - list [ref=e503]:
+      - listitem [ref=e504]:
+        - strong [ref=e505]: "Curioso:"
+        - text: pergunta preço e some. Precisa de curiosidade despertada.
+      - listitem [ref=e506]:
+        - strong [ref=e507]: "Comparador:"
+        - text: fala com vários concorrentes. Precisa do diferencial rápido.
+      - listitem [ref=e508]:
+        - strong [ref=e509]: "Urgente:"
+        - text: precisa resolver agora. Simplifique e acelere.
+      - listitem [ref=e510]:
+        - strong [ref=e511]: "Desconfiado:"
+        - text: quer prova, segurança e explicação. Prova social é essencial.
+      - listitem [ref=e512]:
+        - strong [ref=e513]: "Pronto para comprar:"
+        - text: só precisa de direcionamento. Facilite o pagamento.
+    - separator [ref=e514]
+    - generic [ref=e515]: MEGA-PROMPT 19
+    - heading "Classificador de Leads" [level=2] [ref=e516]
+    - generic [ref=e517]: "Use: ChatGPT ou Claude"
+    - generic [ref=e519]: "Você é especialista em vendas pelo WhatsApp. Analise esta conversa com um possível cliente: [cole a conversa exatamente como aconteceu] Classifique o lead em: 1. Curioso 2. Comparador 3. Urgente 4. Desconfiado 5. Pronto Depois me diga: 1. Por que classificou assim (cite partes da conversa) 2. Qual é a intenção real por trás das mensagens 3. Qual objeção ainda não foi resolvida 4. Qual deve ser minha próxima mensagem (escreva ela pronta) 5. O que NÃO devo responder agora 6. Como conduzir para fechamento sem parecer insistente"
+    - separator [ref=e520]
+    - generic [ref=e521]: MEGA-PROMPT 20
+    - heading "Resposta Estratégica para \"Quanto Custa?\"" [level=2] [ref=e522]
+    - generic [ref=e523]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e525]: "[Cole seu Bloco de Contexto aqui] Meu serviço: [descreva] Preço: [informe] Crie 5 respostas estratégicas para quando o cliente pergunta \"quanto custa?\" logo no início: 1. Resposta curta e educada 2. Resposta que qualifica o cliente 3. Resposta que mostra valor antes do preço 4. Resposta para cliente apressado 5. Resposta para cliente que só está comparando preço Cada resposta: máximo 3 linhas, terminando com pergunta simples. Para cada uma: qual gatilho psicológico estou usando?"
+    - separator [ref=e526]
+    - generic [ref=e527]: MEGA-PROMPT 21
+    - heading "Script Completo de Venda" [level=2] [ref=e528]
+    - generic [ref=e529]: "Use: Claude ou ChatGPT"
+    - generic [ref=e531]: "[Cole seu Bloco de Contexto aqui] O cliente mandou: [mensagem exata do cliente] Crie roteiro completo de conversa para essa situação. Para cada mensagem minha, explique: - Por que estou dizendo isso - O que estou tentando descobrir - O que fazer se o cliente responder diferente REGRAS: - Nunca enviar preço sem entender o problema - Uma pergunta por mensagem - A 3ª mensagem aprofunda a dor, não apresenta solução - Preço só aparece depois que o cliente verbalizou o problema - Sempre terminar com pergunta aberta INCLUA também: - Como lidar com \"quanto custa?\" logo no início - O que fazer quando o cliente some após o preço - Como distinguir cliente sem dinheiro de cliente sem valor percebido - A mensagem de última tentativa elegante"
+    - separator [ref=e532]
+    - generic [ref=e533]: MEGA-PROMPT 22
+    - heading "Follow-up que Não Parece Desespero" [level=2] [ref=e534]
+    - generic [ref=e535]: "Use: ChatGPT ou Claude"
+    - generic [ref=e537]: "[Cole seu Bloco de Contexto aqui] Cliente entrou em contato [X dias] atrás, chegamos até [ponto] e sumiu. Crie 3 mensagens de follow-up: Mensagem 1 (dia 2): Curiosidade — faz ele querer responder. Mensagem 2 (dia 5): Valor — entrega algo útil sem mencionar venda. Mensagem 3 (dia 10): Fechamento elegante com saída digna. REGRAS: - Nenhuma começa com \"Oi, sumiu?\" ou \"Viu minha mensagem?\" - Nenhuma tem tom de cobrança - Cada uma legível em 10 segundos - A 3ª abre a porta para o futuro Para cada mensagem: qual gatilho psicológico e por que funciona?"
+    - separator [ref=e538]
+    - generic [ref=e539]: MEGA-PROMPT 23
+    - 'heading "EXCLUSIVO: Analise Suas Próprias Conversas com a IA" [level=2] [ref=e540]'
+    - paragraph [ref=e541]: Esta é uma das funcionalidades mais poderosas que poucos empreendedores usam. Você exporta sua própria conversa real com clientes e pede para a IA analisar onde você está errando e como melhorar.
+    - paragraph [ref=e543]:
+      - text: ⚠️
+      - strong [ref=e544]: "Atenção antes de usar:"
+      - text: Antes de colar conversas reais na IA, remova dados sensíveis do cliente, como telefone, endereço, CPF, dados de pagamento ou qualquer informação pessoal desnecessária. Substitua o nome do cliente por "Cliente" se preferir. Isso protege a privacidade das pessoas e mantém sua postura profissional.
+    - heading "Como exportar sua conversa do WhatsApp:" [level=3] [ref=e545]
+    - paragraph [ref=e546]:
+      - strong [ref=e547]: "No Android:"
+    - list [ref=e548]:
+      - listitem [ref=e549]: Abra a conversa com o cliente
+      - listitem [ref=e550]: Toque nos 3 pontos (⋮) no canto superior direito
+      - listitem [ref=e551]: Selecione "Mais"
+      - listitem [ref=e552]: Toque em "Exportar conversa"
+      - listitem [ref=e553]: Escolha "Sem mídia" (só o texto)
+      - listitem [ref=e554]: Salve o arquivo .txt
+    - paragraph [ref=e555]:
+      - strong [ref=e556]: "No iPhone:"
+    - list [ref=e557]:
+      - listitem [ref=e558]: Abra a conversa com o cliente
+      - listitem [ref=e559]: Toque no nome do contato no topo
+      - listitem [ref=e560]: Desça a tela e toque em "Exportar conversa"
+      - listitem [ref=e561]: Escolha "Sem mídia"
+      - listitem [ref=e562]: Salve o arquivo
+    - paragraph [ref=e563]:
+      - strong [ref=e564]: "Como usar no ChatGPT ou Claude:"
+    - list [ref=e565]:
+      - listitem [ref=e566]: Abra o ChatGPT ou Claude
+      - listitem [ref=e567]: Copie o texto da conversa exportada
+      - listitem [ref=e568]: Use um dos prompts abaixo
+    - separator [ref=e569]
+    - generic [ref=e570]: PROMPT A
+    - heading "Diagnóstico Completo da Conversa" [level=3] [ref=e571]
+    - generic [ref=e572]: "Use: ChatGPT ou Claude"
+    - generic [ref=e574]: "Você é um especialista em vendas pelo WhatsApp para pequenos negócios. Analise esta conversa real com um cliente potencial: [cole a conversa exportada aqui] Contexto do meu negócio: [cole o bloco C.O.A.T.] Faça uma análise completa: 1. DIAGNÓSTICO GERAL: - Em qual momento da conversa eu perdi a venda? - Qual foi o erro principal? 2. ANÁLISE MENSAGEM POR MENSAGEM: Para as 5 mensagens mais críticas da conversa, me diga: - O que eu disse - O que eu deveria ter dito - Por que a versão certa funciona melhor 3. ERROS IDENTIFICADOS: Liste todos os erros que cometei nessa conversa com explicação. 4. ACERTOS: O que fiz bem e devo manter? 5. REESCRITA: Reescreva os trechos mais problemáticos da conversa mostrando como deveria ter sido. 6. APRENDIZADO: Qual é a principal lição dessa conversa que devo aplicar em todos os atendimentos?"
+    - separator [ref=e575]
+    - generic [ref=e576]: PROMPT B
+    - heading "Análise de Padrão (Múltiplas Conversas)" [level=3] [ref=e577]
+    - paragraph [ref=e578]: Use quando quiser analisar várias conversas de uma vez.
+    - generic [ref=e579]: "Use: Claude (melhor para textos longos) ou ChatGPT"
+    - generic [ref=e581]: "Você é especialista em vendas e atendimento pelo WhatsApp. Vou te enviar [X] conversas com clientes que não fecharam. Analise o padrão e me ajude a identificar o problema raiz. CONVERSA 1: [cole a conversa] CONVERSA 2: [cole a conversa] CONVERSA 3: [cole a conversa] Contexto do meu negócio: [cole o bloco C.O.A.T.] Após analisar todas as conversas, me responda: 1. Qual é o padrão de erro que se repete em todas as conversas? 2. Em que momento exato eu perco a maioria dos clientes? (no início / após apresentar o preço / após a explicação) 3. Quais são as 3 objeções mais frequentes? Para cada uma, crie a resposta ideal. 4. O problema está em: criativo/anúncio, oferta, atendimento ou follow-up? Explique com base nas conversas. 5. Crie um script melhorado para as próximas conversas, corrigindo os erros identificados. 6. O que devo testar nos próximos 7 dias para melhorar minha conversão no WhatsApp?"
+    - separator [ref=e582]
+    - generic [ref=e583]: PROMPT C
+    - heading "Criador de Script Baseado em Conversa Real" [level=3] [ref=e584]
+    - generic [ref=e585]: "Use: Claude ou ChatGPT"
+    - generic [ref=e587]: "Você é especialista em vendas pelo WhatsApp. Leia esta conversa onde consegui fechar uma venda: [cole a conversa de sucesso] E esta onde não fechei: [cole a conversa de fracasso] Contexto do meu negócio: [cole o bloco C.O.A.T.] Com base nessas duas conversas reais: 1. O que fiz diferente na conversa que fechou? 2. Quais foram as palavras ou perguntas que mais ajudaram no fechamento? 3. Crie um script novo baseado no que funcionou, eliminando o que não funcionou. 4. Crie 3 variações desse script para públicos diferentes: - Cliente que pergunta preço logo de início - Cliente que está comparando com concorrente - Cliente que demonstra interesse mas some 5. Como devo adaptar esse script para diferentes nichos dentro do meu segmento?"
+    - separator [ref=e588]
+    - generic [ref=e589]: PROMPT D
+    - heading "Análise Rápida de Conversa (versão curta)" [level=3] [ref=e590]
+    - paragraph [ref=e591]: Para usar no dia a dia quando uma conversa não foi bem.
+    - generic [ref=e592]: "Use: ChatGPT, Claude ou Gemini"
+    - generic [ref=e594]: "Analise essa conversa de WhatsApp e me diga em 3 linhas: 1. Onde errei 2. O que deveria ter dito 3. Como recuperar esse lead agora [cole a conversa] Meu negócio: [descreva brevemente]"
+    - separator [ref=e595]
+    - generic [ref=e596]:
+      - generic [ref=e597]: MÓDULO 6
+      - generic [ref=e598]: "META ADS: ANÚNCIOS QUE GERAM CLIENTES"
+    - heading "⚡ Regra dos 3 Criativos" [level=2] [ref=e599]
+    - paragraph [ref=e600]: "Nunca suba apenas um criativo. Teste sempre:"
+    - generic [ref=e602]: "Criativo 1 — DOR: fala sobre o problema que o cliente sente Criativo 2 — DESEJO: fala sobre o resultado que ele quer Criativo 3 — OFERTA DIRETA: apresenta o produto com preço e CTA Após 3 a 7 dias, analise: - Custo por conversa - Qualidade dos leads (curioso vs. comprador) - Taxa de resposta no WhatsApp - Vendas geradas - Custo por venda Escale o que funciona. Pause o que não funciona. Nunca escolha criativo só porque você acha bonito."
+    - separator [ref=e603]
+    - generic [ref=e604]: MEGA-PROMPT 24
+    - heading "Campanha Completa para WhatsApp" [level=2] [ref=e605]
+    - generic [ref=e606]: "Use: Claude ou ChatGPT"
+    - generic [ref=e608]: "Você é gestor de tráfego especialista em campanhas para WhatsApp para pequenos negócios locais. CONTEXTO DO NEGÓCIO: [cole o bloco C.O.A.T.] PRODUTO/SERVIÇO: [descreva] CIDADE/BAIRRO: [informe] ORÇAMENTO DIÁRIO: [informe] Crie estratégia de campanha no Meta Ads para gerar conversas qualificadas no WhatsApp. Entregue: 1. Diagnóstico da minha oferta: está pronta para anúncio? 2. Melhor objetivo de campanha para meu caso. 3. Estrutura recomendada: campanha → conjunto → anúncios. 4. Público inicial recomendado. 5. 5 ideias de criativos (formato + ideia visual + texto). 6. 5 copies com abordagens diferentes: - Dor / Desejo / Prova social / Oferta direta / Curiosidade 7. Primeira mensagem automática do WhatsApp quando o lead chegar. 8. 3 perguntas de qualificação para separar curioso de comprador. 9. Métricas que devo acompanhar e o que cada uma significa. 10. Regras claras: quando pausar, manter ou escalar."
+    - separator [ref=e609]
+    - generic [ref=e610]: MEGA-PROMPT 25
+    - heading "Diagnóstico de Anúncio Ruim" [level=2] [ref=e611]
+    - generic [ref=e612]: "Use: Claude ou ChatGPT"
+    - generic [ref=e614]: "Você é analista de tráfego pago. Meus números atuais: Investimento: R$ Impressões: Alcance: Cliques: CTR: CPC: R$ Conversas iniciadas: Custo por conversa: R$ Vendas: Custo por venda: R$ Ticket médio: R$ Meu produto: [descreva] Destino: [WhatsApp / site / formulário / direct] Analise e me diga: 1. O que está bom (não mude) 2. O que está ruim (prioridade de ajuste) 3. O problema está no criativo, público, oferta ou WhatsApp? 4. Qual ajuste fazer PRIMEIRO 5. O que NÃO mexer ainda 6. Qual teste fazer nos próximos 3 dias 7. Quando pausar definitivamente 8. Quando aumentar orçamento com segurança"
+    - separator [ref=e615]
+    - generic [ref=e616]:
+      - generic [ref=e617]: MÓDULO 7
+      - generic [ref=e618]: GOOGLE MEU NEGÓCIO / PERFIL DA EMPRESA NO GOOGLE
+    - paragraph [ref=e619]: "Muitas pessoas que pesquisam negócios locais no Google estão prontas para visitar, ligar ou pedir orçamento. Seu perfil no Google — conhecido como Google Meu Negócio ou Perfil da Empresa no Google — pode funcionar como um vendedor silencioso: aparece quando o cliente está pesquisando, mostra suas informações, exibe avaliações e facilita o contato."
+    - generic [ref=e620]: MEGA-PROMPT 26
+    - heading "Dominar o Google Local" [level=2] [ref=e621]
+    - generic [ref=e622]: "Use: ChatGPT ou Claude"
+    - generic [ref=e624]: "[Cole seu Bloco de Contexto aqui] Situação atual no Google Meu Negócio: [descreva ou diga \"não tenho perfil ainda\"] 1. DIAGNÓSTICO: os 3 erros mais comuns que provavelmente estou cometendo no GMB para meu tipo de negócio. 2. DESCRIÇÃO OTIMIZADA: escreva a descrição completa com palavras-chave que meu cliente usa, diferencial, área de atendimento e CTA. Explique quais palavras-chave incluiu. 3. CATEGORIAS: quais usar e como cada uma impacta quais buscas apareço. 4. ESTRATÉGIA DE AVALIAÇÕES: - Momento certo para pedir avaliação - Mensagem de WhatsApp para solicitar (natural) - Resposta para avaliação negativa que vira reputação positiva 5. 4 POSTS PRONTOS para publicar um por semana no próximo mês. (Perfis ativos e completos tendem a ter mais visibilidade local)"
+    - separator [ref=e625]
+    - generic [ref=e626]:
+      - generic [ref=e627]: MÓDULO 8
+      - generic [ref=e628]: BIBLIOTECA POR NICHO
+    - paragraph [ref=e629]: Use o prompt do seu nicho como ponto de partida. Ele já traz o contexto especializado que acelera o resultado.
+    - separator [ref=e630]
+    - heading "Clínica de Estética e Beleza" [level=2] [ref=e631]
+    - generic [ref=e632]: "Use: ChatGPT ou Claude"
+    - generic [ref=e634]: "Você é especialista em marketing para clínicas de estética. Crie campanha de conteúdo e vendas para: [nome do procedimento] CONTEXTO DA CLÍNICA: [cole o bloco C.O.A.T.] Entregue: 1. 5 dores que esse público sente ANTES de procurar o procedimento (as que ele pensa mas não fala abertamente) 2. 5 desejos para usar em anúncios e posts 3. 5 objeções comuns com resposta estratégica para cada 4. 5 posts educativos (tema + gancho + estrutura) 5. 5 stories de prova social contextualizada 6. 3 copies para anúncio (dor, desejo e oferta) 7. 3 mensagens de WhatsApp para quem pediu preço 8. Sequência de follow-up para quem não fechou em 7 dias"
+    - separator [ref=e635]
+    - heading "Restaurante, Delivery e Lanchonete" [level=2] [ref=e636]
+    - generic [ref=e637]: "Use: ChatGPT ou Gemini"
+    - generic [ref=e639]: "Você é estrategista de marketing para restaurantes e deliveries. MEU NEGÓCIO: [cole o bloco C.O.A.T.] PRODUTO QUE QUERO VENDER MAIS: [prato, combo, delivery, marmita, almoço executivo] Entregue: 1. Oferta da semana (como posicionar sem dar desconto barato) 2. 5 ideias de posts para feed 3. 5 ideias de stories 4. 3 anúncios para Meta Ads 5. 3 mensagens para lista de transmissão no WhatsApp 6. 2 ideias de promoção que valorizam, não desvalorizam 7. Roteiro de vídeo de 30s mostrando o prato de forma apetitosa 8. Como usar o iFood e WhatsApp em conjunto para vender mais"
+    - paragraph [ref=e640]:
+      - strong [ref=e641]: "Exemplo preenchido — Marmitaria:"
+    - generic [ref=e642]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e643]: "Gancho de post: \"Por que marmita de verdade não cabe em isopor barato?\" Ângulo de anúncio: \"Almoço saudável sem sair do trabalho — entregamos em [bairros] das 11h às 14h de segunda a sexta\" CTA WhatsApp: \"Manda seu endereço que a gente calcula o frete agora\""
+    - separator [ref=e644]
+    - heading "Salão de Beleza e Barbearia" [level=2] [ref=e645]
+    - generic [ref=e646]: "Use: ChatGPT ou Claude"
+    - generic [ref=e648]: "Você é especialista em marketing para salões e barbearias. MEU NEGÓCIO: [cole o bloco C.O.A.T.] SERVIÇO QUE QUERO DESTACAR: [descreva] Entregue: 1. Por que o cliente cancela ou some após 3 meses (a verdade que ninguém fala) 2. Como criar conteúdo que faz o cliente voltar antes de sentir falta 3. 5 posts que geram agendamentos sem dar desconto 4. Script de WhatsApp para reativar cliente sumido há 60 dias 5. Como usar antes e depois de forma ética e que realmente converte 6. Programa de fidelidade simples sem aplicativo 7. 3 copies de anúncio para atrair cliente novo"
+    - separator [ref=e649]
+    - heading "Pet Shop e Clínica Veterinária" [level=2] [ref=e650]
+    - generic [ref=e651]: "Use: ChatGPT ou Claude"
+    - generic [ref=e653]: "Você é especialista em marketing para pet shops. MEU NEGÓCIO: [cole o bloco C.O.A.T.] SERVIÇO: [banho e tosa / ração / vacina / consulta / etc.] Entregue: 1. As 5 culpas que o dono de pet sente e como sua comunicação pode ser o alívio sem ser manipulador 2. Como criar conteúdo que gera vínculo emocional com o tutor 3. 5 posts de humanização que engajam e fidelizam 4. Script para reagendar banho e tosa de cliente sumido 5. Campanha de vacinas: como criar urgência real e ética 6. 3 copies de anúncio que falam com o coração do tutor"
+    - separator [ref=e654]
+    - heading "Academia e Personal Trainer" [level=2] [ref=e655]
+    - generic [ref=e656]: "Use: ChatGPT ou Claude"
+    - generic [ref=e658]: "Você é especialista em marketing para academias e trainers. MEU NEGÓCIO: [cole o bloco C.O.A.T.] SERVIÇO: [musculação / funcional / emagrecimento / hipertrofia] Entregue: 1. Por que o aluno cancela nos primeiros 3 meses (razão real) 2. Como criar conteúdo que mantém o aluno motivado entre as aulas 3. 5 posts de resultado que não violam regras do Instagram 4. Script para converter lead que pediu preço e sumiu 5. Como vender plano anual sem parecer insistente 6. Campanha de janeiro: como se destacar na concorrência 7. 3 copies de anúncio para atrair aluno novo"
+    - separator [ref=e659]
+    - heading "Loja de Roupas e Moda Local" [level=2] [ref=e660]
+    - generic [ref=e661]: "Use: ChatGPT ou Claude"
+    - generic [ref=e663]: "Você é especialista em marketing para lojas de moda e roupas locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] COLEÇÃO OU PRODUTO: [descreva] Entregue: 1. Como criar desejo por produto de loja local num mercado dominado por Shein, Shopee e e-commerce 2. O que faz uma pessoa comprar roupa em loja física hoje (a razão emocional, não racional) 3. 5 posts que mostram o produto de forma que loja online não consegue 4. Como usar stories para vender sem precisar de catálogo elaborado 5. Script de WhatsApp para cliente que pediu foto e sumiu 6. Como criar lançamento de nova coleção com engajamento 7. 3 copies de anúncio para atrair cliente novo para a loja 8. Como usar vídeo provando a roupa para vender mais"
+    - paragraph [ref=e664]:
+      - strong [ref=e665]: "Exemplo preenchido:"
+    - generic [ref=e666]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e667]: "Gancho: \"Roupa bonita, preço justo e você ainda pode provar antes de levar\" Ângulo que loja online não tem: \"Não vai ficar diferente do que você viu — porque você vai ver pessoalmente\" CTA: \"Me manda seu estilo que a gente separa as peças pra você\""
+    - separator [ref=e668]
+    - heading "Loja de Importados e Produtos Asiáticos" [level=2] [ref=e669]
+    - generic [ref=e670]: "Use: ChatGPT ou Claude"
+    - generic [ref=e672]: "Você é especialista em marketing para lojas de importados locais que vendem acessórios, eletrônicos, gadgets e produtos asiáticos (similar ao que está na Shopee e AliExpress, mas físico). MEU NEGÓCIO: [cole o bloco C.O.A.T.] CATEGORIA DE PRODUTO: [acessórios / eletrônicos / casa / pet / kids] Entregue: 1. O que faz o cliente preferir comprar na loja física em vez de esperar o produto da Shopee (a vantagem que você tem e precisa comunicar) 2. Como mostrar que o produto tem qualidade sem parecer \"produto barato\" 3. 5 posts que geram curiosidade e desejo de ir até a loja 4. Como usar o \"unboxing\" para criar conteúdo viral de forma simples 5. Script de WhatsApp para quando o cliente pergunta \"isso vem igual aparece na foto?\" 6. Como criar senso de novidade constante (a loja que sempre tem coisa nova) 7. 3 copies de anúncio com ângulos diferentes: - Preço surpresa (\"não acredita que é tão barato\") - Produto específico que virou febre - Kit presenteável (\"presente que impressiona sem gastar muito\") 8. Como montar catálogo no WhatsApp Business de forma organizada"
+    - paragraph [ref=e673]:
+      - strong [ref=e674]: "Exemplo preenchido:"
+    - generic [ref=e675]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e676]: "Gancho: \"Esse produto está na Shopee por R$89. Aqui você leva por R$35 e retira hoje.\" Ângulo: \"Sem esperar 30 dias de entrega. Sem risco de produto diferente do anunciado. Você vê, você leva.\" CTA para anúncio: \"Manda foto do que você quer que eu vejo se tenho aqui\" Post de curiosidade: \"Chegou algo que parece ser de loja gringa mas custa menos de R$30. Conseguiu adivinhar?\""
+    - separator [ref=e677]
+    - heading "Mercearia, Minimercado e Armazém" [level=2] [ref=e678]
+    - generic [ref=e679]: "Use: ChatGPT ou Gemini"
+    - generic [ref=e681]: "Você é especialista em marketing para mercearias e minimercados locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. O que faz o cliente escolher a mercearia do bairro em vez do supermercado grande (razão emocional e prática) 2. Como criar conteúdo que lembra o cliente de comprar aqui 3. 5 posts para Instagram ou WhatsApp que geram visitas 4. Como usar lista de transmissão no WhatsApp para divulgar promoções sem parecer spam 5. Estratégia de \"produto da semana\" para movimentar estoque 6. Como criar fidelidade sem cartão de pontos complexo 7. Como divulgar fiado e parcelamento de forma que não desvalorize"
+    - paragraph [ref=e682]:
+      - strong [ref=e683]: "Exemplo preenchido:"
+    - generic [ref=e684]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e685]: "Gancho: \"Por que tem gente que prefere pagar R$2 a mais aqui do que ir ao supermercado?\" Post de bastidores: \"Às 6h da manhã a gente já está aqui deixando tudo fresquinho para você\" CTA: \"Manda sua lista no WhatsApp que a gente separa aqui\""
+    - separator [ref=e686]
+    - heading "Padaria e Confeitaria" [level=2] [ref=e687]
+    - generic [ref=e688]: "Use: ChatGPT ou Gemini"
+    - generic [ref=e690]: "Você é especialista em marketing para padarias e confeitarias locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] PRODUTO QUE QUERO DESTACAR: [descreva] Entregue: 1. Como usar o cheiro, a textura e o visual do produto para vender pelo Instagram (o que a foto precisa transmitir) 2. 5 posts que fazem a pessoa sentir vontade de comprar só de ver 3. Como usar stories de bastidores para criar desejo (pão saindo do forno, bolo sendo decorado) 4. Script para encomendas pelo WhatsApp sem perder nenhum detalhe 5. Como criar caixas e kits presenteáveis para datas comemorativas 6. 3 copies de anúncio para atrair clientes novos 7. Como fazer a pessoa que passou na frente entrar — dica de vitrine e comunicação visual"
+    - separator [ref=e691]
+    - heading "Farmácia e Drogaria de Bairro" [level=2] [ref=e692]
+    - generic [ref=e693]: "Use: ChatGPT ou Claude"
+    - generic [ref=e695]: "Você é especialista em marketing para farmácias e drogarias locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. O que diferencia farmácia de bairro da rede grande (o que você tem que eles não têm) 2. Como criar conteúdo de saúde sem fazer promessa médica ou violar regulamentação 3. 5 posts educativos sobre saúde que geram autoridade e engajamento 4. Como usar delivery de medicamentos como diferencial 5. Script de WhatsApp para pedido de medicamento por entrega 6. Como criar relacionamento com clientes idosos (maior fidelidade) 7. 3 posts de produto (dermocosméticos, suplementos, higiene) que vendem sem parecer anúncio"
+    - separator [ref=e696]
+    - heading "Assistência Técnica e Oficina" [level=2] [ref=e697]
+    - generic [ref=e698]: "Use: ChatGPT ou Claude"
+    - generic [ref=e700]: "Você é especialista em marketing para assistências técnicas e oficinas. MEU NEGÓCIO: [cole o bloco C.O.A.T.] TIPO DE SERVIÇO: [celular / computador / carro / moto / eletrodoméstico] Entregue: 1. Como criar confiança em serviço onde o cliente tem medo de ser enganado 2. 5 posts que mostram competência e transparência 3. Como usar antes e depois de conserto para gerar engajamento 4. Script de WhatsApp para orçamento que não assusta o cliente 5. Como lidar com cliente que questiona o preço do serviço 6. Como pedir avaliação 5 estrelas após serviço bem feito 7. 3 copies de anúncio para atrair clientes com problema específico"
+    - paragraph [ref=e701]:
+      - strong [ref=e702]: "Exemplo preenchido — Assistência de celular:"
+    - generic [ref=e703]:
+      - text: EXEMPLO PREENCHIDO
+      - generic [ref=e704]: "Gancho: \"Tela quebrada? Antes de comprar celular novo, veja isso.\" Post de prova: \"Esse iPhone estava sendo dado como perdido. 2 horas depois...\" CTA: \"Me manda foto do problema que eu te dou um diagnóstico grátis aqui\""
+    - separator [ref=e705]
+    - heading "Escola de Idiomas e Cursos Livres" [level=2] [ref=e706]
+    - generic [ref=e707]: "Use: Claude ou ChatGPT"
+    - generic [ref=e709]: "Você é especialista em marketing para escolas e cursos locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] CURSO: [descreva] Entregue: 1. Por que o aluno desiste nos primeiros 3 meses e como evitar 2. Como criar conteúdo que demonstra resultado antes da matrícula 3. 5 posts educativos que geram curiosidade pelo curso 4. Script de WhatsApp para converter quem pediu informações 5. Como usar aluno atual como prova social de forma autêntica 6. Como criar urgência real para matrícula (sem inventar vagas) 7. 3 copies de anúncio para atrair aluno novo"
+    - separator [ref=e710]
+    - heading "Sorveteria, Açaí e Gelateria" [level=2] [ref=e711]
+    - generic [ref=e712]: "Use: ChatGPT ou Gemini"
+    - generic [ref=e714]: "Você é especialista em marketing para sorveterias e açaiterias. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. Como criar conteúdo visual que faz a boca do cliente salivar 2. 5 posts de produto que geram desejo imediato 3. Como usar a sazonalidade (verão vs. inverno) a favor do negócio 4. Estratégia de delivery para dias de calor 5. Como criar combo e kit que aumenta o ticket médio 6. Script de WhatsApp para pedidos de delivery 7. Como usar cliente feliz para viralizar o produto"
+    - separator [ref=e715]
+    - heading "Lavanderia e Lavagem de Roupa" [level=2] [ref=e716]
+    - generic [ref=e717]: "Use: ChatGPT ou Claude"
+    - generic [ref=e719]: "Você é especialista em marketing para lavanderias locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. O que faz alguém pagar lavanderia em vez de lavar em casa (a razão real — tempo, resultado ou status?) 2. 5 posts que vendem o serviço mostrando o resultado e o conforto 3. Como usar o serviço de coleta e entrega como diferencial 4. Script de WhatsApp para agendamento e coleta 5. Como fidelizar cliente com frequência semanal ou quinzenal 6. 3 copies de anúncio para atrair cliente novo"
+    - separator [ref=e720]
+    - heading "Distribuidora de Bebidas e Conveniência" [level=2] [ref=e721]
+    - generic [ref=e722]: "Use: ChatGPT ou Gemini"
+    - generic [ref=e724]: "Você é especialista em marketing para distribuidoras e conveniências. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. Como criar urgência para pedido de bebida (momento certo: churrasco, reunião, viagem) 2. 5 posts que criam desejo de pedir no momento de consumo 3. Como usar lista de transmissão no WhatsApp para divulgar promoções 4. Script para pedido rápido via WhatsApp 5. Como criar combo de churrasco, aniversário e festa que aumenta ticket 6. Estratégia de entrega rápida como diferencial competitivo"
+    - separator [ref=e725]
+    - heading "Ótica e Óptico Local" [level=2] [ref=e726]
+    - generic [ref=e727]: "Use: Claude ou ChatGPT"
+    - generic [ref=e729]: "Você é especialista em marketing para óticas locais. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. Como vender armação como acessório de moda, não só como necessidade 2. 5 posts que mostram o produto de forma desejável e moderna 3. Como usar antes e depois (sem e com óculos) de forma elegante 4. Script de WhatsApp para quando cliente pergunta preço 5. Como comunicar exame de vista gratuito sem desvalorizar 6. Como criar campanha de troca de armação para cliente antigo 7. 3 copies de anúncio para atrair cliente novo"
+    - separator [ref=e730]
+    - heading "Advogado, Contador e Consultor" [level=2] [ref=e731]
+    - generic [ref=e732]: "Use: Claude (costuma ser muito bom para textos longos e análises detalhadas) ou ChatGPT"
+    - generic [ref=e734]: "Você é especialista em marketing para profissionais liberais que precisam comunicar autoridade sem parecer arrogantes. MEU NEGÓCIO: [cole o bloco C.O.A.T.] ÁREA DE ATUAÇÃO: [descreva] Entregue: 1. Como gerar autoridade no Instagram sem violar a ética profissional 2. 5 posts educativos que mostram competência sem dar consultoria grátis 3. Como usar casos reais sem violar sigilo 4. Script de primeiro contato no WhatsApp que converte em consulta paga 5. Como precificar consulta inicial com valor percebido alto 6. 3 copies de anúncio que atraem o cliente certo (não os que querem tirar dúvidas de graça)"
+    - separator [ref=e735]
+    - heading "Papelaria, Material Escolar e Presente" [level=2] [ref=e736]
+    - generic [ref=e737]: "Use: ChatGPT ou Gemini"
+    - generic [ref=e739]: "Você é especialista em marketing para papelarias e lojas de presentes. MEU NEGÓCIO: [cole o bloco C.O.A.T.] Entregue: 1. Como se diferenciar de papelaria grande com preço menor 2. Como transformar datas comemorativas em campanha recorrente 3. 5 posts de produto personalizável que geram engajamento 4. Como usar personalização como diferencial de preço 5. Script de WhatsApp para encomenda de kit presenteável 6. Como criar catálogo de presente por faixa de preço para facilitar a decisão do cliente 7. 3 copies de anúncio para atrair cliente novo"
+    - separator [ref=e740]
+    - generic [ref=e741]:
+      - generic [ref=e742]: MÓDULO 9
+      - generic [ref=e743]: MATRIZ DOR × CONTEÚDO × OFERTA
+    - paragraph [ref=e744]: Esta matriz é o conteúdo mais estratégico deste guia. Para de postar aleatoriamente e começa a criar com propósito.
+    - table [ref=e746]:
+      - rowgroup [ref=e747]:
+        - row "Dor do Cliente Conteúdo Ideal Oferta Conectada" [ref=e748]:
+          - columnheader "Dor do Cliente" [ref=e749]
+          - columnheader "Conteúdo Ideal" [ref=e750]
+          - columnheader "Oferta Conectada" [ref=e751]
+      - rowgroup [ref=e752]:
+        - row "Não tem tempo Post educativo rápido (resolve algo em 5 min) Solução que economiza tempo" [ref=e753]:
+          - cell "Não tem tempo" [ref=e754]
+          - cell "Post educativo rápido (resolve algo em 5 min)" [ref=e755]
+          - cell "Solução que economiza tempo" [ref=e756]
+        - row "Tem medo de errar Prova social com caso similar ao dele Diagnóstico ou avaliação gratuita" [ref=e757]:
+          - cell "Tem medo de errar" [ref=e758]
+          - cell "Prova social com caso similar ao dele" [ref=e759]
+          - cell "Diagnóstico ou avaliação gratuita" [ref=e760]
+        - row "Acha caro Comparativo de custo (quanto custa não resolver) Parcelamento ou condição especial" [ref=e761]:
+          - cell "Acha caro" [ref=e762]
+          - cell "Comparativo de custo (quanto custa não resolver)" [ref=e763]
+          - cell "Parcelamento ou condição especial" [ref=e764]
+        - row "Não confia Bastidores do processo + depoimento Garantia de satisfação" [ref=e765]:
+          - cell "Não confia" [ref=e766]
+          - cell "Bastidores do processo + depoimento" [ref=e767]
+          - cell "Garantia de satisfação" [ref=e768]
+        - row "Não sabe por onde começar Guia passo a passo Consultoria inicial ou kit básico" [ref=e769]:
+          - cell "Não sabe por onde começar" [ref=e770]
+          - cell "Guia passo a passo" [ref=e771]
+          - cell "Consultoria inicial ou kit básico" [ref=e772]
+        - row "Tentou antes e não funcionou Explicação do por que falhou + o que é diferente em você Demonstração ou sessão grátis" [ref=e773]:
+          - cell "Tentou antes e não funcionou" [ref=e774]
+          - cell "Explicação do por que falhou + o que é diferente em você" [ref=e775]
+          - cell "Demonstração ou sessão grátis" [ref=e776]
+        - row "Compara com concorrente mais barato Comparativo de valor (não de preço) Pacote com mais entregáveis" [ref=e777]:
+          - cell "Compara com concorrente mais barato" [ref=e778]
+          - cell "Comparativo de valor (não de preço)" [ref=e779]
+          - cell "Pacote com mais entregáveis" [ref=e780]
+        - row "Não viu resultado ainda Caso de cliente parecido com ele Acompanhamento pós-venda" [ref=e781]:
+          - cell "Não viu resultado ainda" [ref=e782]
+          - cell "Caso de cliente parecido com ele" [ref=e783]
+          - cell "Acompanhamento pós-venda" [ref=e784]
+    - paragraph [ref=e785]:
+      - strong [ref=e786]: "Como usar:"
+      - text: Identifique a dor principal do seu avatar hoje. Crie o conteúdo correspondente. Conecte com a oferta ligada a essa dor.
+    - generic [ref=e787]: MEGA-PROMPT 27
+    - heading "Criador de Matriz Personalizada" [level=2] [ref=e788]
+    - generic [ref=e789]: "Use: ChatGPT ou Claude"
+    - generic [ref=e791]: "[Cole seu Bloco de Contexto aqui] Crie minha Matriz Dor × Conteúdo × Oferta personalizada. Para cada dor que meu cliente sente: 1. Descreva em linguagem que ele usaria (não jargão técnico) 2. Sugira o melhor tipo de conteúdo para atrair quem sente essa dor 3. Indique qual oferta minha se conecta com essa dor 4. Crie um exemplo prático de post que faz essa conexão Liste pelo menos 8 dores diferentes do meu avatar. Entregue em formato de tabela. Depois me diga: qual dor atacar primeiro com conteúdo e por quê?"
+    - separator [ref=e792]
+    - generic [ref=e793]:
+      - generic [ref=e794]: MÓDULO 10
+      - generic [ref=e795]: ERROS QUE FAZEM A IA ENTREGAR RESPOSTAS RUINS
+    - generic [ref=e796]:
+      - generic [ref=e797]: Pedir "faça um post" sem contexto
+      - generic [ref=e799]: Não informar público-alvo
+      - generic [ref=e801]: Não informar objetivo do conteúdo
+      - generic [ref=e803]: Usar a primeira resposta sem ajustar
+      - generic [ref=e805]: Copiar texto com cara de robô (use o Prompt Humanizador)
+      - generic [ref=e807]: Não adaptar para o jeito da sua marca
+      - generic [ref=e809]: Pedir conteúdo, mas não ter oferta clara
+      - generic [ref=e811]: Postar sem CTA (o que a pessoa deve fazer?)
+      - generic [ref=e813]: Criar anúncio antes de arrumar o WhatsApp
+      - generic [ref=e815]: Achar que IA substitui estratégia
+    - heading "Comandos de Refinamento (use sempre)" [level=2] [ref=e817]
+    - generic [ref=e819]: "\"Melhore essa resposta deixando mais específica para meu público.\" \"Deixe esse texto menos genérico e mais persuasivo.\" \"Crie versão mais curta para Instagram (máx. 150 palavras).\" \"Transforme em linguagem de WhatsApp, mais casual e direto.\" \"Aponte o que está fraco nessa copy antes de reescrever.\" \"Crie 3 variações com abordagens diferentes.\" \"A primeira linha não prende atenção. Crie 5 opções de gancho.\" \"Reescreva como se fosse uma pessoa de carne e osso falando para um amigo próximo.\""
+    - separator [ref=e820]
+    - generic [ref=e821]:
+      - generic [ref=e822]: MÓDULO 11
+      - generic [ref=e823]: BANCO DE CTAs PRONTOS
+    - paragraph [ref=e824]: Use estes CTAs em posts, stories, anúncios e conversas no WhatsApp.
+    - heading "Para Instagram" [level=2] [ref=e825]
+    - generic [ref=e827]: "\"Manda 'QUERO' no direct que eu te explico como funciona.\" \"Comenta 'GUIA' que eu te envio o passo a passo.\" \"Escreve EU QUERO nos comentários que eu te mando os detalhes.\" \"Salva esse post para não perder quando precisar.\" \"Marca aquela pessoa que precisa ver isso.\" \"Compartilha nos stories se você também passa por isso.\" \"Qual desses é você? Comenta aqui embaixo.\""
+    - heading "Para Stories" [level=2] [ref=e828]
+    - generic [ref=e830]: "\"Arrasta pra cima e garanta o seu.\" \"Responde esse story com SIM e eu te mando mais detalhes.\" \"Clica no link e veja as opções.\" \"Manda mensagem agora — atendo pelo WhatsApp.\""
+    - heading "Para WhatsApp" [level=2] [ref=e831]
+    - generic [ref=e833]: "\"Me chama com a palavra QUERO que eu te explico.\" \"Manda AGENDA que eu vejo os horários disponíveis para você.\" \"Quer saber se isso serve para o seu caso? Me chama aqui.\" \"Peça seu orçamento agora — respondo em minutos.\" \"Me manda foto do que você precisa que eu te dou um diagnóstico.\" \"Manda seu endereço que eu calculo o frete para você agora.\""
+    - heading "Para Anúncios" [level=2] [ref=e834]
+    - generic [ref=e836]: "\"Agende sua avaliação.\" \"Consulte disponibilidade.\" \"Fale com um especialista.\" \"Peça o cardápio.\" \"Receba as opções agora.\" \"Saiba mais.\" \"Chame no WhatsApp.\" \"Ver detalhes.\""
+    - separator [ref=e837]
+    - generic [ref=e838]:
+      - generic [ref=e839]: MÓDULO 12
+      - generic [ref=e840]: BANCO DE HOOKS (PRIMEIRAS LINHAS)
+    - paragraph [ref=e841]: A primeira linha decide se a pessoa vai ler ou passar. Use esses hooks prontos ou adapte para seu negócio.
+    - heading "Hooks de Dor" [level=2] [ref=e842]
+    - generic [ref=e844]: "\"O erro que faz você perder clientes sem perceber.\" \"Você provavelmente está perdendo dinheiro por causa disso.\" \"Por que [problema comum] acontece com tanta gente?\" \"Ninguém te conta a verdade sobre [serviço/produto].\" \"Cansado de [problema do avatar]?\" \"Isso aqui acontece com quase todo dono de [negócio].\""
+    - heading "Hooks de Curiosidade" [level=2] [ref=e845]
+    - generic [ref=e847]: "\"Antes de comprar [produto], veja isso.\" \"Isso aqui separa um serviço comum de um profissional de verdade.\" \"O que a gente faz diferente que ninguém mostra por aqui.\" \"Um detalhe que a maioria ignora e faz toda a diferença.\" \"Esse post pode te economizar [tempo/dinheiro]. Salva antes de ler.\" \"Chegou algo novo que vale a pena você ver.\""
+    - heading "Hooks de Prova Social" [level=2] [ref=e848]
+    - generic [ref=e850]: "\"Ela estava prestes a desistir. Depois disso, mudou tudo.\" \"O que aconteceu com esse cliente me surpreendeu.\" \"Resultado de [tempo] trabalhando com a gente.\" \"Esse depoimento me deixou sem palavras.\" \"Cliente que achava que não ia conseguir. Veja o resultado.\""
+    - heading "Hooks Locais (para negócios do bairro)" [level=2] [ref=e851]
+    - generic [ref=e853]: "\"Se você mora em [bairro/cidade], isso é para você.\" \"Quantas vezes você já passou na frente e não sabia o que era?\" \"O [negócio] do seu bairro que as pessoas estão falando.\" \"Aqui pertinho de você tem [solução] que você talvez não conheça.\""
+    - heading "Hooks de Oferta" [level=2] [ref=e854]
+    - generic [ref=e856]: "\"Essa semana tem uma condição especial que não vai se repetir.\" \"Hoje a gente está com [produto/serviço] diferenciado.\" \"Essa promoção só vai até [data real].\" \"Poucas vagas disponíveis para [serviço] neste mês.\""
+    - heading "Hooks de Reflexão e Decisão" [level=2] [ref=e857]
+    - generic [ref=e859]: "\"Se você está esperando o momento certo para resolver [problema], leia isso.\" \"O que ninguém te explica antes de contratar [serviço].\" \"Esse detalhe simples muda completamente o resultado de [produto/serviço].\" \"Você não precisa gastar mais. Precisa escolher melhor.\" \"Antes de procurar o mais barato, veja o que realmente importa.\""
+    - generic [ref=e860]: MEGA-PROMPT 28
+    - heading "Gerador de Hooks Personalizados" [level=2] [ref=e861]
+    - generic [ref=e862]: "Use: ChatGPT ou Claude"
+    - generic [ref=e864]: "[Cole seu Bloco de Contexto aqui] Crie 20 hooks personalizados para meu negócio para usar como: - Primeira linha de legenda no Instagram - Texto inicial de Stories - Frase de abertura de anúncio - Gancho de carrossel Distribua assim: 5 hooks de dor (tocam na frustração do avatar) 5 hooks de curiosidade (criam necessidade de saber mais) 5 hooks de prova social (mostram resultado de outros) 5 hooks locais (usam referência da minha cidade/bairro) Para cada hook, me diga: - Em qual formato funciona melhor (post, story, anúncio) - Qual público responde melhor a esse hook - Uma variação do mesmo hook com abordagem diferente"
+    - separator [ref=e865]
+    - generic [ref=e866]:
+      - generic [ref=e867]: MÓDULO 13
+      - generic [ref=e868]: PLANILHA DE ACOMPANHAMENTO DE LEADS
+    - paragraph [ref=e869]: Use esta tabela simples para registrar e analisar seus leads do WhatsApp.
+    - heading "Modelo de Planilha (copie para o Excel ou Sheets)" [level=2] [ref=e870]
+    - table [ref=e872]:
+      - rowgroup [ref=e873]:
+        - row "Data Origem Nome Interesse Respondeu? Fechou? Motivo da Perda Próx. Follow-up" [ref=e874]:
+          - columnheader "Data" [ref=e875]
+          - columnheader "Origem" [ref=e876]
+          - columnheader "Nome" [ref=e877]
+          - columnheader "Interesse" [ref=e878]
+          - columnheader "Respondeu?" [ref=e879]
+          - columnheader "Fechou?" [ref=e880]
+          - columnheader "Motivo da Perda" [ref=e881]
+          - columnheader "Próx. Follow-up" [ref=e882]
+      - rowgroup [ref=e883]:
+        - row "01/06 Anúncio IG João Serviço A Sim Não Achou caro 05/06" [ref=e884]:
+          - cell "01/06" [ref=e885]
+          - cell "Anúncio IG" [ref=e886]
+          - cell "João" [ref=e887]
+          - cell "Serviço A" [ref=e888]
+          - cell "Sim" [ref=e889]
+          - cell "Não" [ref=e890]
+          - cell "Achou caro" [ref=e891]
+          - cell "05/06" [ref=e892]
+        - row "02/06 Stories Maria Produto B Sim Sim — —" [ref=e893]:
+          - cell "02/06" [ref=e894]
+          - cell "Stories" [ref=e895]
+          - cell "Maria" [ref=e896]
+          - cell "Produto B" [ref=e897]
+          - cell "Sim" [ref=e898]
+          - cell "Sim" [ref=e899]
+          - cell "—" [ref=e900]
+          - cell "—" [ref=e901]
+        - row "03/06 Indicação Pedro Serviço A Não Não Sem resposta 06/06" [ref=e902]:
+          - cell "03/06" [ref=e903]
+          - cell "Indicação" [ref=e904]
+          - cell "Pedro" [ref=e905]
+          - cell "Serviço A" [ref=e906]
+          - cell "Não" [ref=e907]
+          - cell "Não" [ref=e908]
+          - cell "Sem resposta" [ref=e909]
+          - cell "06/06" [ref=e910]
+    - paragraph [ref=e911]:
+      - strong [ref=e912]: "Origens para registrar:"
+      - text: Anúncio Facebook, Anúncio Instagram, Stories, Bio, Post, Indicação, Google, Presencial, Outro.
+    - paragraph [ref=e913]:
+      - strong [ref=e914]: "Motivos de perda comuns:"
+      - text: Achou caro, Foi pro concorrente, Sem resposta, Não era o momento, Não entendeu o produto, Desistiu sem explicar.
+    - separator [ref=e915]
+    - generic [ref=e916]: MEGA-PROMPT 29
+    - heading "Análise da Sua Planilha de Leads" [level=2] [ref=e917]
+    - generic [ref=e918]: "Use: ChatGPT ou Claude"
+    - generic [ref=e920]: "Você é especialista em vendas e análise de dados para pequenos negócios. Analise esta planilha de leads do meu WhatsApp: [cole os dados da planilha ou descreva o que aconteceu] CONTEXTO DO NEGÓCIO: [cole o bloco C.O.A.T.] Com base nos dados, me responda: 1. Qual origem está trazendo leads mais qualificados? 2. Em qual etapa estou perdendo mais vendas? (no primeiro contato / após apresentar o produto / após o preço) 3. Quais são os 3 motivos de perda mais frequentes? Para cada um, crie a resposta ou abordagem que poderia evitar essa perda. 4. Qual é minha taxa de conversão atual? (vendas ÷ total de leads = %) Isso está bom ou ruim para meu segmento? 5. O problema está em: anúncio, oferta, atendimento ou follow-up? Explique com base nos dados. 6. Que ajuste devo fazer nos próximos 7 dias para melhorar minha conversão? 7. Se eu melhorar a conversão em 10%, quanto a mais vou faturar no mês? Faça o cálculo."
+    - separator [ref=e921]
+    - generic [ref=e922]:
+      - generic [ref=e923]: SEÇÃO
+      - generic [ref=e924]: O QUE ESTE GUIA NÃO FAZ
+    - paragraph [ref=e925]: Este guia não promete vendas automáticas sem esforço.
+    - paragraph [ref=e926]: A inteligência artificial acelera sua criação de conteúdo, melhora suas ofertas, ajuda a criar anúncios, organiza seu WhatsApp e economiza tempo.
+    - paragraph [ref=e927]: "Mas o resultado ainda depende de:"
+    - list [ref=e928]:
+      - listitem [ref=e929]: qualidade do seu produto ou serviço;
+      - listitem [ref=e930]: clareza da sua oferta;
+      - listitem [ref=e931]: constância na aplicação;
+      - listitem [ref=e932]: velocidade de resposta no WhatsApp;
+      - listitem [ref=e933]: atendimento;
+      - listitem [ref=e934]: verba de anúncio, se for anunciar;
+      - listitem [ref=e935]: capacidade de entregar o que promete.
+    - paragraph [ref=e936]:
+      - strong [ref=e937]: Use a IA como acelerador, não como milagre.
+    - separator [ref=e938]
+    - generic [ref=e939]:
+      - generic [ref=e940]: SEÇÃO
+      - generic [ref=e941]: "DESAFIO DE 7 DIAS: MEU NEGÓCIO COM IA"
+    - paragraph [ref=e942]: Siga dia a dia. Em 7 dias você terá seus primeiros conteúdos, oferta, WhatsApp e anúncio organizados com IA — a base funcionando para você continuar evoluindo.
+    - paragraph [ref=e943]:
+      - strong [ref=e944]: Dia 1 — Preencha o Bloco de Contexto
+      - text: "Objetivo: ensinar a IA sobre seu negócio antes de pedir qualquer coisa. Entrega: Bloco C.O.A.T. completo salvo no celular. Tempo: 20 minutos."
+    - paragraph [ref=e945]:
+      - strong [ref=e946]: Dia 2 — Crie sua Oferta Principal
+      - text: "Objetivo: sair de serviço genérico para oferta clara e desejável. Use: Módulo 2 — Mega-Prompt 2. Entrega: Uma oferta pronta para comunicar. Tempo: 30 minutos."
+    - paragraph [ref=e947]:
+      - strong [ref=e948]: Dia 3 — Faça o Diagnóstico Estratégico
+      - text: "Objetivo: entender o que sua comunicação está errando. Use: Módulo 1 — Mega-Prompt 1. Entrega: 5 insights sobre sua comunicação atual. Tempo: 20 minutos."
+    - paragraph [ref=e949]:
+      - strong [ref=e950]: Dia 4 — Crie Seu Primeiro Carrossel e 5 Stories
+      - text: "Objetivo: produzir conteúdo de atração e confiança. Use: Mega-Prompts 4 e 7. Entrega: 1 carrossel pronto + sequência de 5 stories. Tempo: 45 minutos."
+    - paragraph [ref=e951]:
+      - strong [ref=e952]: Dia 5 — Monte Seu Script de WhatsApp
+      - text: "Objetivo: parar de perder leads por falta de resposta estratégica. Use: Mega-Prompts 20 e 21. Entrega: Script de venda + respostas para as 3 principais objeções. Tempo: 30 minutos."
+    - paragraph [ref=e953]:
+      - strong [ref=e954]: Dia 6 — Crie Seu Primeiro Anúncio
+      - text: "Objetivo: transformar a oferta em campanha. Use: Mega-Prompts 18 e 24. Entrega: 3 copies + 3 criativos. Tempo: 45 minutos."
+    - paragraph [ref=e955]:
+      - strong [ref=e956]: Dia 7 — Revise, Publique e Meça
+      - text: "Objetivo: organizar a execução e publicar. Use: Checklists abaixo. Entrega: 1 post publicado + campanha pronta para subir. Tempo: 30 minutos."
+    - separator [ref=e957]
+    - generic [ref=e958]:
+      - generic [ref=e959]: SEÇÃO
+      - generic [ref=e960]: CHECKLISTS DE EXECUÇÃO
+    - heading "Antes de Criar Conteúdo com IA" [level=2] [ref=e961]
+    - generic [ref=e962]:
+      - generic [ref=e963]: Defini quem é o público (não "todo mundo")
+      - generic [ref=e965]: Defini o objetivo do conteúdo (não "aparecer")
+      - generic [ref=e967]: Expliquei o tom de voz
+      - generic [ref=e969]: Dei contexto completo sobre meu negócio
+      - generic [ref=e971]: Informei o canal de publicação
+      - generic [ref=e973]: Pedi ao menos 3 variações
+      - generic [ref=e975]: Pedi melhoria da primeira resposta
+      - generic [ref=e977]: Adaptei o texto para parecer meu, não da IA
+      - generic [ref=e979]: Incluí um CTA específico
+      - generic [ref=e981]: Revisei antes de publicar
+    - heading "Antes de Rodar Anúncio" [level=2] [ref=e983]
+    - generic [ref=e984]:
+      - generic [ref=e985]: Tenho uma oferta clara (não um serviço genérico)
+      - generic [ref=e987]: Tenho WhatsApp Business configurado com mensagem automática
+      - generic [ref=e989]: Tenho pelo menos 3 criativos para testar
+      - generic [ref=e991]: Sei quais perguntas fazer ao lead para qualificá-lo
+      - generic [ref=e993]: Tenho planilha simples de acompanhamento de leads
+      - generic [ref=e995]: Sei qual métrica define sucesso para mim
+      - generic [ref=e997]: Tenho verba para testar por pelo menos 7 dias
+      - generic [ref=e999]: Sei quando pausar e quando escalar
+    - heading "WhatsApp que Vende" [level=2] [ref=e1001]
+    - generic [ref=e1002]:
+      - generic [ref=e1003]: Respondo em menos de 1 hora (idealmente menos de 15 min)
+      - generic [ref=e1005]: Nunca mando preço seco sem entender o problema
+      - generic [ref=e1007]: Faço uma pergunta por mensagem (não interrogatório)
+      - generic [ref=e1009]: Entendo o problema antes de oferecer a solução
+      - generic [ref=e1011]: Uso prova social durante a conversa
+      - generic [ref=e1013]: Tenho follow-up definido (2 dias, 5 dias, 10 dias)
+      - generic [ref=e1015]: Registro os motivos de perda
+      - generic [ref=e1017]: Analiso minhas conversas com IA mensalmente
+    - separator [ref=e1019]
+    - generic [ref=e1020]:
+      - generic [ref=e1021]: SEÇÃO
+      - generic [ref=e1022]: "BÔNUS — QUANDO A IA ERRA: O QUE FAZER"
+    - paragraph [ref=e1023]:
+      - strong [ref=e1024]: "Ela não teve contexto suficiente:"
+      - text: "Solução: adicione mais camadas ao prompt (C.O.A.T. + Camadas)."
+    - paragraph [ref=e1025]:
+      - strong [ref=e1026]: "Ela entendeu errado:"
+      - text: "Solução: \"Não é isso. O que quero é [especifique]. Tente novamente.\""
+    - paragraph [ref=e1027]:
+      - strong [ref=e1028]: "A resposta está boa mas genérica:"
+      - text: "Solução: \"Essa resposta está boa. Agora a torne 3x mais específica para [nicho] e [avatar]. Dê exemplos reais.\""
+    - paragraph [ref=e1029]:
+      - strong [ref=e1030]: "O texto parece robotizado:"
+      - text: "Solução: use o Prompt Humanizador (Módulo 3) ou diga: \"Reescreva como se fosse uma pessoa de carne e osso falando para um amigo próximo.\""
+    - paragraph [ref=e1031]:
+      - strong [ref=e1032]: "A imagem saiu com texto errado:"
+      - text: "Solução: \"Refaça com menos texto. Use apenas: [título curto] / [subtítulo curto] / [CTA simples].\""
+    - paragraph [ref=e1033]:
+      - strong [ref=e1034]: "A imagem ficou genérica:"
+      - text: "Solução: \"Muito genérico. Meu negócio é [descreva]. Meu cliente é [descreva]. Refaça com esse contexto específico.\""
+    - separator [ref=e1035]
+    - blockquote [ref=e1036]:
+      - paragraph [ref=e1037]:
+        - strong [ref=e1038]: Este guia tem 29 Mega-Prompts + metodologia C.O.A.T. + Prompt em Camadas + Método F.A.C.E. + Método R.C.T. + Análise de Conversa WhatsApp + Matriz Dor × Conteúdo × Oferta + Banco de CTAs + Banco de Hooks + Planilha de Leads + Desafio de 7 Dias + Checklists de execução + 15 nichos detalhados.
+    - blockquote [ref=e1039]:
+      - paragraph [ref=e1040]:
+        - strong [ref=e1041]: Use. Adapte. Venda mais.
+    - separator [ref=e1042]
+    - paragraph [ref=e1043]:
+      - emphasis [ref=e1044]: IA que Vende — Todos os direitos reservados
+      - emphasis [ref=e1045]: Produto digital — entrega instantânea após o pagamento
+    - separator [ref=e1046]
+    - paragraph [ref=e1047]:
+      - strong [ref=e1048]: IA QUE VENDE
+      - text: · Produto digital · Entrega instantânea após o pagamento
+      - text: Todos os direitos reservados · © 2026

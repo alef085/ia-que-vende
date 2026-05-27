@@ -1,0 +1,424 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - text: ⏳ Oferta de lançamento encerra em
+    - generic [ref=e3]: 06:57:50
+    - text: · Preço sobe para R$97
+  - navigation [ref=e4]:
+    - link "IA que Vende" [ref=e5] [cursor=pointer]:
+      - /url: "#"
+    - link "Quero o guia" [ref=e6] [cursor=pointer]:
+      - /url: SEU_LINK_KIRVANO_AQUI
+  - generic [ref=e8]:
+    - generic [ref=e9]: 🚀 Guia de Lançamento · Acesso Imediato
+    - heading "Não é só o prompt. É a estratégia por trás de cada um." [level=1] [ref=e10]:
+      - text: Não é só o prompt.
+      - generic [ref=e11]: É a estratégia por trás de cada um.
+    - paragraph [ref=e12]:
+      - text: Um
+      - strong [ref=e13]: guia digital em PDF
+      - text: com 29 prompts prontos e o método completo de como, quando e por que usar cada um — para criar posts, artes, anúncios e fechar mais pelo WhatsApp,
+      - strong [ref=e14]: mesmo sem experiência com IA.
+    - generic [ref=e15]:
+      - link "Quero o guia por R$67 →" [ref=e16] [cursor=pointer]:
+        - /url: SEU_LINK_KIRVANO_AQUI
+      - paragraph [ref=e17]:
+        - text: De R$197 por apenas
+        - strong [ref=e18]: R$67
+        - text: no lançamento
+    - generic [ref=e19]:
+      - generic [ref=e20]: 📄 Guia em PDF
+      - generic [ref=e21]: ⚡ Acesso imediato
+      - generic [ref=e22]: 🛡️ Garantia de 7 dias
+      - generic [ref=e23]: 🔒 Pagamento seguro
+  - generic [ref=e26]:
+    - paragraph [ref=e27]: Você se identifica?
+    - heading "Você sabe que precisa aparecer mais — mas trava na hora de criar." [level=2] [ref=e28]:
+      - text: Você sabe que precisa aparecer mais —
+      - text: mas
+      - emphasis [ref=e29]: trava na hora de criar.
+    - paragraph [ref=e30]: Todo pequeno negócio precisa postar, responder clientes, criar ofertas e vender pelo WhatsApp. O problema é que quase ninguém tem agência, tempo ou habilidade para fazer tudo isso bem.
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: ✕
+        - generic [ref=e34]:
+          - strong [ref=e35]: Fica sem ideia do que postar
+          - text: e acaba não postando nada — ou repete sempre o mesmo.
+      - generic [ref=e36]:
+        - generic [ref=e37]: ✕
+        - generic [ref=e38]:
+          - strong [ref=e39]: Perde horas no Canva
+          - text: tentando fazer uma arte que fica mais ou menos — e sabe disso.
+      - generic [ref=e40]:
+        - generic [ref=e41]: ✕
+        - generic [ref=e42]:
+          - strong [ref=e43]: Manda mensagem no WhatsApp
+          - text: e o cliente lê, responde "obrigado" e some sem comprar.
+      - generic [ref=e44]:
+        - generic [ref=e45]: ✕
+        - generic [ref=e46]:
+          - strong [ref=e47]: Quer anunciar no Instagram
+          - text: mas não sabe criar criativo nem escrever copy que converte.
+      - generic [ref=e48]:
+        - generic [ref=e49]: ✕
+        - generic [ref=e50]:
+          - strong [ref=e51]: Já tentou usar IA
+          - text: mas recebeu resposta genérica que não serve pra nada no seu negócio.
+  - generic [ref=e53]:
+    - paragraph [ref=e54]: O produto
+    - heading "O que é o IA que Vende?" [level=2] [ref=e55]
+    - generic [ref=e56]:
+      - generic [ref=e57]: 📄 Guia Digital · PDF
+      - heading "É um guia em PDF. Mas não é qualquer PDF de prompts." [level=3] [ref=e58]
+      - paragraph [ref=e59]:
+        - text: Dentro você encontra 29 prompts prontos para usar no ChatGPT ou qualquer IA — mas cada prompt vem com o contexto certo, o objetivo claro e a estratégia de uso para que a IA entenda exatamente o que você precisa e entregue
+        - strong [ref=e60]: resultado real, não resposta genérica.
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - text: →
+          - strong [ref=e63]: "Contexto de negócio:"
+          - text: como apresentar sua empresa para a IA antes de pedir qualquer coisa
+        - generic [ref=e64]:
+          - text: →
+          - strong [ref=e65]: "Objetivo por uso:"
+          - text: o que pedir de forma que a IA entenda e entregue do jeito certo
+        - generic [ref=e66]:
+          - text: →
+          - strong [ref=e67]: "Estratégia por nicho:"
+          - text: o que funciona para salão é diferente de pet shop — temos os dois
+        - generic [ref=e68]:
+          - text: →
+          - strong [ref=e69]: "Análise de conversas reais:"
+          - text: cole sua conversa do WhatsApp e a IA aponta onde você perdeu a venda
+  - generic [ref=e72]:
+    - paragraph [ref=e73]: O método
+    - heading "O Método C.O.A.T." [level=2] [ref=e74]
+    - paragraph [ref=e75]: É a estrutura por trás de cada prompt do guia. Quando você segue esse método, a IA deixa de dar respostas genéricas e começa a trabalhar de verdade para o seu negócio.
+    - generic [ref=e76]:
+      - generic [ref=e81]: metodo-coat.md — IA que Vende
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]: C
+          - generic [ref=e85]:
+            - heading "Contexto — Apresente seu negócio para a IA" [level=4] [ref=e86]
+            - paragraph [ref=e87]: "Antes de pedir qualquer coisa, você ensina a IA quem você é: seu nicho, seu público, seu tom. Um prompt sem contexto gera resposta genérica. Com contexto, a IA trabalha como se fosse seu sócio."
+        - generic [ref=e89]:
+          - generic [ref=e90]: O
+          - generic [ref=e91]:
+            - heading "Objetivo — Diga exatamente o que você quer criar" [level=4] [ref=e92]
+            - paragraph [ref=e93]: Post de engajamento? Oferta de sexta? Script de WhatsApp para cliente que pediu preço? O objetivo muda tudo. O guia mostra como definir o objetivo certo para cada situação.
+        - generic [ref=e95]:
+          - generic [ref=e96]: A
+          - generic [ref=e97]:
+            - heading "Ação — Execute com o prompt pronto" [level=4] [ref=e98]
+            - paragraph [ref=e99]: Aqui entram os 29 prompts do guia. Você copia, cola, adapta o nome do seu negócio e manda para a IA. Nada de tentar adivinhar o que escrever — está tudo pronto.
+        - generic [ref=e101]:
+          - generic [ref=e102]: T
+          - generic [ref=e103]:
+            - heading "Tom — Ajuste para a sua voz" [level=4] [ref=e104]
+            - paragraph [ref=e105]: O resultado da IA sai bom, mas ainda precisa da sua cara. O guia ensina a calibrar o tom para que o conteúdo pareça que você escreveu — não um robô.
+  - generic [ref=e107]:
+    - paragraph [ref=e108]: Destaques
+    - heading "Os 3 módulos que mais geram resultado" [level=2] [ref=e109]
+    - paragraph [ref=e110]: Cada módulo resolve um gargalo específico do marketing do pequeno negócio. Juntos, cobrem os três maiores problemas de quem tenta crescer sem agência.
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - generic [ref=e113]: 🎨
+        - heading "Canva Nunca Mais" [level=3] [ref=e114]
+        - paragraph [ref=e115]: Aprenda a criar posts, stories e criativos de anúncio usando IA. Com o prompt certo, você descreve o que precisa e a IA gera — sem arrastar elemento nenhum.
+      - generic [ref=e116]:
+        - generic [ref=e117]: 📱
+        - heading "WhatsApp que Vende" [level=3] [ref=e118]
+        - paragraph [ref=e119]: Cole sua conversa do ZAP e a IA analisa onde você perdeu a venda. Scripts prontos para "quanto custa?", follow-up, objeções e fechamento.
+      - generic [ref=e120]:
+        - generic [ref=e121]: 🔥
+        - heading "5 Prompts Indispensáveis" [level=3] [ref=e122]
+        - paragraph [ref=e123]: Diagnóstico do negócio, criador de oferta irresistível, calendário do mês, criativo de anúncio e script de venda. Os cinco que mudam o jogo desde o primeiro uso.
+  - generic [ref=e126]:
+    - paragraph [ref=e127]: O que você recebe
+    - heading "Tudo que vem dentro do guia" [level=2] [ref=e128]
+    - paragraph [ref=e129]: 13 módulos práticos, organizados para você aplicar do zero. Sem enrolação, sem teoria desnecessária — cada item serve para resolver um problema real do dia a dia.
+    - generic [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e132]: ✓
+        - generic [ref=e133]: 29 Mega-Prompts prontos para copiar
+      - generic [ref=e134]:
+        - generic [ref=e135]: ✓
+        - generic [ref=e136]: 13 módulos práticos
+      - generic [ref=e137]:
+        - generic [ref=e138]: ✓
+        - generic [ref=e139]: Método C.O.A.T. completo
+      - generic [ref=e140]:
+        - generic [ref=e141]: ✓
+        - generic [ref=e142]: 5 Prompts Indispensáveis
+      - generic [ref=e143]:
+        - generic [ref=e144]: ✓
+        - generic [ref=e145]: Criador de Oferta Irresistível
+      - generic [ref=e146]:
+        - generic [ref=e147]: ✓
+        - generic [ref=e148]: Módulo Canva Nunca Mais
+      - generic [ref=e149]:
+        - generic [ref=e150]: ✓
+        - generic [ref=e151]: WhatsApp que Vende + análise
+      - generic [ref=e152]:
+        - generic [ref=e153]: ✓
+        - generic [ref=e154]: Meta Ads para WhatsApp
+      - generic [ref=e155]:
+        - generic [ref=e156]: ✓
+        - generic [ref=e157]: Google Meu Negócio com IA
+      - generic [ref=e158]:
+        - generic [ref=e159]: ✓
+        - generic [ref=e160]: Biblioteca por nicho — 15 nichos
+      - generic [ref=e161]:
+        - generic [ref=e162]: ✓
+        - generic [ref=e163]: Banco de Hooks e CTAs
+      - generic [ref=e164]:
+        - generic [ref=e165]: ✓
+        - generic [ref=e166]: Calendário editorial mensal
+      - generic [ref=e167]:
+        - generic [ref=e168]: ✓
+        - generic [ref=e169]: Planilha de acompanhamento de leads
+      - generic [ref=e170]:
+        - generic [ref=e171]: ✓
+        - generic [ref=e172]: Desafio de 7 Dias com resultado
+  - generic [ref=e174]:
+    - paragraph [ref=e175]: Feito para o seu negócio
+    - heading "15 nichos de pequenos negócios locais" [level=2] [ref=e176]
+    - paragraph [ref=e177]: O guia tem uma biblioteca de prompts segmentada por nicho. Porque o que funciona para um salão de beleza é diferente do que funciona para uma assistência técnica.
+    - generic [ref=e178]:
+      - generic [ref=e179]: 💅 Estética
+      - generic [ref=e180]: ✂️ Salão & Barbearia
+      - generic [ref=e181]: 🍔 Restaurante & Delivery
+      - generic [ref=e182]: 🐾 Pet Shop
+      - generic [ref=e183]: 💪 Academia
+      - generic [ref=e184]: 👗 Moda & Roupas
+      - generic [ref=e185]: 📦 Importados
+      - generic [ref=e186]: 🛒 Mercearia & Padaria
+      - generic [ref=e187]: 💊 Farmácia
+      - generic [ref=e188]: 🔧 Assistência Técnica
+      - generic [ref=e189]: 👓 Ótica
+      - generic [ref=e190]: 📎 Papelaria
+      - generic [ref=e191]: 🏥 Clínica
+      - generic [ref=e192]: 🏠 Serviços Locais
+      - generic [ref=e193]: + seu nicho
+  - generic [ref=e196]:
+    - paragraph [ref=e197]: Do zero ao resultado
+    - heading "Desafio de 7 Dias" [level=2] [ref=e198]
+    - paragraph [ref=e199]: O guia não é material para "ler depois". O Desafio de 7 Dias garante que você aplica uma coisa por dia — e no 7º dia você tem resultado real para mostrar.
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e202]: DIA 1
+        - generic [ref=e203]:
+          - heading "Diagnóstico completo do seu negócio" [level=4] [ref=e204]
+          - paragraph [ref=e205]: A IA mapeia seus pontos fortes, fracos e oportunidades em 10 minutos.
+      - generic [ref=e206]:
+        - generic [ref=e207]: DIA 2
+        - generic [ref=e208]:
+          - heading "Sua oferta irresistível criada com IA" [level=4] [ref=e209]
+          - paragraph [ref=e210]: Monte uma oferta com gatilhos que faz o cliente querer comprar na hora.
+      - generic [ref=e211]:
+        - generic [ref=e212]: DIA 3
+        - generic [ref=e213]:
+          - heading "Calendário de conteúdo do mês inteiro" [level=4] [ref=e214]
+          - paragraph [ref=e215]: 30 ideias de post geradas em 10 minutos, já formatadas para o seu nicho.
+      - generic [ref=e216]:
+        - generic [ref=e217]: DIA 4
+        - generic [ref=e218]:
+          - heading "Seu primeiro criativo de anúncio" [level=4] [ref=e219]
+          - paragraph [ref=e220]: Headline + copy + arte gerada com IA. Pronto para subir no Instagram.
+      - generic [ref=e221]:
+        - generic [ref=e222]: DIA 5
+        - generic [ref=e223]:
+          - heading "Script de WhatsApp que fecha" [level=4] [ref=e224]
+          - paragraph [ref=e225]: Resposta para "quanto custa?", objeções e follow-up sem parecer insistente.
+      - generic [ref=e226]:
+        - generic [ref=e227]: DIA 6
+        - generic [ref=e228]:
+          - heading "Análise da sua conversa real do WhatsApp" [level=4] [ref=e229]
+          - paragraph [ref=e230]: Cole uma conversa onde perdeu venda. A IA aponta onde errou e o que fazer.
+      - generic [ref=e231]:
+        - generic [ref=e232]: DIA 7
+        - generic [ref=e233]:
+          - heading "Resultado publicado e sistema rodando" [level=4] [ref=e234]
+          - paragraph [ref=e235]: Post no ar, script pronto, oferta definida. Seu negócio com IA funcionando.
+  - generic [ref=e237]:
+    - paragraph [ref=e238]: Quem já está usando
+    - heading "O que dizem os primeiros usuários" [level=2] [ref=e239]
+    - generic [ref=e240]:
+      - generic [ref=e241]:
+        - text: "\""
+        - generic [ref=e242]: ★★★★★
+        - paragraph [ref=e243]: "\"Nunca pensei que ia conseguir criar post profissional sozinha. Usei o prompt do Canva Nunca Mais e em 5 minutos tinha 3 artes prontas pro Instagram do meu salão.\""
+        - generic [ref=e244]:
+          - generic [ref=e245]: M
+          - generic [ref=e246]:
+            - generic [ref=e247]: Márcia S.
+            - generic [ref=e248]: Salão de Beleza · Fortaleza/CE
+      - generic [ref=e249]:
+        - text: "\""
+        - generic [ref=e250]: ★★★★★
+        - paragraph [ref=e251]: "\"O módulo de WhatsApp mudou meu atendimento completamente. Antes eu ficava sem saber o que responder. Agora tenho script para cada situação.\""
+        - generic [ref=e252]:
+          - generic [ref=e253]: R
+          - generic [ref=e254]:
+            - generic [ref=e255]: Roberto A.
+            - generic [ref=e256]: Assistência Técnica · Recife/PE
+      - generic [ref=e257]:
+        - text: "\""
+        - generic [ref=e258]: ★★★★★
+        - paragraph [ref=e259]: "\"Já tentei usar ChatGPT antes e não dava certo, as respostas eram genéricas. Com o método do guia, a IA entende meu negócio e entrega o que eu precisava.\""
+        - generic [ref=e260]:
+          - generic [ref=e261]: K
+          - generic [ref=e262]:
+            - generic [ref=e263]: Karla M.
+            - generic [ref=e264]: Pet Shop · Salvador/BA
+      - generic [ref=e265]:
+        - text: "\""
+        - generic [ref=e266]: ★★★★★
+        - paragraph [ref=e267]: "\"Fiz o calendário de conteúdo do mês inteiro em 15 minutos. Antes eu ficava uma hora pensando o que postar. Vale cada centavo dos R$67.\""
+        - generic [ref=e268]:
+          - generic [ref=e269]: F
+          - generic [ref=e270]:
+            - generic [ref=e271]: Felipe N.
+            - generic [ref=e272]: Delivery de Comida · Maceió/AL
+  - generic [ref=e275]:
+    - paragraph [ref=e276]: Fit
+    - heading "Para quem é — e para quem não é" [level=2] [ref=e277]
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - heading "✅ É para você se…" [level=4] [ref=e280]
+        - generic [ref=e281]:
+          - generic [ref=e282]:
+            - generic [ref=e283]: ✓
+            - generic [ref=e284]: Você tem um pequeno negócio local
+          - generic [ref=e285]:
+            - generic [ref=e286]: ✓
+            - generic [ref=e287]: Vende pelo WhatsApp ou quer vender mais
+          - generic [ref=e288]:
+            - generic [ref=e289]: ✓
+            - generic [ref=e290]: Faz o marketing sozinho, sem agência
+          - generic [ref=e291]:
+            - generic [ref=e292]: ✓
+            - generic [ref=e293]: Quer postar e anunciar, mas não sabe criar
+          - generic [ref=e294]:
+            - generic [ref=e295]: ✓
+            - generic [ref=e296]: Já tentou IA mas achou complicado demais
+          - generic [ref=e297]:
+            - generic [ref=e298]: ✓
+            - generic [ref=e299]: Quer resultado prático, não teoria
+      - generic [ref=e300]:
+        - heading "✕ Não é para você se…" [level=4] [ref=e301]
+        - generic [ref=e302]:
+          - generic [ref=e303]:
+            - generic [ref=e304]: ✕
+            - generic [ref=e305]: Você procura fórmula mágica sem esforço
+          - generic [ref=e306]:
+            - generic [ref=e307]: ✕
+            - generic [ref=e308]: Acha que IA vende sozinha, sem você aplicar
+          - generic [ref=e309]:
+            - generic [ref=e310]: ✕
+            - generic [ref=e311]: Não tem produto, serviço ou negócio real
+          - generic [ref=e312]:
+            - generic [ref=e313]: ✕
+            - generic [ref=e314]: Não está disposto a dedicar 15 min por dia
+          - generic [ref=e315]:
+            - generic [ref=e316]: ✕
+            - generic [ref=e317]: Espera resultado sem oferta e atendimento
+  - generic [ref=e320]:
+    - generic [ref=e321]: 🚀 Lançamento
+    - heading "Comece hoje a usar IA no seu negócio" [level=2] [ref=e322]
+    - paragraph [ref=e323]: De R$197,00
+    - generic [ref=e324]:
+      - superscript [ref=e325]: R$
+      - text: "67"
+    - paragraph [ref=e326]: à vista · acesso imediato · pagamento seguro
+    - generic [ref=e327]:
+      - generic [ref=e328]:
+        - generic [ref=e329]: ✓
+        - generic [ref=e330]: Guia completo em PDF — 13 módulos
+      - generic [ref=e331]:
+        - generic [ref=e332]: ✓
+        - generic [ref=e333]: 29 Mega-Prompts prontos para copiar
+      - generic [ref=e334]:
+        - generic [ref=e335]: ✓
+        - generic [ref=e336]: Método C.O.A.T. completo
+      - generic [ref=e337]:
+        - generic [ref=e338]: ✓
+        - generic [ref=e339]: Módulo Canva Nunca Mais
+      - generic [ref=e340]:
+        - generic [ref=e341]: ✓
+        - generic [ref=e342]: WhatsApp que Vende + análise real
+      - generic [ref=e343]:
+        - generic [ref=e344]: ✓
+        - generic [ref=e345]: Biblioteca por nicho — 15 nichos
+      - generic [ref=e346]:
+        - generic [ref=e347]: ✓
+        - generic [ref=e348]: Banco de Hooks e CTAs
+      - generic [ref=e349]:
+        - generic [ref=e350]: ✓
+        - generic [ref=e351]: Planilha de leads + Desafio de 7 Dias
+    - link "Quero acessar agora por R$67 →" [ref=e352] [cursor=pointer]:
+      - /url: SEU_LINK_KIRVANO_AQUI
+    - generic [ref=e353]: 🔒 Pagamento seguro · Kirvano · Pix ou Cartão
+  - generic [ref=e357]:
+    - generic [ref=e358]: 🛡️
+    - generic [ref=e359]:
+      - heading "Garantia total de 7 dias" [level=3] [ref=e360]
+      - paragraph [ref=e361]: Você tem 7 dias para acessar o material, testar os prompts e ver se faz sentido para o seu negócio. Se não gostar por qualquer motivo, é só solicitar o reembolso dentro do prazo — sem pergunta, sem burocracia, 100% devolvido.
+  - generic [ref=e363]:
+    - paragraph [ref=e364]: Dúvidas frequentes
+    - heading "Perguntas e respostas" [level=2] [ref=e365]
+    - generic [ref=e366]:
+      - generic [ref=e367]:
+        - button "Preciso pagar o ChatGPT para usar o guia? ▼" [ref=e368] [cursor=pointer]:
+          - generic [ref=e369]: Preciso pagar o ChatGPT para usar o guia?
+          - generic [ref=e370]: ▼
+        - generic [ref=e371]: Não precisa começa pagando. A versão gratuita do ChatGPT funciona para a maioria dos prompts do guia. A versão paga só vale a pena se você for criar muitas artes e criativos por semana — e o guia explica quando isso faz sentido.
+      - generic [ref=e372]:
+        - button "É um curso ou um PDF? ▼" [ref=e373] [cursor=pointer]:
+          - generic [ref=e374]: É um curso ou um PDF?
+          - generic [ref=e375]: ▼
+        - generic [ref=e376]: É um guia digital em PDF. A ideia é você copiar os prompts, adaptar para o seu negócio e usar direto. Não é um curso longo com horas de vídeo — é material de execução rápida para quem quer resultado, não teoria.
+      - generic [ref=e377]:
+        - button "Serve para o meu tipo de negócio? ▼" [ref=e378] [cursor=pointer]:
+          - generic [ref=e379]: Serve para o meu tipo de negócio?
+          - generic [ref=e380]: ▼
+        - generic [ref=e381]: "O guia foi feito para pequenos negócios locais e inclui uma biblioteca com 15 nichos: estética, salão, barbearia, restaurante, delivery, pet shop, academia, moda, importados, mercearia, padaria, farmácia, assistência técnica, ótica e papelaria. Se seu negócio não está na lista, o método C.O.A.T. funciona para adaptar qualquer prompt."
+      - generic [ref=e382]:
+        - button "Quando recebo o acesso? ▼" [ref=e383] [cursor=pointer]:
+          - generic [ref=e384]: Quando recebo o acesso?
+          - generic [ref=e385]: ▼
+        - generic [ref=e386]: Acesso imediato. Assim que o pagamento for confirmado, você recebe o link do guia no e-mail — pode acessar pelo celular, computador ou tablet.
+      - generic [ref=e387]:
+        - button "Preciso saber de marketing para usar? ▼" [ref=e388] [cursor=pointer]:
+          - generic [ref=e389]: Preciso saber de marketing para usar?
+          - generic [ref=e390]: ▼
+        - generic [ref=e391]: Não. O guia foi feito exatamente para quem não tem formação em marketing. O método C.O.A.T. e os prompts prontos guiam você passo a passo — sem precisar saber nada de copy, design ou tecnologia.
+      - generic [ref=e392]:
+        - button "E se eu não gostar? ▼" [ref=e393] [cursor=pointer]:
+          - generic [ref=e394]: E se eu não gostar?
+          - generic [ref=e395]: ▼
+        - generic [ref=e396]: Você tem 7 dias de garantia total. Se por qualquer motivo o guia não fizer sentido para você, basta solicitar o reembolso dentro do prazo. Sem pergunta, sem burocracia — 100% devolvido via plataforma Kirvano.
+  - generic [ref=e398]:
+    - paragraph [ref=e399]: Última chamada
+    - heading "Seu negócio está esperando. A IA está pronta." [level=2] [ref=e400]:
+      - text: Seu negócio está esperando.
+      - text: A IA está pronta.
+    - paragraph [ref=e401]: Basta você dar o primeiro passo. Acesso imediato, preço de lançamento, garantia total.
+    - link "Quero o IA que Vende por R$67 →" [ref=e402] [cursor=pointer]:
+      - /url: SEU_LINK_KIRVANO_AQUI
+    - paragraph [ref=e403]: 🛡️ Garantia de 7 dias · ⚡ Acesso imediato · 🔒 Pagamento seguro
+  - contentinfo [ref=e404]:
+    - paragraph [ref=e405]:
+      - text: © 2026 Ale IA Negócios · aleianegocios.com.br · Todos os direitos reservados.
+      - text: Este produto é um guia digital em PDF. Os resultados dependem da aplicação individual de cada usuário.
+    - generic [ref=e406]:
+      - link "Política de Privacidade" [ref=e407] [cursor=pointer]:
+        - /url: "#"
+      - link "Termos de Uso" [ref=e408] [cursor=pointer]:
+        - /url: "#"
+      - link "Suporte via WhatsApp" [ref=e409] [cursor=pointer]:
+        - /url: https://wa.me/55SEUNUMERO
+  - link "Quero o guia por R$67 →" [ref=e410] [cursor=pointer]:
+    - /url: SEU_LINK_KIRVANO_AQUI
+  - link "💬" [ref=e411] [cursor=pointer]:
+    - /url: https://wa.me/55SEUNUMERO?text=Oi!+Tenho+uma+d%C3%BAvida+sobre+o+IA+que+Vende.

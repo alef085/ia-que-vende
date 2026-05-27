@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python gerar_guia.py)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Org�nico Guia diab�tico\\\\ia-que-vende-GUIA.html\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Org�nico Guia diab�tico\\\\ia-que-vende-capa-v2.pdf\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Org�nico Guia diab�tico\\\\ia-que-vende-capa-v3.pdf\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Org�nico Guia diab�tico\\\\ia-que-vende-capa-v4.pdf\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Org�nico Guia diab�tico\\\\ia-que-vende-COMPLETO.html\")",
+      "Bash(Copy-Item \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Orgânico Guia diabético\\\\ia-que-vende-COMPLETO.html\" \"C:\\\\Users\\\\Paulo Aleixo\\\\Claude VS code\\\\Venda Orgânico Guia diabético\\\\index.html\")",
+      "Bash(python -m http.server 8765)",
+      "Bash(Start-Sleep -Seconds 2)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:8765/\" -UseBasicParsing)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:8765/\" -UseBasicParsing -ErrorAction Stop; $r.StatusCode } catch { \"Not ready: $_\" })"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Paulo Aleixo\\Claude VS code\\Venda Org�nico Guia diab�tico"
+    ]
+  }
+}
