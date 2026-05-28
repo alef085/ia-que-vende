@@ -445,10 +445,10 @@
         gap: 16px;
         text-align: center;
       }
-      .hero-content { align-items: center; gap: 16px; }
+      .hero-content { align-items: center; gap: 16px; order: 1; }
       
       .hero-photo-wrapper { 
-        order: 0; 
+        order: -1; 
         max-width: 270px; /* Foto maior e mais imponente no mobile */
         width: 100%;
         margin-top: 0px;
@@ -1467,21 +1467,6 @@
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div class="hero-content fade-up">
-        
-        <div class="hero-photo-wrapper">
-          <img src="dr_luciana_hero2.png" class="hero-photo" alt="Foto Dra. Luciana Marques">
-          <div class="hero-shape-bg"></div>
-          <div class="photo-badge">
-            <svg class="icon-svg" style="width:16px; height:16px; color:#EAAA08;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-            <span>4,8 no Google • +14.000 pacientes</span>
-          </div>
-          <div class="doctor-badge">
-            <span class="doc-title">ENDOCRINOLOGISTA</span>
-            <span class="doc-name">Dra. Luciana Marques</span>
-            <span class="doc-reg">CRM-PA 9264 | RQE 6571</span>
-          </div>
-        </div>
-
         <h1 class="hero-title">
           Ajudo mulheres acima dos 40 a superar a menopausa e o sobrepeso <span>e voltar a se sentir bem no próprio corpo.</span>
         </h1>
@@ -1520,6 +1505,20 @@
             Conhecer a Dra. Luciana
           </a>
           <span class="hero-cta-note">Agendamento exclusivo via WhatsApp</span>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrapper fade-up">
+        <img src="dr_luciana_hero2.png" class="hero-photo" alt="Foto Dra. Luciana Marques">
+        <div class="hero-shape-bg"></div>
+        <div class="photo-badge">
+          <svg class="icon-svg" style="width:16px; height:16px; color:#EAAA08;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <span>4,8 no Google • +14.000 pacientes</span>
+        </div>
+        <div class="doctor-badge">
+          <span class="doc-title">ENDOCRINOLOGISTA</span>
+          <span class="doc-name">Dra. Luciana Marques</span>
+          <span class="doc-reg">CRM-PA 9264 | RQE 6571</span>
         </div>
       </div>
     </div>
