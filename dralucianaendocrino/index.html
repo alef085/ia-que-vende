@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Luciana Marques — Endocrinologista em Belém</title>
+  <meta name="description" content="Atendimento humanizado e personalizado em endocrinologia para mulheres 40+ em Belém, PA. Equilíbrio hormonal, menopausa e emagrecimento saudável.">
+  
+  <!-- Fontes Premium do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '774004103144003');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=774004103144003&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <style>
+    /* ========== ESTRUTURA E DESIGN SYSTEM ========== */
+    :root {
+      --bg: #FAF8F5; /* Off-white premium */
+      --surface: #FFFFFF;
+      --terracotta: #B87D6B; /* Rose Clay / Terracota Suave */
+      --terracotta-hover: #A36B5B;
+      --terracotta-dim: rgba(184, 125, 107, 0.1);
+      --sage: #7A8F75; /* Verde Sálvia */
+      --sage-dim: rgba(122, 143, 117, 0.1);
+      --text: #2C2523; /* Grafite quente */
+      --text-muted: #6B625F;
+      --border: #E8E2DD;
+      --shadow-soft: 0 10px 30px rgba(44, 37, 35, 0.04);
+      --shadow-hover: 0 15px 40px rgba(184, 125, 107, 0.08);
+      --max-width: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    section { padding: 90px 0; position: relative; }
+    @media (max-width: 768px) { section { padding: 60px 0; } }
+
+    /* ========== TIPOGRAFIA ========== */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(34px, 4.5vw, 56px); }
+    h2 { font-size: clamp(26px, 3.5vw, 40px); }
+    h3 { font-size: clamp(20px, 2.5vw, 28px); }
+
+    /* ========== BOTÕES ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background-color: var(--terracotta);
+      color: #FFF;
+      box-shadow: 0 8px 24px rgba(184, 125, 107, 0.25);
+    }
+    .btn-primary:hover {
+      background-color: var(--terracotta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(184, 125, 107, 0.35);
+    }
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      background-color: var(--terracotta-dim);
+      border-color: var(--terracotta);
+      transform: translateY(-2px);
+    }
+    .btn-wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+      z-index: 100;
+      transition: all 0.3s;
+    }
+    .btn-wa-float:hover {
+      transform: scale(1.08) translateY(-3px);
+      background-color: #20ba59;
+    }
+    .btn-wa-float svg { width: 30px; height: 30px; fill: white; }
+
+    /* ========== MENU HEADER ========== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(250, 248, 245, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 90;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .logo-container { display: flex; flex-direction: column; }
+    .logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .logo-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      font-weight: 600;
+      margin-top: 1px;
+    }
+    .crm-tag {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.03);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    @media (max-width: 600px) {
+      .crm-tag { display: none; }
+      .header { height: 70px; }
+    }
+
+    /* ========== SEÇÃO HERO ========== */
+    .hero {
+      padding-top: 160px;
+      padding-bottom: 80px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-content { display: flex; flex-direction: column; gap: 24px; }
+    .hero-tag {
+      display: inline-flex;
+      align-self: flex-start;
+      align-items: center;
+      gap: 6px;
+      background: var(--sage-dim);
+      color: var(--sage);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(122, 143, 117, 0.15);
+    }
+    .hero-title {
+      color: var(--text);
+    }
+    .hero-title span {
+      display: block;
+      color: var(--terracotta);
+      font-style: italic;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 580px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .hero-image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      border-radius: 200px 200px 20px 20px;
+      overflow: hidden;
+      aspect-ratio: 0.78;
+      box-shadow: 0 20px 50px rgba(44, 37, 35, 0.08);
+      border: 6px solid #FFF;
+    }
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-bg-shape {
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 100%;
+      height: 100%;
+      background: var(--sage-dim);
+      border-radius: 200px 200px 20px 20px;
+      z-index: -1;
+    }
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .hero-tag { align-self: center; }
+      .hero-desc { margin: 0 auto; }
+      .hero-buttons { justify-content: center; }
+      .hero-image-wrapper { max-width: 300px; }
+      .hero { padding-top: 120px; }
+    }
+
+    /* ========== SEÇÃO DE SINTOMAS ========== */
+    .sintomas { background-color: #FFF; }
+    .sintomas-intro { text-align: center; max-width: 650px; margin: 0 auto 50px; }
+    .sintomas-intro h2 { margin-bottom: 16px; }
+    .sintomas-intro p { color: var(--text-muted); }
+    .sintomas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .sintoma-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 32px 24px;
+      border-radius: 16px;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .sintoma-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--terracotta);
+      box-shadow: var(--shadow-hover);
+    }
+    .sintoma-icon {
+      width: 44px; height: 44px;
+      background: var(--terracotta-dim);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--terracotta);
+      font-size: 20px;
+    }
+    .sintoma-card h3 { font-size: 18px; font-weight: 700; }
+    .sintoma-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ========== CONSULTA SEM PRESSA ========== */
+    .consulta-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .consulta-image {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 1.25;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border);
+    }
+    .consulta-image img { width: 100%; height: 100%; object-fit: cover; }
+    .consulta-info { display: flex; flex-direction: column; gap: 24px; }
+    .consulta-pill {
+      display: inline-flex;
+      align-self: flex-start;
+      background: var(--terracotta-dim);
+      color: var(--terracotta);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+    .consulta-features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .feature-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .feature-check {
+      width: 24px; height: 24px;
+      background-color: var(--sage-dim);
+      color: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .feature-text h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .feature-text p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .consulta-layout { grid-template-columns: 1fr; gap: 40px; }
+      .consulta-image { order: 2; }
+    }
+
+    /* ========== ESPECIALIDADES ========== */
+    .especialidades { background-color: #FFF; }
+    .esp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .esp-card {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: all 0.3s;
+      background: #FFF;
+    }
+    .esp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(44, 37, 35, 0.05);
+      border-color: var(--border);
+    }
+    .esp-icon {
+      font-size: 32px;
+      color: var(--sage);
+    }
+    .esp-card h3 { font-size: 22px; font-weight: 600; }
+    .esp-card p { font-size: 15px; color: var(--text-muted); }
+    .esp-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .esp-list li {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .esp-list li::before {
+      content: "•";
+      color: var(--terracotta);
+      font-size: 16px;
+    }
+    @media (max-width: 900px) {
+      .esp-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+
+    /* ========== SOBRE A DRA ========== */
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .sobre-photo-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+    .sobre-photo-wrapper img { width: 100%; display: block; }
+    .sobre-content { display: flex; flex-direction: column; gap: 20px; }
+    .sobre-content h2 span { display: block; font-size: 18px; color: var(--sage); margin-top: 5px; font-family: 'Outfit', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .sobre-content p { color: var(--text-muted); }
+    .formacao-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .formacao-item { display: flex; gap: 16px; align-items: flex-start; }
+    .formacao-year {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--terracotta);
+      background: var(--terracotta-dim);
+      padding: 2px 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .formacao-text h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .formacao-text p { font-size: 13px; color: var(--text-muted); }
+    @media (max-width: 900px) {
+      .sobre-grid { grid-template-columns: 1fr; gap: 45px; text-align: center; }
+      .formacao-list { text-align: left; }
+      .sobre-photo-wrapper { max-width: 320px; margin: 0 auto; }
+    }
+
+    /* ========== TESTEMUNHOS (DEPOIMENTOS) ========== */
+    .depoimentos { background-color: #FFF; }
+    .dep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .dep-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .stars { color: #FFB800; font-size: 16px; letter-spacing: 2px; }
+    .dep-text {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .dep-author { display: flex; flex-direction: column; }
+    .dep-name { font-weight: 700; font-size: 15px; }
+    .dep-status { font-size: 12px; color: var(--sage); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    @media (max-width: 900px) {
+      .dep-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+
+    /* ========== CTA FINAL ========== */
+    .cta-final {
+      text-align: center;
+      background-color: var(--sage);
+      color: white;
+    }
+    .cta-final-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      align-items: center;
+    }
+    .cta-final h2 { color: white; }
+    .cta-final p { color: rgba(255, 255, 255, 0.85); font-size: 18px; }
+    .btn-wa-light {
+      background-color: #25D366;
+      color: white;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
+    }
+    .btn-wa-light:hover {
+      background-color: #20ba59;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.35);
+    }
+    .cta-trust-note {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: -10px;
+    }
+
+    /* ========== FAQ ========== */
+    .faq { background-color: #FFF; }
+    .faq-layout { max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .faq-q {
+      width: 100%;
+      background: #FFF;
+      padding: 20px 24px;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+    }
+    .faq-ans {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+      background: var(--bg);
+      padding: 0 24px;
+    }
+    .faq-ans p { padding-bottom: 20px; font-size: 14.5px; color: var(--text-muted); }
+    .faq-ic { font-size: 20px; color: var(--terracotta); transition: transform 0.3s; }
+    .faq-item.open { border-color: var(--terracotta); }
+    .faq-item.open .faq-ic { transform: rotate(45deg); }
+    .faq-item.open .faq-ans { max-height: 500px; transition: max-height 0.3s cubic-bezier(1, 0, 1, 0); }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background-color: #2C2523;
+      color: #E8E2DD;
+      padding: 60px 0 40px;
+      font-size: 14px;
+      border-top: 1px solid #3d3431;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-about { display: flex; flex-direction: column; gap: 16px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: #FFF; }
+    .footer-address { color: #AFA6A2; line-height: 1.6; }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links h4 { font-family: 'Outfit', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: #FFF; }
+    .footer-links a { color: #AFA6A2; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--terracotta); }
+    .footer-bottom {
+      border-top: 1px solid #3d3431;
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #8C807B;
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5591985597678?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20consulta%20com%20a%20Dra.%20Luciana" class="btn-wa-float" target="_blank" aria-label="Falar no WhatsApp" id="wa-float">
+    <svg viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.243 8.477 3.498 2.266 2.256 3.507 5.257 3.507 8.466 0 6.563-5.337 11.901-11.95 11.901-2.003 0-3.975-.5-5.728-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.793 1.451 5.486 0 9.948-4.437 9.953-9.898.001-2.647-1.03-5.136-2.902-7.013C16.6 1.815 14.119.78 11.47.78 5.987.78 1.526 5.216 1.522 10.676c0 1.644.438 3.24 1.272 4.671l-.997 3.642 3.853-.995z"/>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+    </svg>
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo-container">
+        <span class="logo-name">Dra. Luciana Marques</span>
+        <span class="logo-sub">Endocrinologia & Metabologia</span>
+      </div>
+      <span class="crm-tag">CRM-PA 9264 | RQE 6571</span>
+      <a href="https://wa.me/5591985597678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana" class="btn btn-outline" style="padding: 10px 24px; font-size: 13px;" id="cta-header">Agendar Consulta</a>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          Saúde Hormonal & Longevidade
+        </div>
+        <h1 class="hero-title">
+          Você não está apenas envelhecendo. <span>Seu corpo está pedindo equilíbrio.</span>
+        </h1>
+        <p class="hero-desc">
+          Tratamento individualizado e focado no metabolismo da **mulher 40+** em pré e pós-menopausa. Recupere a sua energia, vitalidade e peso saudável com acompanhamento médico acolhedor.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/5591985597678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana" class="btn btn-primary" id="cta-hero">Agendar Consulta pelo WhatsApp</a>
+        </div>
+      </div>
+      
+      <div class="hero-image-container">
+        <div class="hero-image-wrapper">
+          <img src="dr_luciana_hero.png" alt="Retrato Dra. Luciana Marques">
+        </div>
+        <div class="hero-bg-shape"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEÇÃO SINTOMAS -->
+  <section class="sintomas" id="sintomas">
+    <div class="container">
+      <div class="sintomas-intro">
+        <h2>Você se identifica com algum destes sinais?</h2>
+        <p>A partir dos 40 anos, as flutuações hormonais naturais da menopausa provocam sintomas que costumam ser negligenciados, mas que impactam profundamente sua qualidade de vida.</p>
+      </div>
+      
+      <div class="sintomas-grid">
+        <div class="sintoma-card">
+          <div class="sintoma-icon">🌙</div>
+          <h3>Cansaço Constante</h3>
+          <p>Acordar fadigada mesmo após uma noite inteira de sono, sentindo que o seu corpo não tem o mesmo rendimento de antes.</p>
+        </div>
+        <div class="sintoma-card">
+          <div class="sintoma-icon">⚖️</div>
+          <h3>Ganho de Peso Abdominal</h3>
+          <p>Acúmulo de gordura na região da barriga e dificuldade extrema para perder peso, mesmo mantendo a mesma rotina alimentar.</p>
+        </div>
+        <div class="sintoma-card">
+          <div class="sintoma-icon">🔥</div>
+          <h3>Fogachos e Calores</h3>
+          <p>Ondas de calor repentinas e suores noturnos intensos que interrompem o seu trabalho e fragmentam o seu sono.</p>
+        </div>
+        <div class="sintoma-card">
+          <div class="sintoma-icon">🧠</div>
+          <h3>Nevoeiro Mental</h3>
+          <p>Dificuldade de concentração no dia a dia, lapsos de memória frequentes e sensação constante de desatenção.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CONSULTA SEM PRESSA -->
+  <section class="consulta" id="consulta">
+    <div class="container consulta-layout">
+      <div class="consulta-image">
+        <!-- Usaremos uma representação aconchegante do consultório -->
+        <img src="../landing-page-hero.jpeg" alt="Consultório Médico Acolhedor">
+      </div>
+      <div class="consulta-info">
+        <span class="consulta-pill">Diferencial</span>
+        <h2>Uma consulta médica sem pressa e focada em você</h2>
+        <p>Você já se consultou com um médico que mal olhou nos seus olhos e te atendeu em 15 minutos? No meu consultório, o modelo de atendimento é completamente diferente.</p>
+        
+        <div class="consulta-features">
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <div class="feature-text">
+              <h4>Consultas Longas e Escuta Ativa</h4>
+              <p>Tempo dedicado exclusivamente para entender seu histórico, rotina, queixas e objetivos, sem qualquer correria.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <div class="feature-text">
+              <h4>Investigação Profunda e Científica</h4>
+              <p>Análise minuciosa de exames laboratoriais detalhados, indo além das faixas de normalidade padrão para buscar o equilíbrio ideal.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check">✓</div>
+            <div class="feature-text">
+              <h4>Acompanhamento Próximo</h4>
+              <p>Suporte e orientação contínua ao longo de todo o tratamento, focando em resultados de saúde reais e duradouros.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ESPECIALIDADES -->
+  <section class="especialidades" id="especialidades">
+    <div class="container">
+      <div class="sintomas-intro">
+        <h2>Tratamentos & Especialidades</h2>
+        <p>Soluções integradas de saúde hormonal para devolver o controle do seu corpo e restabelecer sua vitalidade.</p>
+      </div>
+      
+      <div class="esp-grid">
+        <div class="esp-card">
+          <div class="esp-icon">🌸</div>
+          <h3>Menopausa & Climatério</h3>
+          <p>Diagnóstico preciso do perfil hormonal e reposição personalizada para alívio completo dos sintomas.</p>
+          <ul class="esp-list">
+            <li>Avaliação hormonal detalhada</li>
+            <li>Alívio de fogachos e insônia</li>
+            <li>Melhoria da libido e disposição</li>
+          </ul>
+        </div>
+        
+        <div class="esp-card">
+          <div class="esp-icon">🥗</div>
+          <h3>Emagrecimento Metabólico</h3>
+          <p>Tratamento do sobrepeso a partir da regulação hormonal e correção de distúrbios metabólicos.</p>
+          <ul class="esp-list">
+            <li>Investigação de resistência à insulina</li>
+            <li>Regulação do apetite e saciedade</li>
+            <li>Acompanhamento clínico seguro</li>
+          </ul>
+        </div>
+        
+        <div class="esp-card">
+          <div class="esp-icon">🧬</div>
+          <h3>Metabolismo Geral</h3>
+          <p>Prevenção, diagnóstico precoce e acompanhamento próximo para patologias endócrinas crônicas.</p>
+          <ul class="esp-list">
+            <li>Tratamento de distúrbios da Tireoide</li>
+            <li>Acompanhamento e controle de Diabetes</li>
+            <li>Avaliação de osteoporose e metabolismo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SOBRE A DRA. LUCIANA -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-photo-wrapper">
+        <img src="dr_luciana_hero.png" alt="Dra. Luciana Marques no Consultório">
+      </div>
+      <div class="sobre-content">
+        <h2>Dra. Luciana Marques <span>Endocrinologista & Metabologista</span></h2>
+        <p>Sou formada em Medicina pela Universidade Federal do Pará (UFPA) e dediquei anos à residência médica de Clínica Médica (Santa Casa) e de Endocrinologia e Metabologia (Hospital João de Barros Barreto).</p>
+        <p>Minha missão é trazer um atendimento médico verdadeiramente humano e baseado em evidências científicas. Acredito que a saúde hormonal da mulher 40+ não deve ser tratada como um mero sintoma natural do envelhecimento, mas sim cuidada ativamente com acompanhamento ético, focado no bem-estar integral de cada paciente.</p>
+        
+        <ul class="formacao-list">
+          <li class="formacao-item">
+            <span class="formacao-year">2008</span>
+            <div class="formacao-text">
+              <h4>Graduação em Medicina</h4>
+              <p>Universidade Federal do Pará — UFPA</p>
+            </div>
+          </li>
+          <li class="formacao-item">
+            <span class="formacao-year">2013</span>
+            <div class="formacao-text">
+              <h4>Residência em Clínica Médica</h4>
+              <p>Fundação Santa Casa de Misericórdia do Pará</p>
+            </div>
+          </li>
+          <li class="formacao-item">
+            <span class="formacao-year">2016</span>
+            <div class="formacao-text">
+              <h4>Residência em Endocrinologia & Metabologia</h4>
+              <p>Hospital Universitário João de Barros Barreto — HUJBB</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TESTEMUNHOS GOOGLE -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <div class="sintomas-intro">
+        <h2>O carinho de quem já faz acompanhamento</h2>
+        <p>Opinião de pacientes reais extraídas de suas avaliações 5 estrelas no Google e portais de saúde.</p>
+      </div>
+      
+      <div class="dep-grid">
+        <div class="dep-card">
+          <div class="stars">★★★★★</div>
+          <p class="dep-text">"Cheguei no consultório cheia de dúvidas e receios, mas fui muito bem acolhida e orientada. Tive todo suporte e consegui alcançar meu objetivo. Já faço acompanhamento há 1 ano e super recomendo."</p>
+          <div class="dep-author">
+            <span class="dep-name">Silvana Berenguer</span>
+            <span class="dep-status">Paciente</span>
+          </div>
+        </div>
+        
+        <div class="dep-card">
+          <div class="stars">★★★★★</div>
+          <p class="dep-text">"Sou diabético há mais de 11 anos e não tinha conseguido uma endocrinologista eficaz para o meu tratamento. Com a Dra. Luciana consegui controlar minha diabetes e ter uma vida mais saudável. Médica de excelência."</p>
+          <div class="dep-author">
+            <span class="dep-name">Robel Santiago</span>
+            <span class="dep-status">Paciente</span>
+          </div>
+        </div>
+        
+        <div class="dep-card">
+          <div class="stars">★★★★★</div>
+          <p class="dep-text">"Ética, competente e acolhedora. Seu atendimento é humanizado e sempre muito atencioso, desde o primeiro contato para a marcação até todo o acompanhamento ao longo do processo."</p>
+          <div class="dep-author">
+            <span class="dep-name">Rosivane Araujo</span>
+            <span class="dep-status">Paciente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ (DÚVIDAS FREQUENTES) -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="sintomas-intro">
+        <h2>Perguntas Frequentes</h2>
+        <p>Esclareça suas principais dúvidas sobre o formato de consulta e agendamentos.</p>
+      </div>
+      
+      <div class="faq-layout">
+        <div class="faq-item">
+          <button class="faq-q">A Dra. Luciana Marques atende convênios?<span class="faq-ic">+</span></button>
+          <div class="faq-ans">
+            <p>Não. Os atendimentos realizados no consultório são exclusivamente particulares. Isso garante que a Dra. Luciana possa dedicar tempo integral e individualizado a cada paciente, sem os limites de tempo impostos pelas operadoras de planos de saúde.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-q">Como posso solicitar o reembolso do meu plano de saúde?<span class="faq-ic">+</span></button>
+          <div class="faq-ans">
+            <p>Ao realizar sua consulta particular, nós fornecemos a nota fiscal e o relatório médico detalhado. Com esses documentos, você pode dar entrada no pedido de reembolso diretamente no aplicativo do seu plano de saúde. A maioria dos planos reembolsa uma porcentagem expressiva do valor da consulta particular.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-q">Como funcionam os agendamentos?<span class="faq-ic">+</span></button>
+          <div class="faq-ans">
+            <p>Os agendamentos são realizados de forma ágil e exclusiva através do nosso WhatsApp corporativo. Nossa secretária responderá todas as dúvidas e agendará o seu horário de atendimento.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-q">A consulta inclui retorno?<span class="faq-ic">+</span></button>
+          <div class="faq-ans">
+            <p>Sim. Todas as consultas presenciais dão direito a uma consulta de retorno dentro do prazo padrão de 30 dias para avaliação dos exames solicitados e ajustes na conduta terapêutica inicial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA FINAL -->
+  <section class="cta-final" id="cta-final">
+    <div class="container cta-final-inner">
+      <h2>Pronta para recuperar o controle do seu corpo e bem-estar?</h2>
+      <p>Dê o primeiro passo rumo à sua melhor versão hormonal e metabólica. Agende uma consulta com a Dra. Luciana.</p>
+      <a href="https://wa.me/5591985597678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Luciana" class="btn btn-wa-light" id="cta-final-button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar com a Secretária via WhatsApp
+      </a>
+      <span class="cta-trust-note">Suporte e agendamentos exclusivamente por mensagem</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <span class="footer-logo">Dra. Luciana Marques</span>
+          <p class="footer-address">
+            Travessa Dom Romualdo de Seixas, 1476 — Umarizal, Belém-PA<br>
+            CEP 66055-200 · Consultório Particular
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Links Úteis</h4>
+          <a href="#sintomas">Sintomas</a>
+          <a href="#especialidades">Tratamentos</a>
+          <a href="#sobre">Sobre a Dra.</a>
+          <a href="#faq">Dúvidas Frequentes</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>© 2026 Dra. Luciana Marques. Todos os direitos reservados.</span>
+        <span>CRM-PA 9264 | RQE 6571 · Endocrinologia & Metabologia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Fecha todos os outros FAQs abertos
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          openItem.classList.remove('open');
+        });
+        
+        // Abre o atual se não estava aberto
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Tracking de clique nos CTAs (WhatsApp e Agendamentos)
+    function trackLead(contentName) {
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+          content_name: contentName,
+          content_category: 'Consulta Medica'
+        });
+      }
+    }
+
+    document.getElementById('wa-float')?.addEventListener('click', () => trackLead('Botao Flutuante'));
+    document.getElementById('cta-header')?.addEventListener('click', () => trackLead('CTA Header'));
+    document.getElementById('cta-hero')?.addEventListener('click', () => trackLead('CTA Hero'));
+    document.getElementById('cta-final-button')?.addEventListener('click', () => trackLead('CTA Final'));
+  </script>
+</body>
+</html>
