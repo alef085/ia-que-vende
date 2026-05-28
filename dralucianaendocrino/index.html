@@ -559,7 +559,7 @@
     }
 
     @media (max-width: 768px) {
-      .sintomas { padding: 40px 0 60px; }
+      .sintomas { padding: 40px 0 40px; }
       .section-header { 
         margin-bottom: 32px;
       }
@@ -596,6 +596,16 @@
 
     /* ========== SEÇÃO 3: SOBRE A DRA. LUCIANA ========== */
     .sobre { background-color: var(--color-bg); }
+    .sobre-header {
+      margin-bottom: 48px;
+      text-align: left;
+    }
+    .sobre-header h2 {
+      font-family: var(--font-heading);
+      color: #174C4F;
+      font-size: clamp(32px, 4.2vw, 48px);
+      line-height: 1.15;
+    }
     .sobre-grid {
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
@@ -671,7 +681,17 @@
     }
 
     @media (max-width: 900px) {
-      .sobre-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+      .sobre { padding-top: 48px; padding-bottom: 60px; }
+      .sobre-header {
+        margin-bottom: 24px; /* margin-bottom entre 20px e 28px */
+        text-align: left;
+        padding: 0 8px;
+      }
+      .sobre-header h2 {
+        font-size: 32px; /* tamanho mobile: 30px a 34px */
+        line-height: 1.15;
+      }
+      .sobre-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
       .sobre-photo-container { max-width: 320px; }
       .credenciais-grid { text-align: left; }
     }
@@ -1173,10 +1193,14 @@
 
   <!-- 3. SEÇÃO SOBRE A DRA. LUCIANA -->
   <section class="sobre" id="sobre">
-    <div class="container sobre-grid">
-      <div class="sobre-photo-container fade-up">
-        <img src="dr_luciana_hero2.png" class="sobre-photo" alt="Dra. Luciana Marques no consultório">
+    <div class="container">
+      <div class="sobre-header fade-up">
+        <h2>Endocrinologia com escuta, ciência e acolhimento</h2>
       </div>
+      <div class="sobre-grid">
+        <div class="sobre-photo-container fade-up">
+          <img src="dr_luciana_hero2.png" class="sobre-photo" alt="Dra. Luciana Marques no consultório">
+        </div>
       
       <div class="sobre-content fade-up">
         <h2>"A medicina de alto nível começa quando olhamos nos olhos e escutamos a paciente sem pressa."<span>Dra. Luciana Marques</span></h2>
