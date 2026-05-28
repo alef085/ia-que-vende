@@ -187,14 +187,25 @@
       align-items: center;
       width: 100%;
     }
-    .logo-link {
+    .logo-container {
       display: flex;
-      align-items: center;
+      flex-direction: column;
     }
-    .logo-img {
-      max-width: 190px;
-      height: auto;
-      display: block;
+    .logo-name {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      line-height: 1.1;
+    }
+    .logo-sub {
+      font-family: var(--font-body);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-rose);
+      font-weight: 700;
+      margin-top: 4px;
     }
     .crm-tag {
       font-size: 12px;
@@ -259,7 +270,8 @@
       .nav-links, .crm-tag, #cta-header { display: none !important; }
       .header { height: 70px; }
       .menu-wrap-mobile { display: flex; }
-      .logo-img { max-width: 140px; }
+      .logo-name { font-size: 21px; }
+      .logo-sub { font-size: 9px; letter-spacing: 0.08em; }
       
       /* Menu flutuante mobile aberto */
       .nav-links.active {
@@ -432,14 +444,17 @@
       
       .hero-photo-wrapper { 
         order: 0; 
-        max-width: 190px; /* Foto diminuída no mobile */
+        max-width: 270px; /* Foto maior e mais imponente no mobile */
+        width: 100%;
         margin-top: 0px;
         margin-bottom: 0px;
       }
       .hero-photo { 
-        height: 230px; /* Altura compacta */
+        width: 100%;
+        height: 290px; /* Altura aumentada para melhor visualização */
         border-radius: 20px;
         border: 4px solid var(--color-bg-white);
+        object-fit: cover;
       }
       .hero-shape-bg, .photo-badge { display: none !important; }
       
@@ -451,16 +466,21 @@
       
       .hero-title { 
         order: 1; 
-        font-size: 21px; /* Headline compacta */
-        line-height: 1.25;
-        margin-top: 0px;
+        font-size: 25px; /* Aumentado de 21px para preencher melhor e dar impacto */
+        line-height: 1.3;
+        margin-top: 8px;
+        padding: 0 10px;
       }
       .hero-title span { display: inline; margin-top: 0; }
       
-      .hero-desc { order: 2; font-size: 15.5px; margin-top: 4px; }
-      .hero-bullets { order: 3; align-items: flex-start; margin: 8px auto 0; gap: 8px; }
-      .hero-bullet-item { font-size: 14px; }
-      .hero-cta-area { order: 4; margin-top: 12px; width: 100%; flex-direction: column; gap: 10px; }
+      .hero-desc { 
+        order: 2; 
+        font-size: 16.5px; 
+        margin-top: 32px; /* Margem aumentada para empurrar o texto claramente para a segunda dobra */
+      }
+      .hero-bullets { order: 3; align-items: flex-start; margin: 16px auto 0; gap: 8px; }
+      .hero-bullet-item { font-size: 14.5px; }
+      .hero-cta-area { order: 4; margin-top: 24px; width: 100%; flex-direction: column; gap: 10px; }
       .hero-cta-area .btn { width: 100%; height: 48px; }
       .hero-cta-note { text-align: center; margin-top: 0; }
     }
@@ -952,9 +972,10 @@
   <!-- NAVBAR ABSOLUTA (NÃO FIXA) -->
   <header class="header">
     <div class="container header-inner">
-      <a href="#home" class="logo-link">
-        <img src="logo_dra_luciana.png" alt="Dra. Luciana Marques" class="logo-img">
-      </a>
+      <div class="logo-container">
+        <span class="logo-name">Dra. Luciana Marques</span>
+        <span class="logo-sub">Endocrinologia & Metabologia</span>
+      </div>
       
       <div class="menu-wrap-mobile">
         <a href="https://instagram.com/draluciana.endo" target="_blank" class="instagram-icon-top" aria-label="Instagram">
