@@ -9,7 +9,7 @@
   <!-- Fontes de Alta Fidelidade (Cormorant Garamond para Títulos, Manrope para Texto/UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- Facebook Pixel Code -->
   <script>
@@ -45,6 +45,7 @@
       --white: #ffffff;
       
       --font-heading: 'Cormorant Garamond', serif;
+      --font-headline: 'Playfair Display', serif;
       --font-body: 'Manrope', sans-serif;
       
       --radius-card: 24px;
@@ -305,12 +306,16 @@
       align-items: center;
     }
     .hero-content { display: flex; flex-direction: column; gap: 28px; }
+    .hero-title {
+      font-family: var(--font-headline);
+      font-weight: 600;
+    }
     .hero-title span {
       display: block;
       color: var(--color-rose);
       font-style: italic;
-      font-weight: 300;
-      font-family: var(--font-heading);
+      font-weight: 400;
+      font-family: var(--font-headline);
       margin-top: 6px;
     }
     .hero-desc {
@@ -433,7 +438,7 @@
 
     /* Otimização da primeira dobra no celular (Foto + Headline juntas na primeira tela) */
     @media (max-width: 900px) {
-      .hero { padding-top: 90px; padding-bottom: 50px; }
+      .hero { padding-top: 80px; padding-bottom: 50px; }
       .hero-grid {
         display: flex;
         flex-direction: column;
@@ -461,15 +466,16 @@
       .doctor-badge {
         margin-top: 10px;
       }
-      .doc-title { font-size: 9.5px; }
-      .doc-name { font-size: 22px; }
+      .doc-title { font-size: 8.5px; } /* Reduzido de 9.5px */
+      .doc-name { font-size: 19px; } /* Reduzido de 22px */
+      .doc-reg { font-size: 10.5px; } /* Reduzido de 12px */
       
       .hero-title { 
         order: 1; 
-        font-size: 25px; /* Aumentado de 21px para preencher melhor e dar impacto */
-        line-height: 1.3;
+        font-size: 28px; /* Aumentado de 25px para preencher as laterais e dar impacto */
+        line-height: 1.25;
         margin-top: 8px;
-        padding: 0 10px;
+        padding: 0 8px;
       }
       .hero-title span { display: inline; margin-top: 0; }
       
@@ -1024,7 +1030,7 @@
         </div>
 
         <h1 class="hero-title">
-          Ajudo mulheres acima dos 40 a superar a menopausa e o sobrepeso — <span>e voltar a se sentir bem no próprio corpo.</span>
+          Ajudo mulheres acima dos 40 a superar a menopausa e o sobrepeso <span>e voltar a se sentir bem no próprio corpo.</span>
         </h1>
         
         <p class="hero-desc">
