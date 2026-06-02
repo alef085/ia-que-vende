@@ -76,7 +76,7 @@ Jornada do tratamento estruturada em linha de tempo (timeline).
 Acordeões interativos criados com Javascript puro.
 *   **Dúvidas Respondidas**:
     *   *Dra. Luciana Marques atende convênios?* (Foco em esclarecer que o atendimento é **100% particular** e que a equipe fornece nota fiscal e relatório médico para que a paciente solicite reembolso direto com seu plano de saúde).
-    *   *Onde fica localizado o consultório?* (Trav. Dom Romualdo de Seixas, 1476 — Umarizal, Belém-PA, Edifício Evolution).
+    *   *Onde fica localizado o consultório?* (Trav. Barão do Triunfo, 3540 — Ed. Infinity Corporate, sala 2008 — Marco, Belém-PA).
     *   *Como realizo o agendamento da minha consulta?* (Exclusivamente via WhatsApp corporativo).
     *   *As consultas dão direito a retorno clínico?* (Prazo de até 30 dias para leitura de exames).
 
