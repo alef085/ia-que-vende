@@ -79,9 +79,13 @@ Assim que o DNS do novo domínio estiver propagado e apontando para o IP da VPS 
 ### Passo 5: Fluxo de Atualização (CI/CD Manual)
 Quando houver edições no código localmente:
 1.  Faça o commit e push no computador local para o repositório GitHub correspondente.
-2.  Na VPS, acesse a pasta pública e puxe a atualização:
+2.  Na VPS, se estiver logado como `root`, **mude primeiro para o usuário `agbotia`** para evitar erros de permissão e propriedade do Git (*dubious ownership*):
     ```bash
-    cd /home/agbotia/web/nome-do-novo-projeto
+    su - agbotia
+    ```
+3.  Acesse a pasta do projeto e puxe a atualização:
+    ```bash
+    cd /home/agbotia/web/aleianegocios/ia-que-vende
     git pull origin master
     ```
     *A alteração será refletida instantaneamente sem necessidade de reiniciar o container ou o NPM.*
